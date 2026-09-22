@@ -1,7 +1,7 @@
 # Nuke Testing — Contract-Driven Adversarial Assurance
 
-**Version:** 0.6  
-**Date:** 2026-09-14  
+**Version:** 0.7  
+**Date:** 2026-09-22  
 **Status:** EXPERIMENTAL — practice-derived working method; not an established named methodology  
 **Positioning:** Experimental method in the Human Sandwich / AI Madpakken family  
 **Primary audience:** Humans and LLMs working on consequential software, engineering, research, automation and AI-assisted systems  
@@ -349,9 +349,12 @@ A live gap on a consequential claim therefore requires one of:
 
 - expanding the evidence or harness surface until the failure mode is representable;
 - narrowing the claim to what the surface can support;
-- or recording that claim as INCONCLUSIVE or explicitly limited, naming the gap.
+- or recording that claim as INCONCLUSIVE or explicitly limited, naming the gap;
+- or removing the need for the claim, by making the hazardous condition impossible in the
+  execution context rather than establishing its absence in the subject.
 
-Leaving it in a report as a coverage statistic is none of these.
+Leaving it in a report as a coverage statistic is none of these. The fourth option changes what
+is being claimed rather than how well it is evidenced, and is governed below.
 
 ### Partial exercise is not whole-oracle PASS
 
@@ -372,6 +375,20 @@ part of the record.
 This does not require every oracle to be decomposed into clauses. It applies where a real
 oracle already has separable claims and only some are currently reachable.
 
+### A conservative default needs a route out of itself
+
+An owed remainder that nothing can ever discharge is a permanent claim wearing a temporary
+label. Where unknown or unevidenced work is conservatively routed into an expensive or
+restricted disposition, that population only grows, and the pressure it creates lands on the
+gate rather than on the evidence.
+
+> **Where work is routinely held by a fail-closed default, there should be an evidence-producing
+> route by which a held subject can earn the cheaper treatment. The absence of such a route does
+> not make the estate safer — it makes weakening the gate the only available relief.**
+
+The route produces evidence for the claim actually at stake. Relaxing admission because the held
+population became inconvenient is the failure this is meant to prevent, not an instance of it.
+
 ### Consequential non-execution should be observed, not inferred
 
 Sometimes the load-bearing claim is negative: *this mechanism must not have run*. That claim
@@ -390,6 +407,63 @@ five levels' meanings.
 Keep it proportional. This is not a requirement to instrument every action — it applies where
 "this consequential mechanism must not have executed" is itself load-bearing to the assurance
 claim, typically because execution authority was deliberately withheld.
+
+### A condition can be made true by the context instead of proved about the subject
+
+Some blocking conditions are not properties of the subject at all. They are properties of the
+context the subject runs in — and where that is so, the subject-level question can be
+unanswerable and unnecessary at the same time. Field use reached this the hard way: a detector
+that could only ever be PARTIAL was being asked to establish that a subject did *not* exercise a
+hazardous mechanism, a planted-state experiment established that the method could not support
+that claim at all, and the resolution was neither a weaker detector nor a more elaborate one.
+
+> **Before building a stronger absence detector, ask whether the hazardous condition can be made
+> impossible in the execution context. Establishing a condition by construction and establishing
+> a property of the subject are different claims, and the first does not license stating the
+> second.**
+
+Three truths must then stay separate, because collapsing any two of them produces a result that
+reads stronger than its evidence:
+
+- **what the subject can do** — its capability, which the context does not change;
+- **what condition holds in the execution context** — stated in the terms of the hazard, not in
+  the subject's terms;
+- **by which mechanism that condition became true** — different mechanisms establish different
+  condition sets, so one flag cannot stand for two of them.
+
+> **Do not restate a neutralised hazard as an absent or inapplicable capability. Record the
+> capability as it is, the condition as context-established, and the mechanism that established
+> it.**
+
+A capability the context neutralises has not become inapplicable. Rewriting it as such destroys
+the record that the capability is still present and that only the context is holding the hazard
+down — which is exactly what a later change to the context needs to find.
+
+Two bounds apply, and both are load-bearing.
+
+*Scope.* A condition quantified over a population is not established by covering part of that
+population.
+
+> **Where a condition is population-scoped, it is established only when every concurrently
+> relevant participant is covered by the mechanism claimed to make it true. An absence of
+> observed violation is not that mechanism.**
+
+This says nothing about which mechanism, and does not imply one uniform execution environment.
+Several mechanisms may cover one population, provided each carries an explicit guarantee and
+nothing concurrently relevant falls outside all of them.
+
+*Reach.* A mechanism discharges the conditions that follow from it and no others. A mechanism
+that removes concurrency discharges concurrency conditions; it does not discharge hazards that
+were never about concurrency. Subjects held for an independent reason must keep being held for
+that reason, and must say so.
+
+> **A correct disposition reached through a false reason is still a defect wherever reason codes
+> feed later authority, automation or reuse.**
+
+This is not a licence to construct a claim into existence. Construction changes what is being
+claimed, and the new claim carries the same obligations as any other: it must be stated, its
+mechanism must be attacked with working controls (§17), its observation fidelity must be measured
+rather than assumed (§12), and it expires with the context it rests on (§23).
 
 ---
 
@@ -667,6 +741,23 @@ a set is being hashed as a sequence.
 Both are one question asked at evolution time: *which facts is this change supposed to leave
 alone, and is durable identity one of them?*
 
+### Moving work into a different execution context is one of these transformations
+
+Moving verification work into an isolated context, a different host profile, or any other
+altered execution environment is a mechanically active operation asserted to be semantically
+inert with respect to what the work observes. That assertion is exactly the relation above, and
+the protected projection is what the subject sees.
+
+> **Where verification work is moved into a different execution context, observation preservation
+> is a measured property, not an inherited one. A result obtained in the new context is the same
+> result only for the facts declared invariant under the move, and only where that invariance was
+> actually checked.**
+
+Field use found roughly one node in ten diverging under a candidate context that had been
+expected to be transparent. Nothing but running the estate inside it would have shown that, and a
+context that changes what the product does is not a cheaper way to obtain the same evidence — it
+is a different observation wearing the old label.
+
 ---
 
 ## 13. Attack Proxies, Not Only Branches
@@ -915,6 +1006,17 @@ A permanent rule is:
 > **If an independent challenge establishes a real violation and an internal verifier labels it legal, the verifier gap is itself an assurance finding.**
 
 Fixing production without understanding a blind verifier can leave the assurance architecture vulnerable to recurrence.
+
+A related rule governs what verification machinery should do when it catches a violation in
+itself or in the boundary it is enforcing.
+
+> **Verification infrastructure that detects a violated boundary should refuse rather than repair
+> it, wherever repairing would destroy the evidence that the boundary was false. A silent repair
+> removes the one fact worth having.**
+
+A guard that quietly cleans up what it found and continues leaves a clean run behind and no
+record that the claimed boundary did not hold. A refusal is visible and attributable: it can name
+what was found, where, and what it implies about the claim that depended on the boundary.
 
 ---
 
@@ -1362,6 +1464,42 @@ that otherwise verifies.
 
 Either resolution is acceptable. What is not acceptable is metadata that reads as current while
 describing a pre-effect state, because nothing about it looks wrong.
+
+### Reused evidence binds to the population it observed
+
+Where an assurance result is reused rather than re-derived — a qualification, a cached verdict, an
+inherited evidence class — the binding above governs it, and one axis of that binding is easy to
+omit because subject identity looks stable.
+
+> **Where verification evidence is reused rather than re-derived, its binding includes the
+> population of observations it actually covered. Unchanged subject identity is not unchanged
+> coverage.**
+
+A subject that gained or renamed observations was not observed as it now is, and the direction of
+that omission is fail-open: the unobserved part inherits the cheaper treatment. A count
+comparison is not sufficient, because a rename moves no count.
+
+### A reused answer expires when the mechanism that produced it changes
+
+> **The identity of a reusable verification answer includes the semantics of the mechanism that
+> produced it, not only the inputs that mechanism read. Otherwise a corrected mechanism can ship
+> and never run: the answer derived under the superseded semantics is still addressable, still
+> internally consistent, and still verifies.**
+
+This is the currentness axis applied to the deriving mechanism itself, and it is the same
+boundary as *local integrity proves only what it proves* above: a seal that recomputes attests
+that the bytes are intact, not that the semantics that produced them are current.
+
+### A comparison is attributable only if the claim is held constant
+
+> **A before/after comparison supports a conclusion about the mechanism under study only if both
+> sides make the same verification claim. Where the claim changed between them, the difference
+> measures the claim change.**
+
+This applies to any measured delta offered as evidence that a change worked — timing, resource
+use, defect counts, closure metrics. Comparing a weaker claim against a stronger one and
+attributing the whole difference to the mechanism is not a measurement error; it is an
+unsupported claim about what the mechanism did.
 
 ---
 
@@ -2152,6 +2290,41 @@ implementation existed:
   deterministically, while still verifying;
 - human authorization of a consequence does not establish an independent technical predicate
   that the consequence was conditioned on.
+
+### Verification-estate scalability field observations (2026-09)
+
+A further set from one governed downstream programme that optimized the execution of a large
+verification estate under human acceptance. Local field evidence from a single project and a
+single execution environment, not independent replication and not cross-domain validation:
+
+- a hazardous condition can be established by the execution context where the corresponding
+  subject-level property is not establishable at all, at which point subject-level absence is no
+  longer the claim admission should turn on;
+- capability truth, condition truth, and the mechanism that made the condition true are three
+  facts, and merging any two of them overstates the result;
+- a population-scoped condition is not established by confining part of the population;
+- reused qualification typed on subject identity alone went fail-open across a subject whose
+  observation set had changed;
+- a reused answer derived under superseded mechanism semantics remained addressable, internally
+  consistent and verifiable, so a correctness repair could have shipped without ever running;
+- a conservative default with no evidence-producing discharge route accumulates until weakening
+  the gate is the only relief left;
+- a change of execution context altered what a material fraction of the estate observed;
+- two timings for the same estate under two different admission claims differed by more than the
+  scheduling work being measured;
+- a harness defect produced a confident negative conclusion that survived two phases and was
+  withdrawn rather than rewritten, and the enforced run then exposed a defect in the tests that
+  verify the enforcement.
+
+Two evidence boundaries are explicitly unresolved and are recorded here rather than left to be
+inferred from the positive results above:
+
+- **Enumerable populations only.** In this programme one scheduler owned the whole relevant
+  population, so *every concurrently relevant participant* was a set it could enumerate and
+  cover. Where participants arrive from outside that control, the population-scope rule may name
+  a claim nothing can establish, and the failure would be silent.
+- **One execution environment.** The mechanism is unproven on a second environment even inside
+  the project that established it, which bounds how far the accepted evidence reaches.
 
 These observations motivate the method.
 
