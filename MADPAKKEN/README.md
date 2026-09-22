@@ -3,21 +3,29 @@
 This directory holds the cold-start bootstrap package for a user's preferred upstream LLM
 acting as **Layer 1 / COULD** in a Human Sandwich (`COULD → SHOULD → DID`) workflow.
 
-Upload these files to, or paste their contents into, that LLM before discussing work in a
-Human Sandwich project. The upstream LLM helps prepare safe downstream prompts; it does not
-execute against a project itself. The human remains the authority boundary that decides what
-is authorised. The downstream **DID** role — the execution layer that works against real
-project state, validates results, and records evidence — may be performed by Codex, Claude,
-another model, a local toolchain, or a human operator, depending on the task and project.
+Layer 1 either resolves this package from the canonical distribution below, or has it uploaded
+or pasted into its context, before discussing work in a Human Sandwich project. A thin starter
+that only tells Layer 1 where the distribution is suffices: the startup behaviour is owned here,
+by item 1 of the reading order, not by the starter. The upstream LLM helps prepare safe
+downstream prompts; it does not execute against a project itself. The human remains the
+authority boundary that decides what is authorised. The downstream **DID** role — the
+execution layer that works against real project state, validates results, and records
+evidence — may be performed by Codex, Claude, another model, a local toolchain, or a human
+operator, depending on the task and project.
 **DID is a role, not a vendor or model name.**
 
 ## Canonical distribution
 
-The package reaches its two consumers differently. Layer 1 is **supplied** it, as above.
-Downstream, **DID resolves and reads** it: where project grounding or an invoked doctrine
-requires a governing document, DID resolves the current Keeper-maintained distribution and reads
-the applicable document directly, rather than working from a summary, a handoff paraphrase, or an
-older project-local copy (`Human_Sandwich_Layer1_Context.md` §39).
+Both consumers **resolve and read** the package. Layer 1 grounds once at the start of every
+conversation (`Human_Sandwich_Layer1_Context.md` §4). An uploaded, pasted or local copy is a
+transport of foundation content, not proof of currentness: it stands in for the canonical
+foundation only where it is established to match the resolved revision, and is otherwise never
+represented as current. Downstream, where project grounding or an invoked doctrine requires a
+governing document, DID resolves the current Keeper-maintained distribution once per session
+and reads the applicable document directly, rather than working from a summary, a handoff
+paraphrase, or an older project-local copy. The resolved revision is the conversation's or
+session's foundation snapshot, re-checked only when the human asks
+(`Human_Sandwich_Layer1_Context.md` §39).
 
 The appointed canonical distribution is:
 
@@ -40,8 +48,9 @@ manifest.
 ## Reading order
 
 1. **`Human_Sandwich_Layer1_Context.md`** — general cold-start operating context.
-   How a fresh Layer 1 thread starts, new-project vs existing-project onboarding, the
-   existing-project reconstruction/context-pack protocol, Dan's working preferences,
+   How a fresh Layer 1 thread grounds the foundation and starts, new-project vs
+   existing-project onboarding, the existing-project reconstruction/context-pack protocol,
+   foundation bootstrap for a fresh downstream session, Dan's working preferences,
    downstream prompt presentation, escalation and autonomy, custody habits, and how to read
    downstream reports. This is general to any project using the Human Sandwich Model, not
    specific to any one project. Read this first; it is the operating manual.
