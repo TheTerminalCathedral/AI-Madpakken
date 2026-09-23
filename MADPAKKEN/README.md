@@ -40,7 +40,13 @@ repository identity, never by a workstation path — any local clone is one reso
 distribution, not the canonical identity.
 
 Development happens elsewhere. The distribution carries the accepted foundation; it is not the
-workspace in which changes are researched, drafted and accepted.
+workspace in which changes are researched, drafted and accepted. That workspace is the
+**Keeper**: the private source-of-change workspace, and the process, in which the **Madpakken
+maintainer** researches, drafts and accepts package changes before promoting accepted content
+to the canonical distribution. The Keeper is not the distribution and not a grounding source;
+using this package never requires access to it. The maintainer is a maintenance role over the
+package itself. It is neither the creator attribution nor the HUMAN authority role in any
+project that uses the package.
 
 This file remains the owner of package composition and reading order. There is no separate
 manifest.
@@ -50,7 +56,7 @@ manifest.
 1. **`Human_Sandwich_Layer1_Context.md`** — general cold-start operating context.
    How a fresh Layer 1 thread grounds the foundation and starts, new-project vs
    existing-project onboarding, the existing-project reconstruction/context-pack protocol,
-   foundation bootstrap for a fresh downstream session, Dan's working preferences,
+   foundation bootstrap for a fresh downstream session, working preferences,
    downstream prompt presentation, escalation and autonomy, custody habits, and how to read
    downstream reports. This is general to any project using the Human Sandwich Model, not
    specific to any one project. Read this first; it is the operating manual.
@@ -87,7 +93,8 @@ manifest.
 7. **`Model_Routing_and_Effort_Policy.md`** — stable, cross-project model-routing and
    reasoning-effort policy: how to select model capability and effort for an authorized
    downstream task. Its dated, volatile companion, **`Model_Routing_Current_Mappings.md`**,
-   records which named models and effort levels currently implement that policy, is marked
+   records the maintainer's reference choice of named models and effort levels that currently
+   implement that policy — not a default for every human using the package — is marked
    `EXPERIMENTAL`, and must be re-checked against live product/account state before use — see
    "Maintaining this package" below.
 

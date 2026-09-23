@@ -743,7 +743,7 @@ Downward routing MAY be considered when approximately all of the following hold:
 5. **Common-mode false-green risk is controlled.** Producer and checker must not obviously
    share the entire failure model. Where that risk matters, independent challenge may still
    require stronger or differently grounded reasoning (VLD Rule 4; Nuke Testing).
-6. **Escalation is available.** Unresolved semantics can return to Layer 1 / HUMAN SHOULD
+6. **Escalation is available.** Unresolved semantics can return to Layer 1 or HUMAN SHOULD
    instead of forcing the producer to guess.
 7. **The change is reversible or custody-protected.** Producer mistakes must not create silent
    irreversible state outside the authorized boundary.

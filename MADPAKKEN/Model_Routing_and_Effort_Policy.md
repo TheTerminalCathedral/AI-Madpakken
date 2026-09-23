@@ -131,18 +131,18 @@ Encoded here as **conditions**, not as named current models — see `Model_Routi
 - Avoid gratuitous model or effort switching inside an active agentic task — a top-level change can invalidate session cache, and the cost of that is real, not merely inconvenient.
 - Model routing decisions should not destroy cache locality without a decision-relevant reason (§B).
 
-No vendor-specific cache figures are stored here; they belong to Layer 3/4 below.
+No vendor-specific cache figures are stored here; they belong to Routing Layers 3/4 below.
 
 ## J. Volatility / re-derivation
 
-This policy separates four layers of routing knowledge by rate of change. **Guidance documents should not mix them.**
+This policy separates four layers of routing knowledge by rate of change. **Guidance documents should not mix them.** This routing-layer numbering is local to routing and unrelated to the Human Sandwich roles Layer 1 / COULD and Layer 2 / DID.
 
-- **Layer 1 — Stable routing mechanisms.** Sections A–I of this document. Expected to remain valid across several model generations.
-- **Layer 2 — Current model mappings.** Which named model and effort level currently implements each Layer-1 role. Stored in `Model_Routing_Current_Mappings.md`, dated, and explicitly marked experimental.
-- **Layer 3 — Pricing and credits.** Not stored in canonical routing guidance. Re-derive from current vendor/account sources when a cost decision actually depends on it.
-- **Layer 4 — Product and account availability.** Which models, effort levels, and context windows are actually exposed to the current account/harness. Not stored here. Re-derive mechanically (read current config/model-cache state) when needed — it changes faster than any document can track it.
+- **Routing Layer 1 — Stable routing mechanisms.** Sections A–I of this document. Expected to remain valid across several model generations.
+- **Routing Layer 2 — Current model mappings.** Which named model and effort level currently implements each role defined in Routing Layer 1. Stored in `Model_Routing_Current_Mappings.md`, dated, and explicitly marked experimental.
+- **Routing Layer 3 — Pricing and credits.** Not stored in canonical routing guidance. Re-derive from current vendor/account sources when a cost decision actually depends on it.
+- **Routing Layer 4 — Product and account availability.** Which models, effort levels, and context windows are actually exposed to the current account/harness. Not stored here. Re-derive mechanically (read current config/model-cache state) when needed — it changes faster than any document can track it.
 
-**Current mappings (Layer 2) must be reconsidered when:**
+**Current mappings (Routing Layer 2) must be reconsidered when:**
 - a relevant new model generation appears;
 - a model's behaviour or effort semantics materially change;
 - a local benchmark result contradicts the mapping;

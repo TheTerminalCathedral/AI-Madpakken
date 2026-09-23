@@ -546,7 +546,7 @@ A useful effect may include:
 - preventing stale current-state duplication;
 - preventing a derived view from becoming authority;
 - preventing an unrelated artifact from being updated;
-- prompting Dan to correct the AI's proposed owner or location.
+- prompting the human to correct the AI's proposed owner or location.
 
 No effect is also evidence.
 
@@ -613,7 +613,7 @@ Reduce, reject, or keep the rule project-local if the experiment shows that:
 - it causes more documentation to be created “just to be safe”;
 - `no durable change` becomes an excuse to omit necessary evidence or authority;
 - owner discovery repeatedly requires project-wide archaeology;
-- Dan frequently has to correct obvious owner/location choices;
+- the human frequently has to correct obvious owner/location choices;
 - agents treat repository absence as proof of non-existence;
 - the rule duplicates HSM/VLD language instead of adding a useful point of application;
 - a simpler instruction performs equally well.
@@ -779,7 +779,7 @@ CURRENT RESEARCH QUESTION:
 Does making this small durable-state check explicit change enough real documentation decisions to justify a permanent Layer 1 rule?
 
 HUMAN AUTHORITY:
-Dan / HUMAN SHOULD remains final on consequential semantic documentation decisions.
+HUMAN SHOULD remains final on consequential semantic documentation decisions.
 ```
 
 ---

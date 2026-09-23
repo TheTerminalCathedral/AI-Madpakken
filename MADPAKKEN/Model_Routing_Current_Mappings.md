@@ -9,9 +9,10 @@
 
 ## What this document is
 
-This is Dan's **current routing prior** — the specific (platform, model, effort) choices that currently implement the stable policy — **not doctrine, and not a locally proven optimum.**
+This is the Madpakken maintainer's (Dan Almer Jensen's) **current routing prior** — the specific (platform, model, effort) choices that currently implement the stable policy — **not doctrine, and not a locally proven optimum.**
 
 - It is a prior to be tested against Dan's own workload, not a measurement of it. No local benchmark has been run.
+- It is a **maintainer reference prior, not the preferences or routing defaults of every human using Madpakken.** "Dan" below means the maintainer's own configuration and workload. A human using the package applies the stable policy to their own workload, accounts and tools, and may use this prior only as a dated starting point to re-check.
 - Effort labels are **not equivalent across vendors.** "High" on Codex and "high" on Claude Code are different quantities of computation, set against different per-model defaults. Never read a label across the platform column.
 - Benchmark-style comparisons cited below run each model inside its own vendor's harness (Codex or Claude Code) — they are not harness-normalised model-vs-model comparisons. They are used here only because Dan also uses each model inside its own vendor's harness, which is the quantity he actually experiences.
 - Where two models are listed as alternatives, they are genuine alternatives, not a ranking.
@@ -74,4 +75,4 @@ Re-derive this mapping (not just its values, its rows) when:
 
 ## What this document deliberately omits
 
-No current dollar prices, no Codex credit rates, no Claude plan-usage percentages, no account allowance/credit state, no CLI/product versions, no promotional terms, no context-window product configuration, and no plan-specific limits. Those are Layer 3/4 facts (`Model_Routing_and_Effort_Policy.md` §J) — re-derive them live; do not expect this file to carry them.
+No current dollar prices, no Codex credit rates, no Claude plan-usage percentages, no account allowance/credit state, no CLI/product versions, no promotional terms, no context-window product configuration, and no plan-specific limits. Those are Routing Layer 3/4 facts (`Model_Routing_and_Effort_Policy.md` §J) — re-derive them live; do not expect this file to carry them.
