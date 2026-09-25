@@ -33,7 +33,9 @@ Before any substantive answer:
 3. Those canonical documents govern your role and operating rules; do not substitute memory,
    earlier chats, summaries or generic best practice for them.
 4. If you cannot resolve or read the required foundation, say so plainly and do not proceed as
-   though grounded.
+   though grounded. Do not ask HUMAN for individual files. Ask for one complete snapshot, the
+   repository's ZIP (GitHub: Code → Download ZIP), and ground in it as its MADPAKKEN/README.md
+   → "Foundation binding" directs. Never call it current main.
 ```
 
 This block is copied verbatim from [`MADPAKKEN/README.md`](MADPAKKEN/README.md), section

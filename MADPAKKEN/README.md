@@ -47,7 +47,9 @@ Before any substantive answer:
 3. Those canonical documents govern your role and operating rules; do not substitute memory,
    earlier chats, summaries or generic best practice for them.
 4. If you cannot resolve or read the required foundation, say so plainly and do not proceed as
-   though grounded.
+   though grounded. Do not ask HUMAN for individual files. Ask for one complete snapshot, the
+   repository's ZIP (GitHub: Code → Download ZIP), and ground in it as its MADPAKKEN/README.md
+   → "Foundation binding" directs. Never call it current main.
 ```
 
 It is a launcher, not a summary of the package. It tells a blank model how to enter; the package
@@ -250,6 +252,12 @@ doctrine and one of these cannot be established:
   which commit it was bound to. Do **not** silently select the current `main` and present that as
   continuity. Report it. Continuing on a newer foundation is a transition, and needs the human.
 
+A context grounded in a snapshot that HUMAN supplied ("Grounding from a supplied snapshot",
+below) still reports `FOUNDATION_CURRENTNESS_UNESTABLISHED`, but it is grounded. It does not fail
+closed on currentness for work that depends on doctrine at that snapshot. It still fails closed
+where the work needs currentness itself, such as a claim that the snapshot is current canonical
+Madpakken.
+
 A prompt that cites a version, path or rule the bound document does not contain is the same
 kind of discrepancy. Do not reconcile it by preference. Work that does not consequentially
 depend on a Madpakken method may continue from mechanically established project state where it
@@ -260,6 +268,73 @@ concerns dependence on the foundation only. It never supplies missing authority.
 A project may carry a thin pointer to this distribution in a startup surface it already has.
 The pointer copies no doctrine, pins no revision as timeless currentness, and does not become
 foundation authority.
+
+### Grounding from a supplied snapshot — restricted access
+
+`EXPERIMENTAL` — Sometimes a fresh context cannot resolve or read the canonical distribution,
+for example because the environment has no access to the host. Say so, and claim no currentness.
+Do not ask HUMAN to assemble the package or choose governing files. Ask for **one complete
+snapshot** of the distribution at one commit, in this order of preference:
+
+1. **The host's own archive of the distribution, as downloaded and not repacked.** On GitHub this
+   is the repository's ZIP (`Code → Download ZIP`). It holds the whole repository at one commit and
+   records that commit's id as the archive comment.
+2. **Another complete, unmodified copy of the distribution at one commit,** with its exact commit
+   id. Examples are an existing clone, or every file of the whole repository, extracted from its
+   archive, where the environment cannot take the archive itself. The commit id comes from the clone's own history,
+   or from HUMAN reading it off the host.
+3. **Otherwise,** remain `FOUNDATION_CURRENTNESS_UNESTABLISHED` and fail closed as above.
+
+None of the following is ever a snapshot:
+
+- individual governing files, or a selection of them;
+- a summary;
+- a project-local copy;
+- a fork;
+- a derived transport copy (`Human_Sandwich_Layer1_Context.md` §9, "Derived transport copies").
+
+What the foundation contains is decided by this file, not by HUMAN.
+
+**Check before binding.** Run the checks before relying on anything the snapshot says. Run
+every check the environment allows, and report each result:
+
+- **The commit id.** Read it from the archive or the clone. The ZIP archive comment can be read,
+  for example, with Python `zipfile.ZipFile(path).comment` or with `unzip -z`. Where it cannot be
+  read, ask HUMAN for the commit the host shows. Where two sources give different ids, the
+  snapshot does not qualify.
+- **Well-formed.** Every path stays inside the snapshot's root: no absolute paths, no `..`, no
+  links, and no path twice.
+- **Complete.** The root `README.md`, this file, and every file this file routes to are present.
+- **Unmarked.** Search every file, not only the ones you read, for a marking as a derived or
+  transport copy. One marked file disqualifies the whole snapshot. This catches only a copy
+  that declares itself, which is one reason content integrity is not established offline.
+
+A snapshot that fails a check does not qualify. Say which check failed, and ask for a fresh
+snapshot, not for the missing file.
+
+**Bind.** HUMAN supplying the snapshot for grounding authorizes binding to it. Record its commit
+as this context's foundation snapshot, together with its source, for example "supplied host
+archive". Then read as mechanism A directs, at that snapshot. Mechanisms B and C then apply as
+usual: recovery after compaction restores the same commit from the same snapshot, and never
+looks for a newer one.
+
+**What a snapshot establishes.** Keep four facts apart:
+
+- **Snapshot identity** — which commit the files are labelled as. The checks establish it.
+- **Content integrity** — that the files are exactly that commit's content. Offline, nothing
+  proves the files were not altered after download. Where git object ids can be computed, record
+  the recomputed tree id, so it can be compared with the canonical distribution later.
+- **Canonical origin** — that the commit belongs to the canonical distribution. It rests on
+  HUMAN having obtained the snapshot from the canonical host. It is not established offline.
+- **Currentness** — that no newer `main` exists. A snapshot never establishes it.
+
+Report the foundation in this form: `foundation snapshot <commit>, from a supplied host archive;
+currentness unestablished (FOUNDATION_CURRENTNESS_UNESTABLISHED)`. Never describe a snapshot as
+current, latest or verified `main`.
+
+Access that returns later does not move the context. Comparing the bound commit and tree with the
+canonical distribution checks origin and is not a transition. Moving to a newer `main` remains a
+transition that the human authorizes.
 
 ### Maturity
 
@@ -272,7 +347,8 @@ That research returned `LOCAL_EXPERIMENT_REQUIRED` on field behaviour. `EXPERIME
 applies to the implementation claims, which are not yet field-established: that the official
 starters reliably bootstrap each role across models and harnesses, that recovery from lossy compaction preserves load-bearing
 state in practice, that sub-agents inherit the parent snapshot, and that access works in
-non-workstation environments. The pre-publication validation of these paths was a
+non-workstation environments, and that grounding from a supplied snapshot works where access is
+restricted. The pre-publication validation of these paths was a
 maintainer-run dry run with simulated compaction. It was not observed native field use.
 
 ## Reading order

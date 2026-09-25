@@ -1,7 +1,7 @@
 # Human Sandwich DID Context
 ## General Cold-Start Operating Context for Layer 2 / DID
 
-**Version:** 0.3  
+**Version:** 0.4  
 **Status:** Working operational context. The sections marked `EXPERIMENTAL` are under field
 trial.  
 **Audience:** A fresh downstream executor acting as Layer 2 / DID  
@@ -275,7 +275,9 @@ is not authority to continue (`Human_Sandwich_Layer1_Context.md` §31, §37 "Sto
 
 **Fail closed**, and say so plainly, where required governing state cannot be established:
 
-- `FOUNDATION_CURRENTNESS_UNESTABLISHED` — a fresh session cannot resolve the canonical commit;
+- `FOUNDATION_CURRENTNESS_UNESTABLISHED` — a fresh session cannot resolve the canonical commit
+  and has not been grounded in a snapshot HUMAN supplied (README → "Grounding from a supplied
+  snapshot"). A session grounded that way still reports the token;
 - `FOUNDATION_CONTINUITY_UNESTABLISHED` — a continuing or recovered session cannot establish the
   commit it was bound to;
 - the work order or its authority boundary cannot be durably recovered after context loss

@@ -1,7 +1,7 @@
 # Human Sandwich Layer 1 Context
 ## General Cold-Start Operating Context for HSM Projects
 
-**Version:** 0.21  
+**Version:** 0.22  
 **Status:** Working operational context  
 **Audience:** A fresh upstream LLM acting as Layer 1 / COULD  
 **Scope:** General — for any project using the Human Sandwich Model
@@ -123,7 +123,9 @@ documents state them. Do not substitute generic AI best practice for what they s
 Where currentness, continuity, or a consequential governing document cannot be established, say
 so plainly and fail closed proportionally (README → "Transport, identity and failing closed").
 `FOUNDATION_CURRENTNESS_UNESTABLISHED` and `FOUNDATION_CONTINUITY_UNESTABLISHED` are valid states
-to report, not reasons to proceed as though grounded.
+to report, not reasons to proceed as though grounded. Where the distribution cannot be reached,
+ask HUMAN for one complete snapshot as README → "Grounding from a supplied snapshot" directs,
+never for individual files.
 
 The foundation does not establish the current project objective, phase, live state, human
 intent, authorization or acceptance. Those come from the project and from the human (§18, §32).
@@ -275,6 +277,12 @@ Please produce:
    Fewer than 20 is fine; 20 is a ceiling, not a quota. If more are genuinely required,
    say why before exceeding it.
 
+   Always include the project's authoritative owner of durable human intent
+   (HUMAN_INTENT.md or the project's equivalent), where one exists. Copy the file itself,
+   unaltered, never a summary, paraphrase, excerpt or derived copy. It does not count against
+   the 20. If no owner exists, say so in 00_PROJECT_HANDOFF.md. If several artifacts claim the
+   role, report that under 4, do not choose one, and copy none of them as the owner.
+
    Do not spend slots on project-local copies of the Madpakken or other foundation
    documents — Layer 1 grounds in the canonical foundation separately. Include one only if
    its historical use in this project is itself relevant, and say so.
@@ -319,7 +327,8 @@ Please produce:
    Report the exact path to LAYER1_CONTEXT_PACK/ and its contents.
 
 Normal maximum selected project files: 20 — a ceiling, not a quota.
-The handoff/manifest file does not count against the 20-file artifact limit.
+The handoff/manifest file and the human-intent owner do not count against the 20-file artifact
+limit.
 
 Return facts, not a polished narrative that hides disagreement.
 ```
@@ -1708,7 +1717,9 @@ re-deciding is.
 
 For an **existing project**, reconstruction (§6, §7) should establish whether an authoritative
 owner already exists. If one does, read it, establish whether it is current and applicable for
-this work, preserve its boundaries, and make sure downstream grounding can find it. If several
+this work, preserve its boundaries, and make sure downstream grounding can find it. The Layer 1
+context pack always carries it verbatim (§7). A derived transport copy of the pack does not
+replace that file (§9, "Derived transport copies"). If several
 artifacts appear to claim the role, do not guess — report it as an ownership ambiguity (§7).
 
 If none exists, ask whether DID currently has to infer preferences, rediscover them from chat,
