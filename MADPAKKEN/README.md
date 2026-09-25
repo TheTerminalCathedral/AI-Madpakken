@@ -12,11 +12,14 @@ The human remains **HUMAN / SHOULD**, the authority boundary that decides what i
 Either machine role may be performed by Codex, Claude, another model, a local toolchain, or,
 for DID, a human operator. **Layer 1 and DID are roles, not vendor or model names.**
 
-Both machine roles cold-start from this package directly. A thin starter that states the role,
-names the canonical distribution, and says what the project or task is suffices. This file and
-the role's operational context own everything else: the starter does not need to carry
-currentness rules, reading order, recovery rules, authority semantics or method discovery, and
-a starter that omits them does not waive them.
+Both machine roles cold-start from this package directly. HUMAN starts a fresh Layer 1 with the
+official launcher below. Layer 1 starts a fresh DID by opening its work order with the official
+DID starter. Each starter names only the entry: the role, the canonical distribution, what to read
+first, and — for DID — the authority split between Madpakken and the work order, and where
+to return after context loss. This file and the role's operational
+context own everything else. Currentness rules, reading order, recovery rules, authority
+semantics and method discovery live here, not in the starter, and a starter that omits them does
+not waive them.
 
 ## Start here
 
@@ -29,26 +32,58 @@ a starter that omits them does not waive them.
    methods as that context directs: sufficiently to know what each owns and what applies, and
    fully when a task invokes or materially depends on one.
 
-### Thin starters
+### Copy this into a fresh Layer 1
 
-A starter needs to carry only identity, role, the canonical location, and the project or task
-condition. These wordings are illustrations, not required text:
+To start a completely fresh Layer 1, HUMAN pastes this into a blank conversation, then adds the
+situation, for example `I have an existing project.`:
 
 ```text
-You are Layer 1 in a Human Sandwich project.
-Follow AI Madpakken at TheTerminalCathedral/AI-Madpakken.
-I have an existing project.
+You are Layer 1 / COULD in a Human Sandwich project.
+Canonical AI Madpakken: TheTerminalCathedral/AI-Madpakken, branch main.
+Before any substantive answer:
+1. Resolve main once and record the commit as this conversation's foundation snapshot.
+2. At that commit, read README.md, then MADPAKKEN/README.md, and follow it into your role's
+   operating context.
+3. Those canonical documents govern your role and operating rules; do not substitute memory,
+   earlier chats, summaries or generic best practice for them.
+4. If you cannot resolve or read the required foundation, say so plainly and do not proceed as
+   though grounded.
 ```
+
+It is a launcher, not a summary of the package. It tells a blank model how to enter; the package
+governs from there, including how an existing or new project is taken up.
+
+### DID starter (Layer 1 → a fresh DID)
+
+HUMAN does not normally start DID. Layer 1 opens every work order to a fresh or not-yet-grounded
+DID session with this starter, unchanged, followed by the authorized work order
+(`Human_Sandwich_Layer1_Context.md` §15):
 
 ```text
 You are Layer 2 / DID in a Human Sandwich project.
-Ground in the canonical AI Madpakken distribution at TheTerminalCathedral/AI-Madpakken.
-Then ground in the project available in this environment and follow the authorized work
-order below.
+Canonical AI Madpakken: TheTerminalCathedral/AI-Madpakken, branch main.
+Before changing project state: resolve main once, record the commit as this session's
+foundation snapshot, and at that commit read MADPAKKEN/README.md and
+MADPAKKEN/Human_Sandwich_DID_Context.md.
+Madpakken governs your role, operating rules, methods, recovery and authority semantics. The
+authorized work order below governs the concrete task and the authority granted for it, within
+those rules.
+After any loss of context, read the recovery section of Human_Sandwich_DID_Context.md at your
+recorded commit before changing anything.
+Then ground in the project here and follow the authorized work order below.
 ```
 
-A starter that also carries a doctrine summary does not replace the governing documents. Where
-it disagrees with them, report that as a discrepancy.
+Madpakken and the work order do not compete. Madpakken governs the role, operating rules,
+methods, recovery and authority semantics. The authorized work order governs the concrete task
+and the authority granted for it, within those rules.
+
+### Starter rules
+
+Both starters are routing text. They name the entry and nothing else: no doctrine, no method
+content, no project detail beyond what HUMAN or the work order adds. A starter that also carries
+a doctrine summary does not replace the governing documents. Where a starter disagrees with them,
+report that as a discrepancy; the governing documents win. A thinner starter still binds the
+foundation as "Foundation binding" directs, but the official texts are the tested entry.
 
 ## Canonical distribution
 
@@ -234,8 +269,8 @@ across configuration-management baselines, immutable software references, agent 
 discovery, durable execution and recovery, and structured handoff and state transfer.
 
 That research returned `LOCAL_EXPERIMENT_REQUIRED` on field behaviour. `EXPERIMENTAL` therefore
-applies to the implementation claims, which are not yet field-established: that thin starters
-alone reliably bootstrap each role, that recovery from lossy compaction preserves load-bearing
+applies to the implementation claims, which are not yet field-established: that the official
+starters reliably bootstrap each role across models and harnesses, that recovery from lossy compaction preserves load-bearing
 state in practice, that sub-agents inherit the parent snapshot, and that access works in
 non-workstation environments. The pre-publication validation of these paths was a
 maintainer-run dry run with simulated compaction. It was not observed native field use.
@@ -248,7 +283,7 @@ maintainer-run dry run with simulated compaction. It was not observed native fie
    1a. **`Human_Sandwich_Layer1_Context.md`** — Layer 1 / COULD. How a fresh Layer 1
        conversation starts, new-project vs existing-project onboarding, the existing-project
        reconstruction/context-pack protocol, working preferences, downstream prompt
-       presentation and the thin starter a fresh DID needs, escalation and autonomy, custody
+       presentation and when to open a work order with the DID starter, escalation and autonomy, custody
        habits, and how to read downstream reports.
 
    1b. **`Human_Sandwich_DID_Context.md`** — Layer 2 / DID. How a fresh DID session binds the
@@ -389,6 +424,14 @@ is revised. It is not the document's version: the internal `Version:` field is t
 version signal wherever a document has one. Package status (membership, custody) is separate
 from a document's evidence maturity; an `EXPERIMENTAL` label changes only on the evidence that
 document requires.
+
+From 2026-09-25 onward, a change to a document that has a `Version:` field bumps that field. This
+applies to any change to normative behaviour, an execution contract, applicability, authority,
+status, load-bearing operational references, or other plausibly behaviour-changing instructions.
+The bump is one minor step (0.9 → 0.10 → 0.11; 1.1 → 1.2), once per affected document per public
+promotion. Purely typographic or whitespace corrections with no plausible behavioural effect need
+not bump. Earlier publications are not renumbered. A document without a `Version:` field, this
+file among them, is not given one for symmetry.
 
 `Model_Routing_and_Effort_Policy.md` follows the same convention: a stable canonical filename
 without a version suffix, internal `Version:`/`Status:` metadata, and no current model names,

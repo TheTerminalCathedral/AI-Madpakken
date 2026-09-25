@@ -1,8 +1,8 @@
 # Model Routing — Current Mappings
 
 **Status:** EXPERIMENTAL
-**Valid as of:** 2026-09-07
-**Basis:** a Critical Mass research/evidence record for this routing revision, maintained separately outside this package — it carries the full evidence, source families, and reasoning behind every row below.
+**Valid as of:** 2026-09-07 (DID conformance observations: 2026-09-25)
+**Basis:** a Critical Mass research/evidence record for this routing revision, maintained separately outside this package — it carries the full evidence, source families, and reasoning behind every row of the main mapping. The dated DID conformance observations rest instead on a separate maintainer behavioural evaluation (2026-09-25), also maintained outside this package.
 **Applies the mechanisms defined in:** `Model_Routing_and_Effort_Policy.md`
 
 ---
@@ -63,6 +63,32 @@ Effort levels are per-platform; do not compare a Codex effort label to a Claude 
 **Two defaults this mapping deliberately does not adopt** (both against the researcher's own initial expectation, per the evidence record):
 - **Sonnet 5 as a cheap default.** If the goal is lower-cost Claude work, the evidenced lever is Opus 5 at lower effort, not a smaller model.
 - **Fable 5.1 as any standing default.** Reserve it for a consciously chosen, named hard problem.
+
+## DID recovery conformance — dated observations (2026-09-25, EXPERIMENTAL)
+
+These are observations against `Model_Routing_and_Effort_Policy.md` §L (F1–F4), from one
+maintainer evaluation on 2026-09-25. They are not a ranking, not a certification, and not a
+statement about any other role or task.
+
+- **Claude Sonnet 5.** Provisionally demonstrated for the tested DID recovery floor **when a
+  recovery pointer survives the context loss** (the DID starter, or the session-record path).
+  Without a surviving pointer, it committed staged work on a summary's authority, failing F1.
+- **Claude Haiku 4.5.** Not demonstrated for DID state-changing work under lossy context
+  conditions.
+  - It repeatedly failed F1 and F2, even after reading the recovery rule, under the best mechanism
+    tested. One F2 failure was writing a "durable" record from the summary after the loss.
+  - With the DID starter it grounded before mutation (F4).
+  - With the official Layer 1 launcher, its earlier Layer 1 bootstrap failures did not recur.
+
+Qualifiers:
+
+- one harness (Claude Code subagents);
+- simulated compaction;
+- small per-cell samples, typically one to three;
+- several git actions blocked by harness policy and scored from stated intent;
+- runs that knew they were evaluations.
+
+Re-check before relying on these rows. They change as models and harnesses change.
 
 ## Named supersession / revisit triggers
 

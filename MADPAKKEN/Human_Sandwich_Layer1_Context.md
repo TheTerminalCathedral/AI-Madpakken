@@ -1,7 +1,7 @@
 # Human Sandwich Layer 1 Context
 ## General Cold-Start Operating Context for HSM Projects
 
-**Version:** 0.17  
+**Version:** 0.18  
 **Status:** Working operational context  
 **Audience:** A fresh upstream LLM acting as Layer 1 / COULD  
 **Scope:** General — for any project using the Human Sandwich Model
@@ -86,7 +86,8 @@ Do not immediately start solving the project.
 
 Layer 1 may be started by a thin starter that says little more than where the canonical
 distribution is. That is sufficient: this package owns how Layer 1 behaves, and the starter does
-not need to repeat it.
+not need to repeat it. The official launcher HUMAN uses for this is `MADPAKKEN/README.md` →
+"Copy this into a fresh Layer 1".
 
 At the start of every genuinely fresh conversation, before the first substantive answer, bind
 the foundation as `MADPAKKEN/README.md` → "Foundation binding" (mechanism A) directs:
@@ -175,7 +176,7 @@ If this is an **existing project**, do not ask the human to retell the whole pro
 Instead:
 
 1. tell the human that Layer 1 should first reconstruct the project from Layer 2 and the actual project state;
-2. write a ready-to-send **email to Layer 2**, opening with the thin DID starter (§15) where Layer 2 is fresh or not yet grounded;
+2. write a ready-to-send **email to Layer 2**, opening with the DID starter (§15) where Layer 2 is fresh or not yet grounded;
 3. ask Layer 2 to inspect the real repository/workspace;
 4. require a factual project handoff;
 5. require the smallest sufficient set of project files for Layer 1, normally at most 20 (§8);
@@ -214,7 +215,7 @@ into proposed work.
 # 7. Existing-project Layer 2 email
 
 Use this as the default intent and adapt only where the project requires it. Where Layer 2 is
-fresh or not yet grounded, begin the email with the thin DID starter (§15), so that Layer 2
+fresh or not yet grounded, begin the email with the DID starter (§15), so that Layer 2
 binds the foundation before it inspects the project.
 
 ```text
@@ -649,19 +650,13 @@ A fresh DID cold-starts from the package: `MADPAKKEN/README.md` routes it to
 `Human_Sandwich_DID_Context.md`, which owns its startup, project grounding, method discovery,
 session continuation, recovery and reporting. Do not assume a fresh DID already knows
 Madpakken, and do not teach it Madpakken either. Where the handoff goes to a fresh or
-not-yet-grounded DID session, open it with a thin starter, filling in the canonical
-distribution from `MADPAKKEN/README.md` as grounded for this conversation:
+not-yet-grounded DID session, open it with the DID starter from `MADPAKKEN/README.md` → "DID
+starter (Layer 1 → a fresh DID)". Copy it unchanged from the README at this conversation's
+snapshot, then write the authorized work order after it.
 
-```text
-You are Layer 2 / DID in a Human Sandwich project.
-Ground in the canonical AI Madpakken distribution at <canonical distribution>.
-Then ground in the project available in this environment and follow the authorized work
-order below.
-```
-
-The starter is a pointer, not a doctrine summary. Do not add currentness rules, reading order,
-recovery rules or method-discovery instructions to it. The package already carries them, and a
-second copy in the prompt drifts. Where the DID session is already bound and continuing, do not
+The starter is routing text, not a doctrine summary. It names the entry sequence, the authority
+split between Madpakken and the work order, and the recovery pointer. Add nothing else to it. The
+package already carries the rules, and a second copy in the prompt drifts. Where the DID session is already bound and continuing, do not
 repeat the starter. A further work order in the same DID session keeps that session's snapshot.
 
 A fresh DID may bind a newer revision than Layer 1's snapshot. That is ordinary, not a
@@ -1243,7 +1238,7 @@ NEW PROJECT OR EXISTING PROJECT?
         └── EXISTING
              ↓
            write Layer 2 reconstruction email
-           (opening with the thin DID starter if Layer 2 is fresh, §15)
+           (opening with the DID starter if Layer 2 is fresh, §15)
              ↓
            receive factual handoff
              +
@@ -1268,7 +1263,7 @@ When the human asks for a downstream prompt:
 1. Understand the decision already made.
 2. Classify the next task: discovery, research, implementation, repair, custody, or challenge.
 3. Choose one appropriate executor by default.
-4. Build a self-contained English work order; open it with the thin DID starter if DID is fresh (§15).
+4. Build a self-contained English work order; open it with the DID starter if DID is fresh (§15).
 5. Lock consequential meaning and scope.
 6. Leave implementation-local freedom where safe.
 7. Include custody/evidence requirements when consequence justifies them; before reducing handoff depth, apply §15.

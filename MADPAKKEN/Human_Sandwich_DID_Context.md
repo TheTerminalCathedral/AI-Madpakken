@@ -1,7 +1,7 @@
 # Human Sandwich DID Context
 ## General Cold-Start Operating Context for Layer 2 / DID
 
-**Version:** 0.1  
+**Version:** 0.2  
 **Status:** Working operational context. The sections marked `EXPERIMENTAL` are under field
 trial.  
 **Audience:** A fresh downstream executor acting as Layer 2 / DID  
@@ -452,8 +452,8 @@ evidence. Say which evidence.
 
 The role boundary in §2, §6, §9 and §10 applies standing Human Sandwich doctrine. It is not new.
 
-The foundation-binding architecture this file applies is approved. `EXPERIMENTAL`: whether a
-thin starter alone reliably bootstraps a correct DID across providers and harnesses; whether
+The foundation-binding architecture this file applies is approved. `EXPERIMENTAL`: whether the
+official DID starter (README) reliably bootstraps a correct DID across providers and harnesses; whether
 recovery after lossy compaction preserves load-bearing state in practice; and whether delegated
 children reliably inherit the parent snapshot. This file's first version was checked by a
 maintainer-run dry run with simulated compaction, not by observed field use. In that dry run, one

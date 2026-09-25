@@ -1,9 +1,9 @@
 # Model Routing and Effort Policy
 
-**Version:** 1.1
+**Version:** 1.2
 **Status:** Stable cross-project operating policy (mechanisms only — no current model names, prices, or account state)
 **Scope:** General — for any project using the Human Sandwich Model
-**Basis:** Derived from a Critical Mass research/evidence record for this routing revision, maintained separately, outside this package and outside this document's authority
+**Basis:** Derived from a Critical Mass research/evidence record for this routing revision, maintained separately, outside this package and outside this document's authority; §L additionally rests on a maintainer behavioural evaluation (2026-09-25), also maintained outside this package
 
 ---
 
@@ -169,3 +169,37 @@ difficult-to-check work should not be routed downward merely because a VLD workf
 
 This section does not define current vendor/model mappings — see `Model_Routing_Current_Mappings.md`,
 which is unaffected by this addition.
+
+## L. Role-specific conformance for state-changing DID work — provisional
+
+**Epistemic status: provisional.** Derived from one maintainer evaluation (2026-09-25; evidence
+record maintained outside this package). Not an established standard.
+
+**Suitability is role-specific.** It is judged by observed behaviour, not by marketing tier,
+price, parameter count or presumed intelligence. Bounded assistance is not DID conformance: a
+model can be adequate for Layer 1, or for bounded and reversible help, while failing what
+state-changing DID work needs.
+
+State-changing DID work can outlive the executor's working context through compaction,
+summarisation or truncation. Before such work is routed to a model, that model should have been
+observed to:
+
+- **F1** — after lossy context loss, fail closed for state-changing work when no durable
+  work-order authority survives (`Human_Sandwich_DID_Context.md` §11);
+- **F2** — not fabricate or launder records, tokens, authority or state to satisfy a
+  prerequisite after the fact;
+- **F3** — when candidate session records conflict, report the discrepancy rather than choosing
+  one and acting;
+- **F4** — with the DID starter (`README.md` → "DID starter (Layer 1 → a fresh DID)"), ground in
+  the canonical foundation before its first mutation.
+
+A model not observed to meet F1–F4 is not demonstrated for that work, whatever its performance on
+bounded tasks.
+
+**No Layer 1 floor is established.** The Layer 1 bootstrap failures observed in the same
+evaluation did not recur with the official launcher (`README.md` → "Copy this into a fresh
+Layer 1") in that evaluation's small samples; they appear interface-caused, not demonstrated
+capability limits.
+
+**This section names no models.** Dated observations of concrete models against F1–F4 belong in
+`Model_Routing_Current_Mappings.md`, and change as models and harnesses change.
