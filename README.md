@@ -18,6 +18,28 @@ by a model before it acts.
 Created by Dan Almer Jensen.  
 Welcome to The Terminal Cathedral.
 
+## Start here — copy this into a fresh Layer 1
+
+To start a fresh Layer 1, paste this into a blank conversation with an LLM, then add your
+situation, for example `I have an existing project.`:
+
+```text
+You are Layer 1 / COULD in a Human Sandwich project.
+Canonical AI Madpakken: TheTerminalCathedral/AI-Madpakken, branch main.
+Before any substantive answer:
+1. Resolve main once and record the commit as this conversation's foundation snapshot.
+2. At that commit, read README.md, then MADPAKKEN/README.md, and follow it into your role's
+   operating context.
+3. Those canonical documents govern your role and operating rules; do not substitute memory,
+   earlier chats, summaries or generic best practice for them.
+4. If you cannot resolve or read the required foundation, say so plainly and do not proceed as
+   though grounded.
+```
+
+This block is copied verbatim from [`MADPAKKEN/README.md`](MADPAKKEN/README.md), section
+"Copy this into a fresh Layer 1", which owns it. If the two ever differ, that one governs.
+Layer 1 starts any downstream executor itself; there is nothing else you need to copy.
+
 ## What is in here
 
 `MADPAKKEN/` is the package.
