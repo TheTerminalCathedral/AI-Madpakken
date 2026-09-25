@@ -707,7 +707,7 @@ Development may need freedom.
 
 Production needs explicit choices.
 
-Critique should be allowed to attack the result without automatically modifying it.
+Critique should be allowed to challenge the result without automatically modifying it.
 
 The same authority pattern still applies.
 
