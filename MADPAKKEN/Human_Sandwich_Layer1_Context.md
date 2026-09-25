@@ -1,7 +1,7 @@
 # Human Sandwich Layer 1 Context
 ## General Cold-Start Operating Context for HSM Projects
 
-**Version:** 0.20  
+**Version:** 0.21  
 **Status:** Working operational context  
 **Audience:** A fresh upstream LLM acting as Layer 1 / COULD  
 **Scope:** General — for any project using the Human Sandwich Model
@@ -411,6 +411,54 @@ This applies to derived orientation artifacts only.
 Authorization records, work orders, historical evidence, failed attempts, and frozen snapshots whose historical state is part of their meaning are **not** caches, and this rule does not reach them. Where they are evidence — historical evidence, failed attempts, frozen snapshots — their preservation is VLD Rule 3's subject (`The_Sandwich_Alignment_Skewer.md`, "Rule 3 — Preserve what needs to remain capable of disagreeing"), not this one's; work orders return through the authority boundary (next paragraph). Do not refresh them, and do not regenerate them to look current.
 
 A work order whose premises no longer match live state returns through the authority boundary. It is not a cache to refresh.
+
+## Derived transport copies — experimental
+
+`EXPERIMENTAL` — Sometimes a context pack has to be carried into another session or tool where
+its exact wording gets in the way: an interoperability or legibility limit, or legitimate
+assurance vocabulary that is misread out of context. A project may then make a **derived
+transport copy**: a reworded copy of the pack, made only to carry it. It is a derived orientation
+artifact, and everything above applies to it. It adds these conditions:
+
+- **The source stays the source.** The authoritative project files, and the pack copied from
+  them, stay unchanged. A transport copy never becomes the source of record because it is easier
+  to carry.
+- **It says what it is.** Mark the copy prominently as a derived transport copy, not project
+  authority.
+- **Source identity and copy identity are separate.** Record the authoritative source — original
+  paths, and the source revision or hash where mechanically available — and, separately, the
+  copy's own identity. A reworded copy is not a hash-comparable substitute for source records,
+  and is not expected to match hashes recorded for its source.
+  The copy's hash identifies the copy only. It is not evidence that the copy is the original.
+  Verify authoritative state against the source, never against the copy.
+- **HUMAN authority wording is carried verbatim or not at all.** Authorization, intent and
+  acceptance records, and other HUMAN wording that is authority-bearing, are never paraphrased
+  or neutralised. Keep or omit such a statement whole, together with the conditions, scope and
+  exceptions that qualify it. Never separate a grant from its limits.
+- **Machine-significant content is not rewritten.** Code, identifiers, status and verdict tokens,
+  hashes, paths and structured data stay exact.
+- **Truthfulness outranks transport.** A wording change is valid only where it keeps the
+  operational meaning, on the same terms as §15, "Stating target, scope and authority". The test
+  is that a reader of the copy understands the target, scope, authority and method exactly as a
+  reader of the source would. Neutral wording is not preferred over accurate wording. A
+  transformation is invalid if it weakens or changes methodological meaning, including
+  falsification intent, review strength, authority, scope, target or stop conditions. Where no
+  other wording keeps the meaning, keep the original. Old and new vocabulary may then coexist in
+  one copy.
+- **It is for truthful transport legibility, not for evading a safety filter.** The rules in §15,
+  "Stating target, scope and authority", apply in full. A copy never disguises what the work is,
+  its target or its scope.
+- **It must still be fit for its purpose.** Where the copy no longer carries enough meaning for
+  its orientation purpose, use the source instead.
+
+How a project builds a transport copy — its tool, rules and review — stays project-local.
+Madpakken defines no substitution vocabulary and supplies no transport tool. Where a project
+builds one, a record of every change and a check that protected content has not drifted make
+the copy reviewable.
+
+This rests on one project's field use: one pack, one implementation, and known cases where
+rewording weakened meaning. Whether any one construction method generalises safely across
+projects is not established.
 
 ---
 
