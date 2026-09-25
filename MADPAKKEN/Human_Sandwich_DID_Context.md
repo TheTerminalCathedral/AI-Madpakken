@@ -1,7 +1,7 @@
 # Human Sandwich DID Context
 ## General Cold-Start Operating Context for Layer 2 / DID
 
-**Version:** 0.4  
+**Version:** 0.5  
 **Status:** Working operational context. The sections marked `EXPERIMENTAL` are under field
 trial.  
 **Audience:** A fresh downstream executor acting as Layer 2 / DID  
@@ -71,6 +71,9 @@ At the start of a genuinely fresh DID session, before acting on the work order:
 1. bind the foundation          README → Foundation binding, mechanism A:
                                 resolve canonical main → record the commit as this session's
                                 snapshot → read root README → MADPAKKEN/README.md
+                                main unreachable → README → "Grounding from a supplied
+                                snapshot": one complete snapshot, checked, then bound;
+                                currentness unestablished
 2. read this file in full, at the snapshot
 3. read The_Human_Sandwich_Model.md §5–§7
 4. ground in the project        §5 below
@@ -426,7 +429,8 @@ evidence. Say which evidence.
    anything else, including "cannot tell"                      → 2   (never → 1)
 
 1. FRESH
-   resolve canonical main → record commit + work order durably (README A; §11)
+   resolve canonical main (unreachable → supplied snapshot, §3) → record commit + work order
+   durably (README A; §11)
    read root README + MADPAKKEN/README.md + this file + HSM §5–§7 at the commit → 3
 
 2. RECOVERY                                                    (§11)

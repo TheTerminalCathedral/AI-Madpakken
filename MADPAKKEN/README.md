@@ -67,6 +67,9 @@ Canonical AI Madpakken: TheTerminalCathedral/AI-Madpakken, branch main.
 Before changing project state: resolve main once, record the commit as this session's
 foundation snapshot, and at that commit read MADPAKKEN/README.md and
 MADPAKKEN/Human_Sandwich_DID_Context.md.
+If main cannot be resolved or read here, do not ask HUMAN for individual files. Ask for one
+complete snapshot, the repository's ZIP (GitHub: Code → Download ZIP), and bind to it only as
+its MADPAKKEN/README.md → "Foundation binding" directs. Never call it current main.
 Madpakken governs your role, operating rules, methods, recovery and authority semantics. The
 authorized work order below governs the concrete task and the authority granted for it, within
 those rules.
