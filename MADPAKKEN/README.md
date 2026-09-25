@@ -363,7 +363,10 @@ this file for foundation binding, the doctrine or method documents for everythin
 in two role contexts.
 
 The doctrine documents (`The_Human_Sandwich_Model.md`, `The_Sandwich_Alignment_Skewer.md`)
-and `Critical_Mass_v0.1.md` are published/accepted methodology held in governed custody. Do
+and `Critical_Mass_v0.1.md` are published/accepted methodology held in governed custody.
+"Published/accepted" is their status within this package and its custody. It is not a claim that
+they are externally established named methodologies; each document states its own evidence
+maturity (Critical Mass, for example, describes itself as a practice-derived protocol). Do
 not rewrite them casually. Replace what one of them says only when the publication itself is
 substantively superseded, and keep exactly one current copy of each under its canonical
 filename.
@@ -379,6 +382,13 @@ duplicates such as `..._v4`, `Critical_Mass_v0.2.md`, or `...(4)`.
 filenames without a version suffix, so future revisions replace them in place rather than
 forcing every project or reference to change filenames. Each file's own internal `Version:`
 metadata tracks its revision.
+
+Some package filenames carry a version suffix, such as `_v0.1`. That suffix is part of the
+file's stable path, kept so that references do not break, and is not renamed when the document
+is revised. It is not the document's version: the internal `Version:` field is the authoritative
+version signal wherever a document has one. Package status (membership, custody) is separate
+from a document's evidence maturity; an `EXPERIMENTAL` label changes only on the evidence that
+document requires.
 
 `Model_Routing_and_Effort_Policy.md` follows the same convention: a stable canonical filename
 without a version suffix, internal `Version:`/`Status:` metadata, and no current model names,

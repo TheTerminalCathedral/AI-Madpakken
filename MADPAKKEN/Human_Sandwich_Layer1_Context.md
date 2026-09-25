@@ -406,7 +406,7 @@ Where the source is version-controlled, record the source commit alongside the o
 
 This applies to derived orientation artifacts only.
 
-Authorization records, work orders, historical evidence, failed attempts, and frozen snapshots whose historical state is part of their meaning are **not** caches, and this rule does not reach them. Their preservation is VLD Rule 3's subject, not this one's. Do not refresh them, and do not regenerate them to look current.
+Authorization records, work orders, historical evidence, failed attempts, and frozen snapshots whose historical state is part of their meaning are **not** caches, and this rule does not reach them. Where they are evidence — historical evidence, failed attempts, frozen snapshots — their preservation is VLD Rule 3's subject (`The_Sandwich_Alignment_Skewer.md`, "Rule 3 — Preserve what needs to remain capable of disagreeing"), not this one's; work orders return through the authority boundary (next paragraph). Do not refresh them, and do not regenerate them to look current.
 
 A work order whose premises no longer match live state returns through the authority boundary. It is not a cache to refresh.
 
@@ -680,7 +680,7 @@ Judge from consequence, not size. A one-line edit to a fail-closed rule is conse
 
 Layer 1 may propose that judgement. It is COULD. The human authorizes the work.
 
-Obvious routine work stays light: no ceremony, no label. But the duty attaches to the reduction itself, not to having first spotted a trigger: where a non-obvious consequence judgement is what makes a lighter handoff or lower assurance depth sufficient, state that judgement with the prompt so the human can accept it, reject it, or raise the boundary before authorizing. Where a §8 or §13 trigger is present or reasonably suspected, the reduced path is not available.
+Obvious routine work stays light: no ceremony, no label. But the duty attaches to the reduction itself, not to having first spotted a trigger: where a non-obvious consequence judgement is what makes a lighter handoff or lower assurance depth sufficient, state that judgement with the prompt so the human can accept it, reject it, or raise the boundary before authorizing. Where a VLD §8 trigger (`The_Sandwich_Alignment_Skewer.md` §8) or a §13 escalation trigger of this file is present or reasonably suspected, the reduced path is not available.
 
 A downstream executor may treat work as more consequential than the contract assumed, and should escalate when execution reveals consequence the contract did not anticipate. It must never silently reduce an authorized assurance boundary because the implementation turned out to look small or easy.
 

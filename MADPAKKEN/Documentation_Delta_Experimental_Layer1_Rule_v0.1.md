@@ -5,7 +5,7 @@
 **Status:** EXPERIMENTAL FIELD RULE — active-use candidate; not stable Madpakken doctrine  
 **Positioning:** Small Layer 1 point-of-application rule for durable project knowledge  
 **Origin:** Dynamic Documentation research → cross-project field interviews → Critical Mass reduction  
-**Intended use:** May be supplied in the active Madpakken cold-start package during a bounded field experiment  
+**Intended use:** Supplied in the Madpakken cold-start package as an active member under bounded field trial  
 **Maturity:** Practice-supported research candidate. Use is allowed for experimentation; promotion requires field evidence.
 
 ---
@@ -580,7 +580,7 @@ yes / no
 WHAT CHANGED?
 <one short statement>
 
-DID DAN OVERRIDE OWNER / LOCATION / DELTA?
+DID THE HUMAN OVERRIDE OWNER / LOCATION / DELTA?
 yes / no
 
 DID IT PREVENT:
@@ -784,4 +784,4 @@ HUMAN SHOULD remains final on consequential semantic documentation decisions.
 
 ---
 
-**End of Documentation Delta — Experimental Layer 1 Rule v0.1**
+**End of Documentation Delta — Experimental Layer 1 Rule**

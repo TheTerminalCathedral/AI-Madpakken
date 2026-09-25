@@ -14,8 +14,8 @@ No established model-tier routing law yet, and no controlled capability comparis
 **Origin:** Live downstream project field work, followed by a mechanism-first Critical Mass
 investigation.
 **Intended use:** Authorized for real Madpakken-assisted work. Every use remains experimental
-until field review (§13). This document is independently removable if field evidence does not
-support it — see §13 and §17.
+until field review under §11 (Field review / sunset rule). This document is independently
+removable if field evidence does not support it — see §11 and §15 (Update / removal policy).
 
 ---
 
@@ -38,8 +38,8 @@ Raw model capability does not increase. What changes, when the hypothesis holds,
 "complex intermediate-representation repair" can become a materially smaller judgment problem
 once meaning is fixed, files are bounded, a failing witness exists, regression is discriminative,
 predecessor state is protected, stop conditions are explicit, and escalation is available. The
-label on the original task is not evidence about the residual task after transformation (see §12
-for the anti-rule this protects).
+label on the original task is not evidence about the residual task after transformation;
+§9 (Important routing anti-rule) is the anti-rule this protects.
 
 ### 1.2 A compact mechanism model (experimental, not a law)
 
@@ -71,8 +71,9 @@ SHARED WRONG ORACLE
 CONFIDENTLY VERIFIED FAILURE
 ```
 
-Both models are true at once. Section 6 and §10.5 exist to keep the second one from being
-quietly dropped whenever the first one looks encouraging.
+Both models are true at once. Section 6 and §8 gate item 5 (Common-mode false-green risk)
+exist to keep the second one from being quietly dropped whenever the first one looks
+encouraging.
 
 ---
 
@@ -457,7 +458,8 @@ plausibly moves out of the producer from what remains model or human competence.
 - human semantic escalation.
 
 This is not complete substitution. It is a claim that *some* of the burden can move outside the
-producer under the right conditions (§7, §10).
+producer under the right conditions — §7 (Current best abstraction) and §8 (Experimental routing
+gate).
 
 ---
 
@@ -558,8 +560,9 @@ See §2. One operational episode; local; not generalized.
 ### 6.4 Inferences
 
 - Task transformation, not model choice alone, is likely the operative variable.
-- The residual-judgment view of a task (§10) is likely a better routing signal than the
-  original task-complexity label (§12).
+- The residual-judgment view of a task — §7 (Current best abstraction) and §8 (Experimental
+  routing gate) — is likely a better routing signal than the original task-complexity label,
+  which §9 (Important routing anti-rule) addresses.
 
 ### 6.5 Open questions
 
@@ -583,7 +586,7 @@ See §2. One operational episode; local; not generalized.
 
 ### 6.7 Proposed testable hypotheses
 
-See §14 (the future controlled experiment) and §15 (falsifiers).
+See §12 (Proposed controlled experiment) and §13 (Falsifiers).
 
 **None of the above is direct proof of VLD.** It is bounded support for the plausibility of
 several component mechanisms VLD composes. Do not cite this section as "external research
@@ -781,9 +784,9 @@ merely be nominally present.
 ## 10. Experimental field use
 
 This experiment is authorized for real Madpakken-assisted work. Layer 1 may use the candidate
-mechanism (§7, §8) when selecting model/effort for bounded DID work. A synthetic experiment
-(§14) is not required before any use — but every use remains experimental, subject to field
-review (§13).
+mechanism (§7, §8) when selecting model/effort for bounded DID work. A synthetic experiment —
+§12 (Proposed controlled experiment) — is not required before any use, but every use remains
+experimental, subject to field review (§11).
 
 The expected useful observation from ordinary field use is **not**:
 
@@ -802,7 +805,7 @@ It is whether, across real tasks:
 
 No new permanent per-task report is required. Existing project history, handoffs, evidence,
 commit history, task records, and later field review may be used to reconstruct these
-observations when review occurs (§13).
+observations when review occurs (§11).
 
 ---
 
@@ -855,7 +858,9 @@ The portability/substitution distinction (§7.1) applies throughout: an episode 
 that work continued under a different available agent is evidence about portability, and
 answers the routing question only indirectly.
 
-Two further questions follow from §7.3:
+Two further questions follow from §7.3 (Residual judgment is not the only residual), and three
+more from the later field episodes and §7.4 (The emerging difference may be integration
+friction, not authority):
 
 - **Residual authority surface.** After task transformation, what consequential actions could
   the producer — or ordinary automation running alongside it — still execute without a separate
@@ -980,7 +985,7 @@ Update or supersede this document only through an explicit, human-authorised rev
 same convention as Nuke Testing and Documentation Delta.
 
 This document, and the small references to it in `Human_Sandwich_Layer1_Context.md`,
-`Model_Routing_and_Effort_Policy.md`, `The_Sandwich_Alignment_Skewer.md`, and `README.md`, are
-designed to be removable together without requiring changes to the Human Sandwich Model, VLD
-itself, Critical Mass, Nuke Testing, or `Model_Routing_Current_Mappings.md`, if field review
-(§11) disposes of this experiment as `DROP`.
+`Human_Sandwich_DID_Context.md`, `Model_Routing_and_Effort_Policy.md`,
+`The_Sandwich_Alignment_Skewer.md`, and `README.md`, are designed to be removable together
+without requiring changes to the Human Sandwich Model, VLD itself, Critical Mass, Nuke Testing, or
+`Model_Routing_Current_Mappings.md`, if field review (§11) disposes of this experiment as `DROP`.

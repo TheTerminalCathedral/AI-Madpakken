@@ -4,6 +4,7 @@
 **Version:** 0.2  
 **Date:** 2026-09-14  
 **Status:** Practice-derived protocol; research-grounded synthesis; not an established named methodology  
+**Package status:** Accepted AI Madpakken methodology, held in governed custody. This is its status within the package, not a claim that Critical Mass is an externally established methodology (see Part IX)  
 **Primary audience:** LLMs and humans using LLMs for engineering, software, research, assurance, bug investigation, method design, and feature development
 
 ---
@@ -1463,7 +1464,7 @@ Reference:
 
 ## 59. Canonical operational instruction
 
-> **Run a Critical Mass on the problem before proposing a solution. Freeze the local observation, derive the underlying mechanism, search across materially different mature fields, identify independent evidence families and candidate method families, extract why each method works and under which assumptions, test structural transfer to the target, counter-search for failure and alternatives, label inherited versus adapted versus locally invented content, and stop only when the Critical Mass criteria are satisfied.**
+> **When a trigger condition applies (§15), run a Critical Mass on the problem before proposing a solution. Freeze the local observation, derive the underlying mechanism, search across materially different mature fields, identify independent evidence families and candidate method families, extract why each method works and under which assumptions, test structural transfer to the target, counter-search for failure and alternatives, label inherited versus adapted versus locally invented content, and stop only when the Critical Mass criteria are satisfied. Do not run full Critical Mass for routine mechanical work with a well-established local answer (§15).**
 
 ---
 

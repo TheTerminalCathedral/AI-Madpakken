@@ -37,7 +37,7 @@ Nuke Testing treats these as **assurance failures**, not merely ordinary test fa
 
 Its working principle is:
 
-> **Lock the meaning. Derive falsifiable claims. Attack the implementation and the assurance model through heterogeneous mechanisms. Repair causes, not examples. Verify the verification. Preserve failures. Re-anchor after repair. Stop when further attacks no longer add materially independent evidence against the remaining risk.**
+> **Lock the meaning. Derive falsifiable claims. Attack the implementation and the assurance model through heterogeneous mechanisms. Repair causes, not examples. Verify the verification. Preserve failures. Re-anchor after repair. Stop when further attacks are no longer expected to add materially independent evidence against the remaining risk.**
 
 Nuke Testing does not promise proof of correctness.
 
@@ -1982,6 +1982,13 @@ It does not make the human decision.
 
 ## 32. LLM Execution Contract
 
+This section, with §33 (Forbidden LLM Behavior), is Nuke Testing's normative compact operational
+contract. The body of this document owns the operational semantics. The compact summaries in
+§37 (Minimal Viable Nuke) and §42 (One-Page Model) are derived from this contract and the body:
+they may reduce attack breadth and depth proportionally, but they add no obligations and never
+bypass adjudication, stop states, authority gates, evidence requirements or the permanent rules
+(§43). Where a summary appears to differ, this contract and the body govern.
+
 When an LLM is instructed to run or prepare Nuke Testing, it should:
 
 1. identify the exact bounded assurance question;
@@ -2196,13 +2203,16 @@ For smaller but consequential tasks, a minimal experimental Nuke can be:
 5. RUN ONE MECHANISM-DIFFERENT CHALLENGE
 6. TEST ONE PRESERVATION AND ONE INVALIDATION CONTROL
 7. ASK WHETHER THE VERIFIER COULD MISS THE FAILURE
-8. IF FAILURE: REPAIR THE CAUSE
-9. PROVE OLD FAILS / NEW PASSES
-10. STATE RESIDUAL RISK
-11. STOP OR ESCALATE PROPORTIONALLY
+8. IF FAILURE: ADJUDICATE AGAINST AUTHORITY BEFORE ANY REPAIR
+   IF MISSING MEANING: HUMAN_RULING_REQUIRED
+9. IF DEFECT: REPAIR THE CAUSE
+10. PROVE OLD FAILS / NEW PASSES
+11. STATE RESIDUAL RISK
+12. STOP OR ESCALATE PROPORTIONALLY — ACCEPTANCE REMAINS THE HUMAN'S
 ```
 
-This is preferable to applying the entire methodology mechanically to every task.
+This is preferable to applying the entire methodology mechanically to every task. It is a
+derived summary of §32 (LLM Execution Contract), not a substitute for it.
 
 ---
 
@@ -2449,6 +2459,9 @@ Before stable doctrine, investigate at least:
 
 ## 42. One-Page Model
 
+A derived overview of the method; §32 (LLM Execution Contract) and the body govern its
+obligations.
+
 ```text
 BOUND THE CONSEQUENCE
         ↓
@@ -2529,7 +2542,7 @@ HUMAN ACCEPTANCE
 
 > **Stop metrics report evidence; they do not acquire semantic authority.**
 
-> **Stop when additional attacks no longer add materially independent evidence against the remaining risk.**
+> **Stop when additional attacks are no longer expected to add materially independent evidence against the remaining risk.**
 
 ---
 
@@ -2585,4 +2598,4 @@ Its ambition is:
 
 ---
 
-**End of Nuke Testing — Experimental v0.1**
+**End of Nuke Testing — Experimental**

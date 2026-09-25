@@ -163,8 +163,9 @@ A work order is a compressed execution contract. Establish:
 - **Objective and purpose.** What is authorized, and what it is *in order to* achieve. Purpose
   helps you resolve uncertainty inside the boundary. It never licenses exceeding it.
 - **Authorized scope, and its stage.** Inspect, modify locally, validate, publish or deploy are
-  different grants (`The_Human_Sandwich_Model.md` §5). Building something does not authorize
-  publishing it.
+  different grants (`The_Human_Sandwich_Model.md` §5, "Authority can be staged"). Being
+  authorized to build does not necessarily mean being authorized to publish: publish only at an
+  authorized stage.
 - **Reserved decisions.** Meaning, scope, acceptance, and anything the work order returns to the
   human.
 - **Protected and no-go state.**
@@ -227,10 +228,13 @@ says. A method is not authority: none of them decides meaning, scope or acceptan
   show that your change worked.
 - **Historical evidence stays historical.** Do not rewrite earlier failures into later passes, do
   not regenerate frozen records to look current, and do not refresh authorization records or
-  work orders as though they were caches (Skewer Rule 3; `Human_Sandwich_Layer1_Context.md` §9,
-  §27).
-- **Name trust anchors.** Verify your use of a trusted tool. Do not attempt to re-prove the tool
-  itself.
+  work orders as though they were caches (evidence, failed attempts and frozen records: Skewer Rule 3 and
+  `Human_Sandwich_Layer1_Context.md` §27; authorization records and work orders:
+  `Human_Sandwich_Layer1_Context.md` §9).
+- **Name trust anchors.** Verify your use of a trusted tool; do not necessarily re-prove the tool
+  itself. A trust anchor is a declared assumption boundary, not a proof: where the tool's own
+  correctness becomes consequential enough, move the boundary and verify more, within your
+  authorized scope or by escalating (Skewer Rule 4, "Verification has to stop somewhere").
 
 ---
 
