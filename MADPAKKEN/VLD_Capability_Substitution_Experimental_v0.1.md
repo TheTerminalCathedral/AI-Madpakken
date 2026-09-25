@@ -1,18 +1,21 @@
 # VLD Capability Substitution — Experimental Field Hypothesis
 
-**Version:** 0.6
+**Version:** 0.7
 **Date:** 2026-09-14
 **Status:** EXPERIMENTAL FIELD HYPOTHESIS — not established doctrine, not a validated model-tier routing law
 **Positioning:** Experimental companion to Verification-Locked Development
 (`The_Sandwich_Alignment_Skewer.md`) and to `Model_Routing_and_Effort_Policy.md`. Not a new
-named methodology alongside the Human Sandwich Model, VLD, Critical Mass, or Nuke Testing — it
+named methodology alongside the Human Sandwich Model, VLD, Information Buffet, or Chef's Test — it
 owns one bounded experimental question about those methods' downstream effect on model routing.
 **Maturity:** Several local operational observations from live governed project work — repeated
 within-project field evidence, not independent replications and not controlled comparison — plus
 relevant cross-domain and LLM-verification research support for several component mechanisms.
 No established model-tier routing law yet, and no controlled capability comparison.
-**Origin:** Live downstream project field work, followed by a mechanism-first Critical Mass
+**Origin:** Live downstream project field work, followed by a mechanism-first Information Buffet
 investigation.
+**Names:** Information Buffet was formerly named Critical Mass, and Chef's Test was formerly
+named Nuke Testing. The field evidence below keeps the names in use at the time ("Nuke",
+"re-Nuke").
 **Intended use:** Authorized for real Madpakken-assisted work. Every use remains experimental
 until field review under §11 (Field review / sunset rule). This document is independently
 removable if field evidence does not support it — see §11 and §15 (Update / removal policy).
@@ -184,7 +187,7 @@ A/B comparison, no randomized task assignment, no validated capability ordering,
 cost or time comparison exist for any of it.
 
 Under those conditions the execution agent handled live-state reconstruction, bounded
-implementation, mechanism repair, hostile assurance work, authority-registry work, package
+implementation, mechanism repair, adversarial assurance work, authority-registry work, package
 sealing and custody, environment-binding repair, provider-transport investigation, deterministic
 multipart transport implementation, and broad regression.
 
@@ -194,7 +197,7 @@ stronger than another, or that downward routing was demonstrated. None of that w
 What is observable is that the residual task was repeatedly transformed before execution.
 Meaning, state and checking were externalized through explicit human rulings, bounded file and
 state scope, protected historical evidence, fail-before-change reproduction, discriminative
-tests, hostile checks, stop conditions, human escalation, and immutable custody.
+tests, adversarial checks, stop conditions, human escalation, and immutable custody.
 
 The most informative part is where execution stopped. The agent correctly declined to proceed
 where residual semantic judgment remained — selecting consequential authority members, deciding
@@ -380,7 +383,7 @@ candidate, or mutate rooted state that did not exist.
 > execution model stopped rather than inventing the missing authority.
 
 That is externalized meaning and correct escalation working as §3 describes, and a further
-datapoint for the governed-model insufficiency that Nuke Testing records separately — not a new
+datapoint for the governed-model insufficiency that Chef's Test records separately — not a new
 representability rule here.
 
 After the human authorized a change to the representation, the repair added a separate canonical
@@ -508,7 +511,7 @@ The expected benefit should weaken as the task becomes:
 - dependent on implicit domain judgment;
 - vulnerable to producer/checker common-mode misunderstanding.
 
-This document uses existing VLD and Nuke Testing terminology for checkability, oracle adequacy,
+This document uses existing VLD and Chef's Test terminology for checkability, oracle adequacy,
 and common-mode risk rather than inventing a parallel coverage taxonomy. Read those documents
 directly for the underlying concepts.
 
@@ -745,7 +748,7 @@ Downward routing MAY be considered when approximately all of the following hold:
    behavior.
 5. **Common-mode false-green risk is controlled.** Producer and checker must not obviously
    share the entire failure model. Where that risk matters, independent challenge may still
-   require stronger or differently grounded reasoning (VLD Rule 4; Nuke Testing).
+   require stronger or differently grounded reasoning (VLD Rule 4; Chef's Test).
 6. **Escalation is available.** Unresolved semantics can return to Layer 1 or HUMAN SHOULD
    instead of forcing the producer to guess.
 7. **The change is reversible or custody-protected.** Producer mistakes must not create silent
@@ -957,14 +960,14 @@ suppressed or quietly reframed.
 
 ## 14. Position in the Madpakken stack
 
-This document does not restate Human Sandwich, VLD, Critical Mass, or Nuke Testing content. It
+This document does not restate Human Sandwich, VLD, Information Buffet, or Chef's Test content. It
 sits beside them as a narrow experimental question about one downstream consequence of using
 them together:
 
 > **HSM:** who may decide?
 > **VLD:** what meaning is locked, and does evidence support the claim?
-> **Critical Mass:** what method should we consider?
-> **Nuke Testing:** why should we trust that implementation and verification preserve the
+> **Information Buffet:** what method should we consider?
+> **Chef's Test:** why should we trust that implementation and verification preserve the
 > intended meaning?
 > **This document:** given VLD-style transformation, how much does the residual judgment burden
 > on the producer actually shrink, and can that support routing a lower-capability or
@@ -982,10 +985,10 @@ mappings — this document introduces neither.
 Keep exactly one active copy under this canonical filename while the experiment runs.
 
 Update or supersede this document only through an explicit, human-authorised revision — the
-same convention as Nuke Testing and Documentation Delta.
+same convention as Chef's Test and Documentation Delta.
 
 This document, and the small references to it in `Human_Sandwich_Layer1_Context.md`,
 `Human_Sandwich_DID_Context.md`, `Model_Routing_and_Effort_Policy.md`,
 `The_Sandwich_Alignment_Skewer.md`, and `README.md`, are designed to be removable together
-without requiring changes to the Human Sandwich Model, VLD itself, Critical Mass, Nuke Testing, or
+without requiring changes to the Human Sandwich Model, VLD itself, Information Buffet, Chef's Test, or
 `Model_Routing_Current_Mappings.md`, if field review (§11) disposes of this experiment as `DROP`.

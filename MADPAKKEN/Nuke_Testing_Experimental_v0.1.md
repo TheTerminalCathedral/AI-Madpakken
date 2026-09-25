@@ -1,7 +1,9 @@
-# Nuke Testing — Contract-Driven Adversarial Assurance
+# Chef's Test
+## Contract-Driven Assurance and Falsification Testing
 
-**Version:** 0.8  
+**Version:** 0.9  
 **Date:** 2026-09-25  
+**Former name:** Nuke Testing. The file keeps its stable path `Nuke_Testing_Experimental_v0.1.md`.  
 **Status:** EXPERIMENTAL — practice-derived working method; not an established named methodology  
 **Positioning:** Experimental method in the Human Sandwich / AI Madpakken family  
 **Primary audience:** Humans and LLMs working on consequential software, engineering, research, automation and AI-assisted systems  
@@ -11,11 +13,11 @@
 
 ## 1. Purpose
 
-**Nuke Testing** is an experimental assurance method for work that is too consequential to trust merely because ordinary implementation checks are green.
+**Chef's Test** is an experimental assurance method for work that is too consequential to trust merely because ordinary implementation checks are green.
 
-**Scope.** Nuke Testing applies to the authorized project's own implementation, models, evidence
-and test estate, including the dependencies and tools as that estate uses them. Its attacks,
-mutants and injected faults are challenges to claims about that system, run under HUMAN
+**Scope.** Chef's Test applies to the authorized project's own implementation, models, evidence
+and test estate, including the dependencies and tools as that estate uses them. Its challenges,
+mutants and injected faults test claims about that system, run under HUMAN
 authorization for the project. Acting against systems the project does not own or control is
 outside the method unless separately and explicitly authorized.
 
@@ -39,13 +41,13 @@ Examples include:
 - a coverage model reaching 100% while an important property was never represented;
 - several AI agents independently sounding confident while sharing the same prior conclusion.
 
-Nuke Testing treats these as **assurance failures**, not merely ordinary test failures.
+Chef's Test treats these as **assurance failures**, not merely ordinary test failures.
 
 Its working principle is:
 
-> **Lock the meaning. Derive falsifiable claims. Attack the implementation and the assurance model through heterogeneous mechanisms. Repair causes, not examples. Verify the verification. Preserve failures. Re-anchor after repair. Stop when further attacks are no longer expected to add materially independent evidence against the remaining risk.**
+> **Lock the meaning. Derive falsifiable claims. Challenge the implementation and the assurance model through heterogeneous mechanisms. Repair causes, not examples. Verify the verification. Preserve failures. Re-anchor after repair. Stop when further challenges are no longer expected to add materially independent evidence against the remaining risk.**
 
-Nuke Testing does not promise proof of correctness.
+Chef's Test does not promise proof of correctness.
 
 It aims for:
 
@@ -55,7 +57,7 @@ It aims for:
 
 ## 2. Experimental Status
 
-Nuke Testing is currently **EXPERIMENTAL**.
+Chef's Test is currently **EXPERIMENTAL**.
 
 It is practice-derived from consequential AI-assisted engineering work and has evolved through repeated real failures, repairs, verifier failures, independent challenge and assurance-closure attempts.
 
@@ -70,7 +72,7 @@ It must not currently be described as:
 
 A correct current description is:
 
-> **Nuke Testing is a practice-derived experimental assurance method that composes established verification, validation, adversarial testing, falsification, mutation, stateful testing, independent review and assurance ideas into an LLM-compatible workflow for challenging high-consequence semantic claims.**
+> **Chef's Test is a practice-derived experimental assurance method that composes established verification, validation, adversarial testing, falsification, mutation, stateful testing, independent review and assurance ideas into an LLM-compatible workflow for challenging high-consequence semantic claims.**
 
 Its individual techniques have substantial precedent.
 
@@ -82,7 +84,7 @@ The method should remain versioned and explicitly experimental until broader use
 
 ## 3. Position in the Madpakken Stack
 
-Nuke Testing is intended to sit beside, not replace, the other methods.
+Chef's Test is intended to sit beside, not replace, the other methods.
 
 ### Human Sandwich Model — Authority
 
@@ -109,17 +111,17 @@ A useful shorthand is:
 
 Implementation freedom does not grant semantic authority.
 
-### Critical Mass — Method Discovery
+### Information Buffet — Method Discovery
 
-Critical Mass asks:
+Information Buffet asks:
 
 > **What mechanism are we actually dealing with, where else has it appeared, and which field-tested responses can transfer?**
 
 It is used to discover and challenge candidate methods before inventing locally.
 
-### Nuke Testing — Assurance
+### Chef's Test — Assurance
 
-Nuke Testing asks:
+Chef's Test asks:
 
 > **What evidence justifies trusting that the locked meaning survives implementation, interaction, persistence, repair, failure and verification?**
 
@@ -127,14 +129,14 @@ Together:
 
 > **HSM:** Who may decide?  
 > **VLD:** What meaning is locked?  
-> **Critical Mass:** What method should we consider?  
-> **Nuke Testing:** Why should we trust that the implementation and verification actually preserve the intended meaning?
+> **Information Buffet:** What method should we consider?  
+> **Chef's Test:** Why should we trust that the implementation and verification actually preserve the intended meaning?
 
 A compact sequence is:
 
 > **Authority → Meaning → Method → Assurance**
 
-Nuke Testing must never acquire authority to invent missing meaning.
+Chef's Test must never acquire authority to invent missing meaning.
 
 If testing discovers that the governing semantics are genuinely underspecified:
 
@@ -144,9 +146,9 @@ If testing discovers that the governing semantics are genuinely underspecified:
 
 ---
 
-## 4. When to Use Nuke Testing
+## 4. When to Use Chef's Test
 
-Nuke Testing is not required for every task.
+Chef's Test is not required for every task.
 
 It is most appropriate when one or more of these are true:
 
@@ -180,7 +182,7 @@ Examples may include:
 
 ## 5. When Not to Use It
 
-Do not invoke a full Nuke campaign merely because testing is possible.
+Do not invoke a full Chef's Test campaign merely because testing is possible.
 
 Ordinary validation may be sufficient for:
 
@@ -191,21 +193,23 @@ Ordinary validation may be sufficient for:
 - changes whose failure is obvious and cheap to correct;
 - work where additional assurance has no plausible decision value.
 
-Nuke Testing must be proportional.
+Chef's Test must be proportional.
 
 A methodology that requires maximum ceremony for every change becomes a process defect.
 
 The correct result may be:
 
-> **NUKE_NOT_JUSTIFIED_FOR_THIS_SCOPE**
+> **CHEFS_TEST_NOT_JUSTIFIED_FOR_THIS_SCOPE**
 
-A Nuke campaign should exist because of a meaningful assurance question, not because the method is available.
+(Recorded as `NUKE_NOT_JUSTIFIED_FOR_THIS_SCOPE` before version 0.9.)
+
+A Chef's Test campaign should exist because of a meaningful assurance question, not because the method is available.
 
 ---
 
 ## 6. Core Shift: Claims Before Tests
 
-Nuke Testing begins from **governed claims**.
+Chef's Test begins from **governed claims**.
 
 Not from:
 
@@ -259,7 +263,7 @@ The central question is:
 
 > **What observation would make us stop believing this claim?**
 
-If no falsifier can be stated, the claim is probably not ready for a Nuke campaign.
+If no falsifier can be stated, the claim is probably not ready for a Chef's Test campaign.
 
 ---
 
@@ -285,13 +289,13 @@ When a test expectation conflicts with accepted authority, possible outcomes inc
 
 Do not silently choose whichever interpretation produces green output.
 
-Nuke Testing requires **adjudication against authority before repair**.
+Chef's Test requires **adjudication against authority before repair**.
 
 ---
 
 ## 8. The Five-Level Coverage Distinction
 
-A central experimental Nuke distinction is:
+A central experimental Chef's Test distinction is:
 
 > **Representable ≠ Reachable ≠ Exercised ≠ Observed ≠ Verdict-influential**
 
@@ -337,19 +341,19 @@ or:
 
 For every high-risk assurance claim, challenge all five levels where relevant.
 
-### Gaps attach to claims, not to attacks
+### Gaps attach to claims, not to challenges
 
 A gap at any of the five levels is not an unexecuted test. It limits a specific assurance claim: the one whose relevant failure mode could not be represented, reached, exercised, observed or made verdict-influential.
 
-> **A representability gap attaches to the assurance claim it limits, not to the attack that could not be run.**
+> **A representability gap attaches to the assurance claim it limits, not to the challenge that could not be run.**
 
 Three consequences follow.
 
-Unrelated passing evidence does not compensate. A claim whose relevant failure mode the harness cannot represent is not supported by tests of other properties, by attack counts, or by coverage totals.
+Unrelated passing evidence does not compensate. A claim whose relevant failure mode the harness cannot represent is not supported by tests of other properties, by challenge counts, or by coverage totals.
 
-The count of affected attacks is not the count of distinct gap mechanisms. One unrepresentable state can block many predeclared attacks, so an attack-instance count overstates how many independent problems exist.
+The count of affected challenges is not the count of distinct gap mechanisms. One unrepresentable state can block many predeclared challenges, so a challenge-instance count overstates how many independent problems exist.
 
-Predeclared attacks the evidence surface cannot represent are not assurance. A large frozen attack model is a plan; only executed attacks are evidence.
+Predeclared challenges the evidence surface cannot represent are not assurance. A large frozen challenge model is a plan; only executed challenges are evidence.
 
 A live gap on a consequential claim therefore requires one of:
 
@@ -468,14 +472,14 @@ that reason, and must say so.
 
 This is not a licence to construct a claim into existence. Construction changes what is being
 claimed, and the new claim carries the same obligations as any other: it must be stated, its
-mechanism must be attacked with working controls (§17), its observation fidelity must be measured
+mechanism must be challenged with working controls (§17), its observation fidelity must be measured
 rather than assumed (§12), and it expires with the context it rests on (§23).
 
 ---
 
 ## 9. Three Layers Must Be Challenged
 
-Nuke Testing distinguishes at least three layers.
+Chef's Test distinguishes at least three layers.
 
 ### Layer A — Implementation correctness
 
@@ -577,7 +581,7 @@ justify unconstrained behavior.
 
 ## 10. Semantic Coverage, Not Test Count
 
-Nuke Testing does not treat raw test count as assurance depth.
+Chef's Test does not treat raw test count as assurance depth.
 
 Useful semantic dimensions may include:
 
@@ -766,7 +770,7 @@ is a different observation wearing the old label.
 
 ---
 
-## 13. Attack Proxies, Not Only Branches
+## 13. Challenge Proxies, Not Only Branches
 
 Serious failures often arise when an implementation uses a convenient proxy for a deeper semantic fact.
 
@@ -794,74 +798,74 @@ A mechanism repair is incomplete if only one visible occurrence of the proxy is 
 
 ---
 
-## 14. Attack Families
+## 14. Challenge Families
 
-A mature Nuke campaign may consider these attack families.
+A mature Chef's Test campaign may consider these challenge families.
 
 Not every campaign requires all of them.
 
-### 14.1 Authority attacks
+### 14.1 Authority challenges
 
 Can a lower-authority actor produce a human-only semantic effect?
 
-### 14.2 Identity attacks
+### 14.2 Identity challenges
 
 Can identity be transferred, reused, resurrected, merged or erased without authority?
 
-### 14.3 Preservation attacks
+### 14.3 Preservation challenges
 
 Can valid human or persistent state disappear under semantically unchanged evidence?
 
-### 14.4 Invalidation attacks
+### 14.4 Invalidation challenges
 
 Can stale meaning survive genuine governing change?
 
-### 14.5 Proxy-divergence attacks
+### 14.5 Proxy-divergence challenges
 
 Can implementation proxies diverge from the facts they are assumed to represent?
 
-### 14.6 Coverage-model attacks
+### 14.6 Coverage-model challenges
 
 Which important semantic properties are missing from the declared coverage model?
 
-### 14.7 Verifier attacks
+### 14.7 Verifier challenges
 
 Can an oracle, checker or validator label a real violation as legal?
 
-### 14.8 Common-mode attacks
+### 14.8 Common-mode challenges
 
 What single mistaken assumption could make implementation and validators agree?
 
-### 14.9 Metamorphic / stutter attacks
+### 14.9 Metamorphic / stutter challenges
 
 Do meaning-preserving transformations preserve the protected semantic projection?
 
-### 14.10 Stateful / history attacks
+### 14.10 Stateful / history challenges
 
 Can legal individual operations compose into an illegal history?
 
-### 14.11 Forbidden-composition attacks
+### 14.11 Forbidden-composition challenges
 
 Can individually permitted transitions combine into a forbidden semantic end state? (Called
 exploit-chain attacks before version 0.8.)
 
-### 14.12 Failure / chaos attacks
+### 14.12 Failure / chaos challenges
 
 Can interruption, recovery or partial failure leave the system confidently wrong?
 
-### 14.13 Mutation attacks
+### 14.13 Mutation challenges
 
 Would the assurance estate detect a deliberately introduced high-consequence defect?
 
-### 14.14 Custody / evidence attacks
+### 14.14 Custody / evidence challenges
 
 Can evidence become more authoritative merely through movement, replay, copying or persistence?
 
-### 14.15 Independent challenger attacks
+### 14.15 Independent-challenger counterexamples
 
 Can an independently derived semantic model produce a serious counterexample that the internal assurance model missed?
 
-### 14.16 Authority-laundering attacks
+### 14.16 Authority-laundering challenges
 
 Can technically valid evidence confer apparent authority on state that governing human authority never currently approved?
 
@@ -886,9 +890,9 @@ question through §14.1, §14.2 or §14.14, the mechanism is covered and the ter
 
 ---
 
-## 15. Nuclear Mutation Testing
+## 15. High-Consequence Mutation Testing
 
-Nuke Testing may use deliberately chosen **nuclear mutants**.
+Chef's Test may use deliberately chosen **high-consequence mutants**.
 
 These are not random syntax mutations.
 
@@ -896,7 +900,7 @@ They are small deliberate changes that violate a high-consequence semantic claim
 
 Examples:
 
-- bypass a human-authority gate;
+- circumvent a human-authority gate;
 - accept stale state;
 - omit one provenance contributor;
 - reuse a retired identity;
@@ -985,7 +989,7 @@ It should not simply call the production mechanism it is supposed to judge.
 
 ## 17. Verification of Verification
 
-Nuke Testing treats verification machinery as part of the assurance problem.
+Chef's Test treats verification machinery as part of the assurance problem.
 
 This can include:
 
@@ -1120,7 +1124,7 @@ A strong pattern is:
 3. derive critical expectations independently;
 4. freeze those expectations;
 5. inspect implementation;
-6. construct independent attacks/oracles;
+6. construct independent challenges/oracles;
 7. freeze findings;
 8. only then unblind against the internal assurance case.
 
@@ -1294,7 +1298,7 @@ DISCRIMINATE OLD VS NEW
     ↓
 RE-ANCHOR AFFECTED EVIDENCE
     ↓
-ATTACK SIBLING / ADJACENT PATHS
+CHALLENGE SIBLING / ADJACENT PATHS
 ```
 
 ### Discriminative regression
@@ -1432,7 +1436,7 @@ The corollary matters more than the statement:
 > visible difference between semantically distinct evidence fields.**
 
 That changes the evidence surface to satisfy a presentation expectation, which is a custody and
-evidence attack (§14.14) rather than a repair. If two evidence claims need to be
+evidence challenge (§14.14) rather than a repair. If two evidence claims need to be
 distinguishable, distinguish them by their claim and provenance, which is where the difference
 actually lives.
 
@@ -1526,7 +1530,7 @@ Compactly:
 
 A narrow repair may justify a narrow re-challenge.
 
-A mechanism with large semantic blast radius may require broader reopening.
+A mechanism with large semantic reach may require broader reopening.
 
 Do not automatically rerun the entire campaign.
 
@@ -1594,10 +1598,10 @@ Steps 1–5 above re-challenge the repaired path and its adjacent paths. A repai
 the moment it lands.
 
 > **Post-repair assurance should challenge both the affected original failure family and the
-> new load-bearing trust assumptions the repair introduced. Killing every original attack is
+> new load-bearing trust assumptions the repair introduced. Making every original challenge fail is
 > not closure if the repair created assumptions that have not themselves been challenged.**
 
-Field use produced exactly this: a repair killed its entire original hostile failure family,
+Field use produced exactly this: a repair eliminated its entire original failure family,
 and a fresh challenge against the repair's own new surfaces found further dangerous survivors —
 stale and superseded authority, artifact-versus-approval mismatch, removable predecessor
 lineage, and derived requirement state that certified its own completeness.
@@ -1607,7 +1611,7 @@ records, lineage anchors, provenance roots, caches and materialized views, regis
 state, new verification dependencies, and reservation or allocation mechanisms. Where the repair
 added one of these, ask what now trusts it and what happens when that trust is wrong.
 
-Replaying only the original attacks can therefore produce false closure: the old family is
+Replaying only the original challenges can therefore produce false closure: the old family is
 genuinely dead, and the evidence says nothing about the surface that replaced it. This is a
 reminder about what the existing re-challenge step should cover, not a new phase and not a
 required campaign after every repair — proportionality (§27) still governs.
@@ -1649,7 +1653,7 @@ automatically equivalent, and equivalence should not be assumed without evidence
 
 ## 25. Historical Failure Must Remain Historical
 
-Nuke Testing must preserve uncomfortable history.
+Chef's Test must preserve uncomfortable history.
 
 If a criterion failed:
 
@@ -1702,11 +1706,11 @@ by rewriting what the original criterion meant.
 
 ## 27. Stop Doctrine
 
-Nuke Testing is not infinite testing.
+Chef's Test is not infinite testing.
 
 The current experimental stopping rule is:
 
-> **Stop when additional attacks are no longer expected to add materially independent evidence against the remaining risk.**
+> **Stop when additional challenges are no longer expected to add materially independent evidence against the remaining risk.**
 
 This is deliberately not:
 
@@ -1766,11 +1770,11 @@ And:
 
 ## 29. "Done" Has Multiple Meanings
 
-Nuke Testing distinguishes:
+Chef's Test distinguishes:
 
 ### EXHAUSTED
 
-No currently justified new attack dimension remains within the defined scope.
+No currently justified new challenge dimension remains within the defined scope.
 
 ### ASSURED
 
@@ -1821,7 +1825,7 @@ Do not create universal numeric thresholds without evidence.
 
 ## 31. A Practical Experimental Pipeline
 
-The following is the current **experimental** Nuke workflow.
+The following is the current **experimental** Chef's Test workflow.
 
 It is not mandatory ceremony for every project.
 
@@ -1871,7 +1875,7 @@ Define:
 
 - semantic dimensions;
 - important bins/crosses;
-- attack families;
+- challenge families;
 - verifier expectations;
 - minimum evidence floor;
 - stopping criteria;
@@ -1904,7 +1908,7 @@ Choose proportionally from:
 - mutation;
 - governed real-world evidence where authorized.
 
-### Phase 6 — Attack seams and proxies
+### Phase 6 — Challenge seams and proxies
 
 Prioritize:
 
@@ -1945,7 +1949,7 @@ Reopen affected assurance only.
 
 ### Phase 10 — Verify the verification
 
-Attack:
+Challenge:
 
 - checkers;
 - oracles;
@@ -1975,13 +1979,13 @@ Ask:
 - what remains unknown?
 - what historical failures remain?
 - what residual risk remains?
-- would another materially different attack plausibly change the decision?
+- would another materially different challenge plausibly change the decision?
 
 ### Phase 14 — Human acceptance
 
 The human decides whether the remaining residual risk is acceptable for the intended next use.
 
-Nuke Testing provides evidence.
+Chef's Test provides evidence.
 
 It does not make the human decision.
 
@@ -1989,18 +1993,18 @@ It does not make the human decision.
 
 ## 32. LLM Execution Contract
 
-This section, with §33 (Forbidden LLM Behavior), is Nuke Testing's normative compact operational
+This section, with §33 (Forbidden LLM Behavior), is Chef's Test's normative compact operational
 contract. The body of this document owns the operational semantics. The compact summaries in
-§37 (Minimal Viable Nuke) and §42 (One-Page Model) are derived from this contract and the body:
-they may reduce attack breadth and depth proportionally, but they add no obligations and never
-bypass adjudication, stop states, authority gates, evidence requirements or the permanent rules
+§37 (Minimal Viable Chef's Test) and §42 (One-Page Model) are derived from this contract and the body:
+they may reduce challenge breadth and depth proportionally, but they add no obligations and never
+waive adjudication, stop states, authority gates, evidence requirements or the permanent rules
 (§43). Where a summary appears to differ, this contract and the body govern.
 
 Scope (§1): a campaign challenges the authorized project's own implementation, models, evidence
 and test estate. Acting against systems the project does not own or control is out of scope
 unless separately and explicitly authorized.
 
-When an LLM is instructed to run or prepare Nuke Testing, it should:
+When an LLM is instructed to run or prepare Chef's Test, it should:
 
 1. identify the exact bounded assurance question;
 2. identify accepted semantic authority before deriving tests;
@@ -2027,7 +2031,7 @@ When an LLM is instructed to run or prepare Nuke Testing, it should:
 
 ## 33. Forbidden LLM Behavior
 
-An LLM running Nuke Testing must not:
+An LLM running Chef's Test must not:
 
 - invent semantic authority to satisfy a failing test;
 - treat production behavior as authority merely because it exists;
@@ -2105,12 +2109,12 @@ A synthesis that settles challenger disagreement by weight of numbers discards t
 
 ## 35. Assurance Artifact
 
-A Nuke campaign should eventually leave an inspectable assurance record, not merely test logs.
+A Chef's Test campaign should eventually leave an inspectable assurance record, not merely test logs.
 
 A useful minimal shape is:
 
 ```text
-NUKE ASSURANCE RECORD
+CHEF'S TEST ASSURANCE RECORD
 
 SCOPE:
 <what exact system/use is being assured>
@@ -2163,7 +2167,7 @@ This is a state declaration, not a numerical score.
 
 ## 36. Recommended Finding States
 
-A Nuke workflow benefits from explicit assurance states.
+A Chef's Test workflow benefits from explicit assurance states.
 
 Candidate states:
 
@@ -2200,11 +2204,11 @@ This prevents "current looks good" from rewriting the evidence trail.
 
 ---
 
-## 37. Minimal Viable Nuke
+## 37. Minimal Viable Chef's Test
 
 A full campaign may be expensive.
 
-For smaller but consequential tasks, a minimal experimental Nuke can be:
+For smaller but consequential tasks, a minimal experimental Chef's Test can be:
 
 ```text
 1. LOCK THE CLAIM
@@ -2240,7 +2244,7 @@ The current experimental method is supported by practice observations including:
 - a campaign can saturate its declared semantic model while the model remains incomplete;
 - genuinely independent semantic re-derivation can find failures after extensive internal hardening;
 - preservation properties can be as important as invalidation properties;
-- semantic no-op transformations are useful metamorphic attack surfaces;
+- semantic no-op transformations are useful metamorphic challenge surfaces;
 - repairs invalidate assurance evidence tied to the superseded mechanism;
 - discriminative pre/post regressions strengthen evidence that a repair addressed the intended defect;
 - a verifier may observe a field without allowing that field to influence its verdict;
@@ -2249,7 +2253,7 @@ The current experimental method is supported by practice observations including:
 
 ### Local downstream field evidence (2026-09)
 
-The following four observations come from one local downstream project Nuke episode, not
+The following four observations come from one local downstream project episode of this method (then named Nuke Testing), not
 external validation:
 
 - repairing an early short-circuit defect can make previously unreachable downstream assurance
@@ -2281,8 +2285,8 @@ independent replications and not controlled evidence:
 Further observations from continued local governed project work, again repeated
 within-project rather than independently replicated:
 
-- a repair that kills its entire original failure family can introduce new load-bearing trust
-  assumptions that no original attack touches;
+- a repair that eliminates its entire original failure family can introduce new load-bearing trust
+  assumptions that no original challenge touches;
 - internally coherent local evidence — valid approvals, hashes, registries, derived state — can
   make a state appear currently authorized when governing authority does not support it;
 - establishing that an artifact is non-authoritative for a property does not make that property
@@ -2357,7 +2361,7 @@ They do not establish external validity.
 
 ### Inherited / established ingredients
 
-Nuke Testing draws on mature or established traditions such as:
+Chef's Test draws on mature or established traditions such as:
 
 - requirements/contract-driven verification;
 - independent verification and validation;
@@ -2376,7 +2380,7 @@ Nuke Testing draws on mature or established traditions such as:
 
 ### Adapted
 
-Nuke Testing adapts these to focus on:
+Chef's Test adapts these to focus on:
 
 - semantic authority;
 - persistent human decisions;
@@ -2391,16 +2395,16 @@ Nuke Testing adapts these to focus on:
 
 The following should currently be treated as local synthesis:
 
-- the name **Nuke Testing**;
+- the name **Chef's Test** (formerly Nuke Testing);
 - the exact workflow composition;
-- the five-level representable/reachable/exercised/observed/verdict-influential distinction as an operational Nuke lens;
+- the five-level representable/reachable/exercised/observed/verdict-influential distinction as an operational Chef's Test lens;
 - the explicit preservation/invalidation pairing as a standard campaign obligation;
-- "nuclear mutants" as a named high-consequence mutation class;
+- "high-consequence mutants" as a named mutation class;
 - re-anchor as a first-class post-repair assurance phase;
 - the specific blind-challenger sequencing for LLM workflows;
 - the current Stop Doctrine;
 - the assurance-state vocabulary;
-- the combined HSM/VLD/Nuke governance model.
+- the combined HSM/VLD/Chef's Test governance model.
 
 ### Experimental
 
@@ -2420,7 +2424,7 @@ Still experimental:
 
 ## 40. Method Maturity Rule
 
-Do not promote Nuke Testing from EXPERIMENTAL merely because:
+Do not promote Chef's Test from EXPERIMENTAL merely because:
 
 - one project reaches human acceptance;
 - many tests pass;
@@ -2431,10 +2435,10 @@ Do not promote Nuke Testing from EXPERIMENTAL merely because:
 Promotion should require evidence such as:
 
 - repeated use across materially different projects;
-- documented cases where Nuke finds failures ordinary validation misses;
-- documented cases where Nuke correctly decides deeper assurance is unnecessary;
+- documented cases where Chef's Test finds failures ordinary validation misses;
+- documented cases where Chef's Test correctly decides deeper assurance is unnecessary;
 - evidence about cost and diminishing returns;
-- cross-domain Critical Mass research;
+- cross-domain Information Buffet research;
 - external critique;
 - failed transfers and negative cases;
 - comparison against simpler alternatives;
@@ -2447,7 +2451,7 @@ Promotion should require evidence such as:
 
 Before stable doctrine, investigate at least:
 
-1. Which Nuke phases produce genuinely independent defect-finding value?
+1. Which Chef's Test phases produce genuinely independent defect-finding value?
 2. Which phases mostly duplicate evidence?
 3. Which parts transfer beyond persistent engineering/software systems?
 4. When is a blind challenger worth the custody/coordination cost?
@@ -2460,10 +2464,10 @@ Before stable doctrine, investigate at least:
 11. What consequence thresholds justify mutation, chaos, deep history or independent challenge?
 12. How should verifier gaps be prioritized relative to product defects?
 13. When is model/provider diversity enough, and when is organizational independence required?
-14. What parts of Nuke Testing duplicate existing safety/security assurance methods?
+14. What parts of Chef's Test duplicate existing safety/security assurance methods?
 15. Can a much smaller method achieve most of the benefit?
-16. What are the strongest observed cases where Nuke Testing adds too much process?
-17. What should a future Critical Mass investigation reject or rename?
+16. What are the strongest observed cases where Chef's Test adds too much process?
+17. What should a future Information Buffet investigation reject or rename?
 18. What evidence would justify moving from EXPERIMENTAL to PRACTICE-DERIVED STABLE?
 
 ---
@@ -2491,9 +2495,9 @@ DERIVE PRESERVATION + INVALIDATION PROPERTIES
         ↓
 BUILD HETEROGENEOUS EVIDENCE
         ↓
-ATTACK PROXIES + CROSS-MECHANISM SEAMS
+CHALLENGE PROXIES + CROSS-MECHANISM SEAMS
         ↓
-ATTACK THE VERIFIERS
+CHALLENGE THE VERIFIERS
         ↓
 ADJUDICATE AGAINST AUTHORITY
         ↓
@@ -2513,7 +2517,7 @@ ASSESS DECLARED COVERAGE + MODEL COMPLETENESS
         ↓
 STATE RESIDUAL RISK
         ↓
-STOP WHEN FURTHER ATTACKS LACK
+STOP WHEN FURTHER CHALLENGES LACK
 MATERIALLY INDEPENDENT ASSURANCE VALUE
         ↓
 HUMAN ACCEPTANCE
@@ -2553,7 +2557,7 @@ HUMAN ACCEPTANCE
 
 > **Stop metrics report evidence; they do not acquire semantic authority.**
 
-> **Stop when additional attacks are no longer expected to add materially independent evidence against the remaining risk.**
+> **Stop when additional challenges are no longer expected to add materially independent evidence against the remaining risk.**
 
 ---
 
@@ -2561,7 +2565,7 @@ HUMAN ACCEPTANCE
 
 ```text
 METHOD:
-Nuke Testing — Contract-Driven Adversarial Assurance
+Chef's Test — Contract-Driven Assurance and Falsification Testing
 
 MADPAKKEN STATUS:
 EXPERIMENTAL
@@ -2583,7 +2587,7 @@ REQUIRED GOVERNANCE:
 Human authority remains above test/oracle/agent output.
 
 NEXT MATURITY WORK:
-Cross-domain Critical Mass
+Cross-domain Information Buffet research
 Continued real-project experiments
 Independent critique
 Transfer testing
@@ -2597,7 +2601,7 @@ Method simplification
 
 The current experimental definition is:
 
-> **Nuke Testing is a practice-derived, contract-driven adversarial assurance method that begins from governed meaning, derives falsifiable claims, challenges implementation, verification and the assurance model through heterogeneous evidence, repairs causal mechanisms, preserves historical failures, re-anchors evidence after change, uses genuinely independent challenge where consequence warrants it, and stops when further attacks are no longer expected to add materially independent evidence against the remaining risk.**
+> **Chef's Test is a practice-derived, contract-driven assurance and falsification method that begins from governed meaning, derives falsifiable claims, challenges implementation, verification and the assurance model through heterogeneous evidence, repairs causal mechanisms, preserves historical failures, re-anchors evidence after change, uses genuinely independent challenge where consequence warrants it, and stops when further challenges are no longer expected to add materially independent evidence against the remaining risk.**
 
 Its ambition is not:
 
@@ -2609,4 +2613,4 @@ Its ambition is:
 
 ---
 
-**End of Nuke Testing — Experimental**
+**End of Chef's Test — Experimental**

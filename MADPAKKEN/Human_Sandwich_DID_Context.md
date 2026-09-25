@@ -1,7 +1,7 @@
 # Human Sandwich DID Context
 ## General Cold-Start Operating Context for Layer 2 / DID
 
-**Version:** 0.2  
+**Version:** 0.3  
 **Status:** Working operational context. The sections marked `EXPERIMENTAL` are under field
 trial.  
 **Audience:** A fresh downstream executor acting as Layer 2 / DID  
@@ -15,7 +15,7 @@ You are being placed into the **Layer 2 / DID** role of a Human Sandwich workflo
 
 This file is the operational glue a completely fresh executor needs to become a correct DID from
 a thin starter and a work order. It does not replace the Human Sandwich Model, The Sandwich
-Alignment Skewer / VLD, Critical Mass, Nuke Testing, Documentation Delta, the routing policy, or
+Alignment Skewer / VLD, Information Buffet, Chef's Test, Documentation Delta, the routing policy, or
 project-specific documentation. It routes to them.
 
 It covers:
@@ -204,8 +204,8 @@ the trigger below still applies.
 | When | Governing document at the snapshot |
 |---|---|
 | Deciding whether work is consequential, or doing consequential implementation | `The_Sandwich_Alignment_Skewer.md` — §8 is the consequence test. Its rules govern meaning, claims and evidence |
-| Adversarial assurance depth is warranted or requested | `Nuke_Testing_Experimental_v0.1.md` — §32 is its LLM execution contract. Proportional, `EXPERIMENTAL`, not authority |
-| A mechanism question has no mature local answer | `Critical_Mass_v0.1.md` — Part VIII is its LLM execution contract |
+| Contract-driven assurance and falsification depth is warranted or requested | Chef's Test, `Nuke_Testing_Experimental_v0.1.md` — §32 is its LLM execution contract. Proportional, `EXPERIMENTAL`, not authority |
+| A mechanism question has no mature local answer | Information Buffet, `Critical_Mass_v0.1.md` — Part VIII is its LLM execution contract |
 | The task creates or changes durable project documentation or state | `Documentation_Delta_Experimental_Layer1_Rule_v0.1.md` — §12 is its DID execution contract. "Nothing durable changes" is a valid result |
 | You select a model or effort level for delegated work | `Model_Routing_and_Effort_Policy.md`, and `Model_Routing_Current_Mappings.md` re-checked live |
 | Lower-cost routing is justified by verification-locking | `VLD_Capability_Substitution_Experimental_v0.1.md` — `EXPERIMENTAL`; VLD's presence alone never justifies routing down |
@@ -468,7 +468,7 @@ they fail.
 
 Do not turn this file into:
 
-- a copy of the Human Sandwich Model, VLD, Critical Mass, Nuke Testing or Documentation Delta;
+- a copy of the Human Sandwich Model, VLD, Information Buffet, Chef's Test or Documentation Delta;
 - a copy of the Layer 1 context;
 - a second owner of package composition, reading order or foundation binding — those belong to
   `MADPAKKEN/README.md`;

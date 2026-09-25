@@ -1,9 +1,9 @@
 # Model Routing and Effort Policy
 
-**Version:** 1.2
+**Version:** 1.3
 **Status:** Stable cross-project operating policy (mechanisms only — no current model names, prices, or account state)
 **Scope:** General — for any project using the Human Sandwich Model
-**Basis:** Derived from a Critical Mass research/evidence record for this routing revision, maintained separately, outside this package and outside this document's authority; §L additionally rests on a maintainer behavioural evaluation (2026-09-25), also maintained outside this package
+**Basis:** Derived from an Information Buffet (formerly Critical Mass) research/evidence record for this routing revision, maintained separately, outside this package and outside this document's authority; §L additionally rests on a maintainer behavioural evaluation (2026-09-25), also maintained outside this package
 
 ---
 

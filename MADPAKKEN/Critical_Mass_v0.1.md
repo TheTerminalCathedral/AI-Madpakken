@@ -1,17 +1,18 @@
-# Critical Mass
+# Information Buffet
 ## Mechanism-First Cross-Domain Research for Field-Proven Methods
 
-**Version:** 0.2  
-**Date:** 2026-09-14  
+**Version:** 0.3  
+**Date:** 2026-09-25  
+**Former name:** Critical Mass. The file keeps its stable path `Critical_Mass_v0.1.md`. The stop threshold the method works toward keeps its own name, *critical mass* (Part IV), and so do its `CRITICAL_MASS_…` result tokens.  
 **Status:** Practice-derived protocol; research-grounded synthesis; not an established named methodology  
-**Package status:** Accepted AI Madpakken methodology, held in governed custody. This is its status within the package, not a claim that Critical Mass is an externally established methodology (see Part IX)  
+**Package status:** Accepted AI Madpakken methodology, held in governed custody. This is its status within the package, not a claim that Information Buffet is an externally established methodology (see Part IX)  
 **Primary audience:** LLMs and humans using LLMs for engineering, software, research, assurance, bug investigation, method design, and feature development
 
 ---
 
 ## 1. Purpose
 
-**Critical Mass** is a research protocol for situations where a local problem should not be solved only from the vocabulary, habits, or literature of the field in which it first appeared.
+**Information Buffet** is a research protocol for situations where a local problem should not be solved only from the vocabulary, habits, or literature of the field in which it first appeared.
 
 Its purpose is to help an LLM move from:
 
@@ -21,7 +22,7 @@ into:
 
 > “What is the underlying mechanism, where else does that mechanism appear, which responses have survived real use or serious research, and which parts can actually transfer here?”
 
-Critical Mass is intended for:
+Information Buffet is intended for:
 
 - new feature research;
 - difficult bugs;
@@ -37,7 +38,7 @@ Critical Mass is intended for:
 
 It is especially useful when the local field is young, fragmented, dominated by convention, or likely to share the same blind spots as the system being designed.
 
-Critical Mass is **not** “search widely and collect many links.”  
+Information Buffet is **not** “search widely and collect many links.”  
 It is a mechanism-first, evidence-labelled, transfer-tested synthesis process.
 
 The central rule is:
@@ -48,7 +49,7 @@ The central rule is:
 
 ## 2. Positioning
 
-Critical Mass should not be represented as an already established scientific methodology under that name.
+Information Buffet should not be represented as an already established scientific methodology under that name.
 
 It is a **practice-derived operational synthesis** assembled from mature and partially mature traditions including:
 
@@ -68,9 +69,9 @@ The particular combination, sequencing, terminology, LLM execution model, transf
 
 A correct description is:
 
-> **Critical Mass is a practice-derived research protocol assembled from established ideas in evidence synthesis, mechanism-oriented review, cross-domain transfer, analogical reasoning, triangulation, and evidence-informed decision-making. Its specific combination and LLM-oriented execution model are local synthesis rather than an externally validated named method.**
+> **Information Buffet is a practice-derived research protocol assembled from established ideas in evidence synthesis, mechanism-oriented review, cross-domain transfer, analogical reasoning, triangulation, and evidence-informed decision-making. Its specific combination and LLM-oriented execution model are local synthesis rather than an externally validated named method.**
 
-Never describe Critical Mass itself as “industry standard,” “scientifically proven,” or “established best practice” unless later evidence actually supports such a claim.
+Never describe Information Buffet itself as “industry standard,” “scientifically proven,” or “established best practice” unless later evidence actually supports such a claim.
 
 ---
 
@@ -122,7 +123,7 @@ The third may concern:
 
 If an LLM searches only the local terminology, it can easily rediscover local conventions instead of finding mature responses to the underlying mechanism.
 
-Critical Mass therefore treats **mechanism abstraction as a research gate**.
+Information Buffet therefore treats **mechanism abstraction as a research gate**.
 
 ---
 
@@ -211,7 +212,7 @@ Unknowns:
 <what research must resolve>
 ```
 
-Do not freeze the first mechanism hypothesis permanently. Critical Mass is iterative.
+Do not freeze the first mechanism hypothesis permanently. Information Buffet is iterative.
 
 ---
 
@@ -298,7 +299,7 @@ A method may be widely used because it is:
 - interoperable;
 - institutionally convenient.
 
-Therefore Critical Mass must separate:
+Therefore Information Buffet must separate:
 
 - evidence of **use**;
 - evidence of **effectiveness**;
@@ -342,7 +343,7 @@ Two systems may both use words such as “identity,” “validation,” “vers
 
 Conversely, two disciplines may use completely different language for nearly identical mechanisms.
 
-Critical Mass therefore prioritizes:
+Information Buffet therefore prioritizes:
 
 > **shared causal and relational structure over shared terminology.**
 
@@ -380,7 +381,7 @@ A vague statement such as “this is similar to aviation” is insufficient.
 
 ---
 
-## 10. Attack the analogy
+## 10. Challenge the analogy
 
 Finding an attractive analogy is the beginning of transfer analysis, not the end.
 
@@ -407,7 +408,7 @@ A transfer recommendation without an attempted falsification is incomplete.
 
 ## 11. Evidence is multi-dimensional
 
-Critical Mass must not collapse all evidence into one numeric confidence score.
+Information Buffet must not collapse all evidence into one numeric confidence score.
 
 Use explicit evidence labels instead. An item may receive multiple labels.
 
@@ -500,7 +501,7 @@ They may all:
 - share the same simulation model;
 - assume the same abstraction.
 
-Critical Mass tracks **evidence families**.
+Information Buffet tracks **evidence families**.
 
 Example:
 
@@ -545,7 +546,7 @@ A recurring field practice can reveal implementation constraints, failure modes,
 
 Research can reveal controlled comparisons, causal mechanisms, bias, generalizability, and effects hidden by anecdote.
 
-Critical Mass should seek convergence **and** informative disagreement between them.
+Information Buffet should seek convergence **and** informative disagreement between them.
 
 ---
 
@@ -553,7 +554,7 @@ Critical Mass should seek convergence **and** informative disagreement between t
 
 ## 15. Trigger conditions
 
-Run a Critical Mass when one or more conditions apply:
+Run an Information Buffet when one or more conditions apply:
 
 - a new feature involves non-trivial design authority;
 - a bug reveals a mechanism not already covered by accepted local doctrine;
@@ -566,7 +567,7 @@ Run a Critical Mass when one or more conditions apply:
 - an LLM is about to invent a new methodology;
 - a local rule is at risk of being mislabeled “best practice.”
 
-Do not run full Critical Mass for routine mechanical work with a well-established local answer.
+Do not run a full Information Buffet for routine mechanical work with a well-established local answer.
 
 ---
 
@@ -792,7 +793,7 @@ Search for:
 
 This is mandatory for high-impact decisions.
 
-A research process that only accumulates supporting sources has not reached Critical Mass.
+A research process that only accumulates supporting sources has not reached critical mass.
 
 ---
 
@@ -827,21 +828,21 @@ to mutate into:
 
 ---
 
-# Part IV — Critical Mass Stop Doctrine
+# Part IV — Stop Doctrine: Reaching Information Buffet
 
-## 25. Critical Mass does not mean “many sources”
+## 25. Critical mass does not mean “many sources”
 
 The metaphor refers to **decision-relevant sufficiency**, not volume.
 
-Critical Mass is approached when independent evidence families begin to support a stable mechanism model and additional research produces diminishing decision-relevant novelty.
+Critical mass is approached when independent evidence families begin to support a stable mechanism model and additional research produces diminishing decision-relevant novelty.
 
 The stop decision is itself an evidential claim and must be justified.
 
 ---
 
-## 26. Conditions for declaring Critical Mass
+## 26. Conditions for declaring critical mass
 
-For a bounded decision, Critical Mass may be declared when all applicable conditions hold:
+For a bounded decision, critical mass may be declared when all applicable conditions hold:
 
 ### 1. Mechanism stability
 The underlying mechanism model is no longer changing materially with each credible source.
@@ -873,23 +874,23 @@ Additional searching mostly adds repetition, detail, or adjacent examples rather
 ### 10. Provenance is sufficient
 The conclusion can be traced to sources, evidence classes, local inference, and remaining uncertainty.
 
-If one of these conditions fails materially, Critical Mass has not been reached.
+If one of these conditions fails materially, critical mass has not been reached.
 
 ---
 
-## 27. Critical Mass can be bounded
+## 27. Critical mass can be bounded
 
-Critical Mass is always relative to a decision scope.
+Critical mass is always relative to a decision scope.
 
 Correct:
 
-> “Critical Mass reached for choosing the first-slice identity-preservation strategy.”
+> “Critical mass reached for choosing the first-slice identity-preservation strategy.”
 
 Incorrect:
 
 > “The entire identity problem is solved.”
 
-A later question may require a new Critical Mass.
+A later question may require a new Information Buffet run.
 
 ### Depth is proportional to what the decision commits
 
@@ -990,7 +991,7 @@ the existing states to return:
   `HUMAN_RULING_REQUIRED`;
 - an unknown that cannot materially change the bounded decision → potentially
   `CRITICAL_MASS_REACHED_WITH_RESIDUAL_UNCERTAINTY`, on the decision-sensitivity condition for
-  declaring Critical Mass.
+  declaring critical mass.
 
 Reaching the limit of what reasoning can add is therefore not by itself
 `CRITICAL_MASS_REACHED`. Nor does it mean every empirical unknown must be measured before
@@ -1055,7 +1056,7 @@ numeric threshold, and none is adopted here.
 ## 38. Endless research
 
 **Failure:** Continue because another source could always exist.  
-**Correction:** Use the Critical Mass Stop Doctrine and bounded decision scope.
+**Correction:** Use the Stop Doctrine (Part IV) and bounded decision scope.
 
 ## 39. Local invention laundering
 
@@ -1072,7 +1073,7 @@ The Human Sandwich Model primarily answers:
 
 > **Who has authority to decide?**
 
-Critical Mass can inform the COULD space with stronger evidence.
+Information Buffet can inform the COULD space with stronger evidence.
 
 It does not replace the human SHOULD decision.
 
@@ -1086,27 +1087,27 @@ VLD concerns semantic authority:
 
 > **Vibe the implementation. Lock the meaning.**
 
-Critical Mass can be used before meaning is locked when the correct contract or method is unclear.
+Information Buffet can be used before meaning is locked when the correct contract or method is unclear.
 
 It can also be used later when a defect reveals that the current locked meaning may be incomplete.
 
-Critical Mass must not silently override an accepted semantic contract. If external research conflicts with accepted local authority, report the conflict for human adjudication.
+Information Buffet must not silently override an accepted semantic contract. If external research conflicts with accepted local authority, report the conflict for human adjudication.
 
 ---
 
-## 42. Nuke Testing
+## 42. Chef's Test
 
-Nuke Testing asks:
+Chef's Test asks:
 
 > **What evidence justifies trusting that implementation preserves the locked meaning?**
 
-Critical Mass asks a different question:
+Information Buffet asks a different question:
 
 > **What mature knowledge should inform the method, feature, repair, or assurance strategy in the first place?**
 
 The two reinforce one another.
 
-Nuke Testing can discover a new problem. Critical Mass can investigate the underlying mechanism across disciplines. The resulting method can then return to Nuke Testing for adversarial validation.
+Chef's Test can discover a new problem. Information Buffet can investigate the underlying mechanism across disciplines. The resulting method can then return to Chef's Test for challenge-based validation.
 
 A useful loop is:
 
@@ -1115,13 +1116,13 @@ local observation
     ↓
 mechanism abstraction
     ↓
-CRITICAL MASS
+INFORMATION BUFFET
     ↓
 human decision / local adaptation
     ↓
 implementation
     ↓
-NUKE TESTING
+CHEF'S TEST
     ↓
 new evidence or failure
     ↺
@@ -1225,7 +1226,7 @@ The mechanism may still transfer after adaptation.
 
 ## 45. Mandatory behaviour
 
-When instructed to “run a Critical Mass,” an LLM must:
+When instructed to “run an Information Buffet,” an LLM must:
 
 1. restate the bounded decision;
 2. record direct local evidence separately from inference;
@@ -1240,14 +1241,14 @@ When instructed to “run a Critical Mass,” an LLM must:
 11. distinguish inherited/adapted/invented content;
 12. conduct a counter-search;
 13. state unresolved disagreement;
-14. apply the Critical Mass Stop Doctrine;
+14. apply the Stop Doctrine (Part IV);
 15. report why research stopped.
 
 ---
 
 ## 46. Forbidden behaviour
 
-An LLM running Critical Mass must not:
+An LLM running Information Buffet must not:
 
 - search only for support of a preferred solution;
 - treat source prestige as transfer proof;
@@ -1265,7 +1266,7 @@ An LLM running Critical Mass must not:
 ## 47. Recommended output schema
 
 ```text
-CRITICAL MASS REPORT
+INFORMATION BUFFET REPORT
 
 1. Bounded decision
 2. Local observation
@@ -1316,19 +1317,19 @@ The following components have substantial precedent:
 - explicit concern for search saturation;
 - input-model adequacy as distinct from structural execution coverage.
 
-These support the general architecture of Critical Mass.
+These support the general architecture of Information Buffet.
 
 ---
 
 ## 49. What is adapted
 
-Critical Mass adapts these ideas into a decision-oriented engineering workflow that:
+Information Buffet adapts these ideas into a decision-oriented engineering workflow that:
 
 - starts with mechanism abstraction;
 - deliberately searches distant fields;
 - ranks operational consequence as a search signal;
 - requires structural transfer mapping;
-- explicitly attacks the analogy;
+- explicitly challenges the analogy;
 - tracks common-mode evidence families;
 - separates field maturity from efficacy;
 - integrates local engineering evidence.
@@ -1341,11 +1342,11 @@ The exact combination is not inherited wholesale from one source.
 
 The following should currently be treated as local synthesis or experimental doctrine:
 
-- the name **Critical Mass**;
+- the name **Information Buffet** (formerly Critical Mass);
 - the complete sequence in this document;
 - the exact evidence-label vocabulary;
 - the exact transfer verdict vocabulary;
-- the Critical Mass Stop Doctrine as a unified set;
+- the Stop Doctrine (Part IV) as a unified set;
 - the use of the protocol as a direct LLM execution contract;
 - any future fixed numeric thresholds unless separately validated.
 
@@ -1359,7 +1360,7 @@ Do not retroactively green these as externally established merely because their 
 
 The Cochrane Handbook provides mature guidance on structured searching, source selection, sensitivity, bias reduction, and documentation. Its current guidance also notes that in qualitative evidence synthesis searching can be iterative and may stop when new information ceases to emerge, with the stopping rationale documented in terms such as saturation.
 
-**Relevance to Critical Mass:** search discipline, transparency, heterogeneous source strategy, and a precedent for justified non-exhaustive stopping in appropriate review types.
+**Relevance to Information Buffet:** search discipline, transparency, heterogeneous source strategy, and a precedent for justified non-exhaustive stopping in appropriate review types.
 
 Reference:
 
@@ -1372,7 +1373,7 @@ Reference:
 
 RAMESES meta-narrative review is designed for heterogeneous topics where different research traditions have studied the same or similar problem in contrasting ways.
 
-**Relevance to Critical Mass:** disciplines may encode the same mechanism using different concepts, questions, assumptions, and methods. Cross-domain synthesis must understand those traditions rather than flatten them.
+**Relevance to Information Buffet:** disciplines may encode the same mechanism using different concepts, questions, assumptions, and methods. Cross-domain synthesis must understand those traditions rather than flatten them.
 
 Reference:
 
@@ -1385,7 +1386,7 @@ Reference:
 
 Realist synthesis focuses on explanation: how and why an intervention or method works, in which contexts, and through which mechanisms. RAMESES guidance also emphasizes transparency, judgement, and theory-driven iteration rather than treating complex synthesis as a purely linear checklist.
 
-**Relevance to Critical Mass:** transfer should preserve the mechanism and test the enabling context rather than copy a ritual.
+**Relevance to Information Buffet:** transfer should preserve the mechanism and test the enabling context rather than copy a ritual.
 
 Reference:
 
@@ -1398,7 +1399,7 @@ Reference:
 
 Evidence-Based Software Engineering explicitly adapted evidence-based practice ideas to software engineering and argued for answerable questions, acquisition of evidence, critical appraisal, application, and evaluation.
 
-**Relevance to Critical Mass:** engineering decisions should be evidence-informed rather than convention-only, and software engineering itself already contains precedent for structured evidence use.
+**Relevance to Information Buffet:** engineering decisions should be evidence-informed rather than convention-only, and software engineering itself already contains precedent for structured evidence use.
 
 Reference:
 
@@ -1411,7 +1412,7 @@ Reference:
 
 Research on cross-industry innovation examines transfer of technologies, practices, concepts, and knowledge across industry boundaries. A 2023 systematic literature review documents this as a distinct innovation research field. More recent work has explicitly tried to operationalize transfer between conceptually dissimilar industries by abstracting principles rather than directly copying practices.
 
-**Relevance to Critical Mass:** distant industries can be useful sources of solutions, but successful transfer depends on identifying the underlying structure and adapting it to the target context.
+**Relevance to Information Buffet:** distant industries can be useful sources of solutions, but successful transfer depends on identifying the underlying structure and adapting it to the target context.
 
 References:
 
@@ -1427,7 +1428,7 @@ References:
 
 NIST researchers have argued that structural coverage alone can miss faults associated with rare or absent inputs, and that assurance should also examine input-space coverage and the adequacy of the input model.
 
-**Relevance to Critical Mass:** a local failure can often be better understood by searching for the underlying assurance mechanism in adjacent research rather than merely extending the existing local test technique.
+**Relevance to Information Buffet:** a local failure can often be better understood by searching for the underlying assurance mechanism in adjacent research rather than merely extending the existing local test technique.
 
 Reference:
 
@@ -1439,7 +1440,7 @@ Reference:
 
 # Part XI — Compact Doctrine
 
-## 57. Critical Mass in twelve rules
+## 57. Information Buffet in twelve rules
 
 1. **Start from the observed problem, not the preferred solution.**
 2. **Abstract the underlying mechanism before broad search.**
@@ -1450,7 +1451,7 @@ Reference:
 7. **Extract mechanisms and assumptions, not just recommendations.**
 8. **Transfer mechanisms, not rituals.**
 9. **Prefer structural similarity over vocabulary similarity.**
-10. **Attack every important analogy.**
+10. **Challenge every important analogy.**
 11. **Label inherited, adapted, and locally invented content honestly.**
 12. **Stop when additional research no longer materially changes the mechanism model, credible method families, transfer assumptions, or bounded decision.**
 
@@ -1458,19 +1459,19 @@ Reference:
 
 ## 58. Canonical short definition
 
-> **Critical Mass is a mechanism-first cross-domain research protocol for discovering and evaluating field-proven methods. It abstracts a local problem into its underlying mechanism, searches materially different disciplines for mature responses, separates evidence of use from evidence of effectiveness, tests whether source assumptions survive transfer, actively challenges attractive analogies, and stops when additional research no longer materially changes the decision-relevant mechanism model or method choice.**
+> **Information Buffet is a mechanism-first cross-domain research protocol for discovering and evaluating field-proven methods. It abstracts a local problem into its underlying mechanism, searches materially different disciplines for mature responses, separates evidence of use from evidence of effectiveness, tests whether source assumptions survive transfer, actively challenges attractive analogies, and stops when additional research no longer materially changes the decision-relevant mechanism model or method choice.**
 
 ---
 
 ## 59. Canonical operational instruction
 
-> **When a trigger condition applies (§15), run a Critical Mass on the problem before proposing a solution. Freeze the local observation, derive the underlying mechanism, search across materially different mature fields, identify independent evidence families and candidate method families, extract why each method works and under which assumptions, test structural transfer to the target, counter-search for failure and alternatives, label inherited versus adapted versus locally invented content, and stop only when the Critical Mass criteria are satisfied. Do not run full Critical Mass for routine mechanical work with a well-established local answer (§15).**
+> **When a trigger condition applies (§15), run an Information Buffet on the problem before proposing a solution. Freeze the local observation, derive the underlying mechanism, search across materially different mature fields, identify independent evidence families and candidate method families, extract why each method works and under which assumptions, test structural transfer to the target, counter-search for failure and alternatives, label inherited versus adapted versus locally invented content, and stop only when the Information Buffet criteria are satisfied. Do not run a full Information Buffet for routine mechanical work with a well-established local answer (§15).**
 
 ---
 
 ## 60. Final principle
 
-Critical Mass is not a machine for manufacturing consensus.
+Information Buffet is not a machine for manufacturing consensus.
 
 Its job is to make the decision landscape harder to fool.
 
@@ -1495,4 +1496,4 @@ It is:
 
 > **“We understand the mechanism, we know where the evidence comes from, we know which assumptions permit transfer, we know what remains uncertain, and we know why we have enough—or do not yet have enough—to decide.”**
 
-That is Critical Mass.
+That is Information Buffet.

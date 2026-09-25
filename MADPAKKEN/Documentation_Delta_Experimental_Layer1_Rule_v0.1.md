@@ -1,10 +1,10 @@
 # Documentation Delta — Experimental Layer 1 Rule
 
-**Version:** 0.2  
+**Version:** 0.3  
 **Date:** 2026-09-11  
 **Status:** EXPERIMENTAL FIELD RULE — active-use candidate; not stable Madpakken doctrine  
 **Positioning:** Small Layer 1 point-of-application rule for durable project knowledge  
-**Origin:** Dynamic Documentation research → cross-project field interviews → Critical Mass reduction  
+**Origin:** Dynamic Documentation research → cross-project field interviews → Information Buffet (then named Critical Mass) reduction  
 **Intended use:** Supplied in the Madpakken cold-start package as an active member under bounded field trial  
 **Maturity:** Practice-supported research candidate. Use is allowed for experimentation; promotion requires field evidence.
 
@@ -44,7 +44,7 @@ The broader Dynamic Documentation candidate originally explored:
 - type-specific document contracts;
 - persistent documentation metadata.
 
-Critical Mass reduced most of that.
+Information Buffet reduced most of that.
 
 The surviving generic mechanism was much smaller:
 
@@ -58,7 +58,7 @@ Current Madpakken already covers much of the semantic boundary:
 
 - **HSM** — human authority;
 - **VLD** — evidence, meaning, predecessor/history preservation;
-- **Nuke Testing** — adversarial assurance;
+- **Chef's Test** — contract-driven assurance and falsification testing;
 - **Layer 1 live-state discipline** — current state must be checked rather than inferred from cached prose.
 
 Therefore this experiment does not introduce a new documentation methodology.
@@ -371,7 +371,7 @@ Do not automatically remediate a finding. If the same human instruction separate
 
 Ownership reconstruction is normally transient reasoning at the point of need.
 
-Do not create `truth_ownership_map.md`, `documentation_inventory.md`, a knowledge graph, a documentation registry, or any equivalent persistent artifact merely because reconnaissance occurred. Critical Mass specifically reduced that idea: a persisted ownership map decays while continuing to look authoritative.
+Do not create `truth_ownership_map.md`, `documentation_inventory.md`, a knowledge graph, a documentation registry, or any equivalent persistent artifact merely because reconnaissance occurred. Information Buffet specifically reduced that idea: a persisted ownership map decays while continuing to look authoritative.
 
 Where a project already runs a governed configuration, records, or data catalog that legitimately owns this information, use the existing system rather than inventing a second one.
 
@@ -393,7 +393,7 @@ These terms may remain useful as private reasoning vocabulary.
 
 They are **not mandatory output labels** in this experiment.
 
-Critical Mass found that mature lifecycle mechanisms already cover much of their meaning, and current Madpakken already carries standing preservation obligations.
+Information Buffet found that mature lifecycle mechanisms already cover much of their meaning, and current Madpakken already carries standing preservation obligations.
 
 In particular:
 
@@ -677,7 +677,7 @@ The mechanism should be judged by decision value, not usage count.
 Do not promote this rule because:
 
 - it sounds simple;
-- Critical Mass found mature analogues;
+- Information Buffet found mature analogues;
 - several AIs agree with it;
 - it works on one project;
 - it creates tidy documentation.
@@ -762,7 +762,7 @@ EXPERIMENTAL FIELD RULE
 ORIGIN:
 Dynamic Documentation research
 → cross-project interviews
-→ Critical Mass
+→ Information Buffet
 → reduced candidate
 
 AUTHORIZED USE:

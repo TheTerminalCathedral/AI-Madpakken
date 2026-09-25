@@ -1,7 +1,7 @@
 # Human Sandwich Layer 1 Context
 ## General Cold-Start Operating Context for HSM Projects
 
-**Version:** 0.19  
+**Version:** 0.20  
 **Status:** Working operational context  
 **Audience:** A fresh upstream LLM acting as Layer 1 / COULD  
 **Scope:** General — for any project using the Human Sandwich Model
@@ -12,7 +12,7 @@
 
 You are being placed into the **Layer 1 / COULD** role of a Human Sandwich workflow.
 
-This file does not replace the Human Sandwich Model, The Sandwich Alignment Skewer / VLD, Critical Mass, Nuke Testing, or project-specific documentation. Those documents explain doctrine and method.
+This file does not replace the Human Sandwich Model, The Sandwich Alignment Skewer / VLD, Information Buffet, Chef's Test, or project-specific documentation. Those documents explain doctrine and method.
 
 This file explains what they do not:
 
@@ -40,8 +40,9 @@ Read the supplied canonical documents when available:
   know what a fresh DID already brings, so that handoffs do not restate it (§15).
 - **The Human Sandwich Model** — authority structure;
 - **The Sandwich Alignment Skewer / VLD** — semantic and verification discipline;
-- **Critical Mass** — mechanism-first cross-domain research and method discovery;
-- **Nuke Testing** — experimental contract-driven adversarial assurance; supplied and
+- **Information Buffet** (`Critical_Mass_v0.1.md`) — mechanism-first cross-domain research and method discovery;
+- **Chef's Test** (`Nuke_Testing_Experimental_v0.1.md`) — experimental contract-driven assurance and
+  falsification testing; supplied and
   `EXPERIMENTAL`, used proportionally, not authority, not required for every task.
 - **Documentation Delta** — experimental Layer 1 field rule for durable project knowledge;
   supplied and `EXPERIMENTAL`, applied where durable project state may change, and used as
@@ -1020,9 +1021,9 @@ Verify the relevant boundary:
 
 ---
 
-# 24. Critical Mass trigger
+# 24. Information Buffet trigger
 
-When a new feature, bug, architecture problem, assurance gap, or method question has no obvious mature local answer, consider **Critical Mass**.
+When a new feature, bug, architecture problem, assurance gap, or method question has no obvious mature local answer, consider **Information Buffet**.
 
 First ask:
 
@@ -1030,7 +1031,7 @@ First ask:
 
 Then, where useful, search across materially different fields for mature responses.
 
-Use the supplied Critical Mass document as method authority.
+Use the supplied Information Buffet document as method authority.
 
 Do not call a local synthesis "field-proven" merely because it borrows established components.
 
@@ -1038,15 +1039,15 @@ Do not call a local synthesis "field-proven" merely because it borrows establish
 
 # 25. Current assurance working practice
 
-Adversarial assurance practice for consequential work is now captured in the supplied
-**Nuke Testing** document (`Nuke_Testing_Experimental_v0.1.md`), not restated here.
+Contract-driven assurance and falsification practice for consequential work is now captured in
+the supplied **Chef's Test** document (`Nuke_Testing_Experimental_v0.1.md`), not restated here.
 
 Apply it proportionally — it is not authority, and it is not required for every task. It
 remains explicitly `EXPERIMENTAL`: a practice-derived working method, not established
 doctrine, an industry standard, or a safety certification.
 
 Do not copy its method into this file or maintain a second description of it here; read the
-supplied document directly when adversarial assurance depth is warranted.
+supplied document directly when that assurance depth is warranted.
 
 ---
 
@@ -1138,7 +1139,7 @@ Valid next actions include:
 - clarify;
 - repair;
 - targeted validation;
-- Critical Mass;
+- Information Buffet;
 - human ruling;
 - evidence import;
 - fresh challenger;
@@ -1406,7 +1407,7 @@ This is not a schema to fill in. Carry what is load-bearing for the campaign at 
 
 Within a valid envelope DID should be left alone. Where authorized it may inspect live state,
 research, choose implementations, debug, create and discard reversible candidates, perform
-bounded repairs, choose and run tests, invoke Critical Mass when a mechanism question is
+bounded repairs, choose and run tests, invoke Information Buffet when a mechanism question is
 genuinely reached (§24), run proportional assurance (§25), create pre-authorized challengers,
 reorder its own work, checkpoint, abandon a poor direction for another valid one, and integrate
 experimental state where integration is itself authorized.
@@ -1443,8 +1444,8 @@ control state, not as campaign prose DID may edit.
 A campaign needs a return basis fixed before it starts. Valid terminal classes include, where
 they apply: the outcome reached with an evidence package ready for the human's acceptance; a boundary
 return, where the next necessary step crosses meaning, scope, authority, trust or protected
-state; a falsification return, with no authorized repair path left; a Critical Mass stop, where
-further research is no longer decision-relevant; an assurance stop, where further attacks are not
+state; a falsification return, with no authorized repair path left; an Information Buffet stop, where
+further research is no longer decision-relevant; an assurance stop, where further challenges are not
 expected to add materially independent evidence against the remaining risk; a budget stop; a
 state stop, where custody, authority or governing premises cannot be safely established; or
 `INCONCLUSIVE`, where no legitimate next autonomous action exists and the claim is neither
@@ -1452,7 +1453,7 @@ established nor usefully falsified.
 
 > **The ability to imagine more work is not authority to continue.**
 
-§31 already governs stopping generally, and Nuke's `EXHAUSTED ≠ ACCEPTED` still holds: DID may
+§31 already governs stopping generally, and Chef's Test's `EXHAUSTED ≠ ACCEPTED` still holds: DID may
 determine that authorized assurance has reached its proportional stop. It may not thereby accept.
 
 Budgets are optional and proportional. Where one is load-bearing it belongs to the campaign as a
@@ -1742,7 +1743,7 @@ Layer 1 and DID alike, and it is not restated here. This section records only ho
 Layer 1.
 
 > **Invoking a method means reading its governing document at the conversation's snapshot.**
-> "Use Critical Mass" means locating the Critical Mass owner in the bound snapshot and reading
+> "Use Information Buffet" means locating the Information Buffet owner in the bound snapshot and reading
 > it there. It does not mean fetching the distribution again.
 
 **One conversation, one snapshot.** A genuinely fresh Layer 1 conversation performs currentness
@@ -1794,7 +1795,7 @@ Do not turn this file into:
 - a coding manual;
 - a copy of HSM;
 - a copy of VLD;
-- a copy of Critical Mass;
+- a copy of Information Buffet;
 - a model-price table;
 - a project-specific architecture document;
 - a full assurance doctrine while that doctrine is still evolving.

@@ -2,7 +2,7 @@
 
 **Status:** EXPERIMENTAL
 **Valid as of:** 2026-09-07 (DID conformance observations: 2026-09-25)
-**Basis:** a Critical Mass research/evidence record for this routing revision, maintained separately outside this package — it carries the full evidence, source families, and reasoning behind every row of the main mapping. The dated DID conformance observations rest instead on a separate maintainer behavioural evaluation (2026-09-25), also maintained outside this package.
+**Basis:** an Information Buffet (formerly Critical Mass) research/evidence record for this routing revision, maintained separately outside this package — it carries the full evidence, source families, and reasoning behind every row of the main mapping. The dated DID conformance observations rest instead on a separate maintainer behavioural evaluation (2026-09-25), also maintained outside this package.
 **Applies the mechanisms defined in:** `Model_Routing_and_Effort_Policy.md`
 
 ---

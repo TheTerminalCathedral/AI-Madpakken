@@ -159,7 +159,7 @@ begun, or another Madpakken method has become relevant. There is no refresh cade
 weekly, per-N-messages or per-N-tokens rule. No sufficient basis for one was found.
 
 > **Invoking a method means reading its governing document at the bound snapshot.** "Use
-> Critical Mass" means locating the Critical Mass owner in the snapshot and reading it there. It
+> Information Buffet" means locating the Information Buffet owner in the snapshot and reading it there. It
 > does not mean fetching `main` again.
 
 A context moves to a newer foundation only through an explicit **foundation transition**,
@@ -264,7 +264,7 @@ foundation authority.
 ### Maturity
 
 The separation of A, B and C, resolve-then-bind, compaction as recovery, the two clocks and
-explicit transitions are the approved architecture. They rest on a mechanism-first Critical Mass
+explicit transitions are the approved architecture. They rest on a mechanism-first Information Buffet investigation
 across configuration-management baselines, immutable software references, agent instruction
 discovery, durable execution and recovery, and structured handoff and state transfer.
 
@@ -304,15 +304,16 @@ maintainer-run dry run with simulated compaction. It was not observed native fie
    real still mean what was authorised, and does the evidence actually support that claim?*
    VLD may operate inside a consequential `DID`. It is not a fourth Human Sandwich layer.
 
-4. **`Critical_Mass_v0.1.md`** — mechanism-first cross-domain research protocol for
+4. **`Critical_Mass_v0.1.md`** — **Information Buffet** (formerly Critical Mass):
+   mechanism-first cross-domain research protocol for
    discovering, evaluating and transferring field-proven methods. It is a distinct
    methodology document, not part of Human Sandwich authority doctrine or VLD verification
    doctrine — it addresses a different question: how to find and validate a method in the
    first place, not who decides or whether evidence supports a claim.
 
-5. **`Nuke_Testing_Experimental_v0.1.md`** — experimental contract-driven adversarial
-   assurance. Starts from governed meaning/claims and attacks implementation, verification,
-   and assurance-model weaknesses to challenge whether confidence in a result is actually
+5. **`Nuke_Testing_Experimental_v0.1.md`** — **Chef's Test** (formerly Nuke Testing):
+   experimental contract-driven assurance and falsification testing. Starts from governed
+   meaning/claims and challenges implementation, verification, and assurance-model weaknesses to challenge whether confidence in a result is actually
    justified. It applies to the authorized project's own implementation, models, evidence
    and test estate. Proportional — not mandatory for every task, and not authority. Marked
    `EXPERIMENTAL`; see "Maintaining this package" below for what that status does and does
@@ -341,7 +342,7 @@ maintainer-run dry run with simulated compaction. It was not observed native fie
 
 Items 1–7 are general to Human Sandwich Model projects and contain no project-specific or
 volatile project state, with the deliberate, dated exception of item 7's current-mappings
-companion. Items 5 (Nuke Testing), 6 (Documentation Delta), and 8 (VLD Capability Substitution)
+companion. Items 5 (Chef's Test), 6 (Documentation Delta), and 8 (VLD Capability Substitution)
 are likewise general and fully supplied, but their explicit `EXPERIMENTAL` maturity labels are
 not project-specific or volatile details to be stripped out — they are part of those documents'
 meaning.
@@ -364,7 +365,7 @@ meaning.
   on and recovers its foundation snapshot.** The role contexts apply it to their role and do
   not restate it.
 - **`Nuke_Testing_Experimental_v0.1.md` (item 5) is a supplied experimental assurance
-  method, not authority.** It gives a technique for adversarially challenging whether
+  method, not authority.** It is Chef's Test. It gives a technique for challenging whether
   confidence in a result is justified; it does not decide meaning, cannot invent missing
   semantics, and remains `EXPERIMENTAL` — apply it proportionally, not as mandatory ceremony.
 - **`Documentation_Delta_Experimental_Layer1_Rule_v0.1.md` (item 6) is a supplied experimental
@@ -402,7 +403,7 @@ The doctrine documents (`The_Human_Sandwich_Model.md`, `The_Sandwich_Alignment_S
 and `Critical_Mass_v0.1.md` are published/accepted methodology held in governed custody.
 "Published/accepted" is their status within this package and its custody. It is not a claim that
 they are externally established named methodologies; each document states its own evidence
-maturity (Critical Mass, for example, describes itself as a practice-derived protocol). Do
+maturity (Information Buffet, for example, describes itself as a practice-derived protocol). Do
 not rewrite them casually. Replace what one of them says only when the publication itself is
 substantively superseded, and keep exactly one current copy of each under its canonical
 filename.
@@ -448,7 +449,7 @@ are re-derived from live sources whenever a decision actually depends on them.
 `Nuke_Testing_Experimental_v0.1.md` is an active package member but is explicitly
 `EXPERIMENTAL` — unlike the doctrine documents above, it is not published/accepted stable
 methodology, and being part of this package does not by itself promote its maturity. Keep
-exactly one active Nuke Testing document under its canonical filename; predecessor versions
+exactly one active Chef's Test document under its canonical filename; predecessor versions
 remain available through Git history. Do not describe it as established doctrine, an
 industry standard, or a validated/certified methodology. Update or supersede it only through
 an explicit, human-authorised revision.
