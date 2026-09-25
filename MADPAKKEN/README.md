@@ -1,31 +1,56 @@
-# Layer 1 cold-start package
+# Human Sandwich cold-start package
 
-This directory holds the cold-start bootstrap package for a user's preferred upstream LLM
-acting as **Layer 1 / COULD** in a Human Sandwich (`COULD → SHOULD → DID`) workflow.
+This directory holds the cold-start package for the two machine roles of a Human Sandwich
+(`COULD → SHOULD → DID`) workflow:
 
-Layer 1 either resolves this package from the canonical distribution below, or has it uploaded
-or pasted into its context, before discussing work in a Human Sandwich project. A thin starter
-that only tells Layer 1 where the distribution is suffices: the startup behaviour is owned here,
-by item 1 of the reading order, not by the starter. The upstream LLM helps prepare safe
-downstream prompts; it does not execute against a project itself. The human remains the
-authority boundary that decides what is authorised. The downstream **DID** role — the
-execution layer that works against real project state, validates results, and records
-evidence — may be performed by Codex, Claude, another model, a local toolchain, or a human
-operator, depending on the task and project.
-**DID is a role, not a vendor or model name.**
+- **Layer 1 / COULD** — the upstream reasoning role. It explores what could be done, helps the
+  human decide, and prepares bounded downstream work. It does not execute against a project.
+- **Layer 2 / DID** — the downstream execution role. It works against real project state,
+  validates results, records evidence, and stops or escalates at the authority boundary.
+
+The human remains **HUMAN / SHOULD**, the authority boundary that decides what is authorised.
+Either machine role may be performed by Codex, Claude, another model, a local toolchain, or,
+for DID, a human operator. **Layer 1 and DID are roles, not vendor or model names.**
+
+Both machine roles cold-start from this package directly. A thin starter that states the role,
+names the canonical distribution, and says what the project or task is suffices. This file and
+the role's operational context own everything else: the starter does not need to carry
+currentness rules, reading order, recovery rules, authority semantics or method discovery, and
+a starter that omits them does not waive them.
+
+## Start here
+
+1. **Bind the foundation** — see "Foundation binding" below. This comes before anything else.
+2. **Identify your role.** The starter or work order normally states it.
+   - Layer 1 / COULD → read `Human_Sandwich_Layer1_Context.md` (reading order item 1a).
+   - Layer 2 / DID → read `Human_Sandwich_DID_Context.md` (reading order item 1b).
+   - If your role is not established, do not guess. Ask the human which role you hold.
+3. **Follow the reading order below** from your role's context. Read the shared doctrine and
+   methods as that context directs: sufficiently to know what each owns and what applies, and
+   fully when a task invokes or materially depends on one.
+
+### Thin starters
+
+A starter needs to carry only identity, role, the canonical location, and the project or task
+condition. These wordings are illustrations, not required text:
+
+```text
+You are Layer 1 in a Human Sandwich project.
+Follow AI Madpakken at TheTerminalCathedral/AI-Madpakken.
+I have an existing project.
+```
+
+```text
+You are Layer 2 / DID in a Human Sandwich project.
+Ground in the canonical AI Madpakken distribution at TheTerminalCathedral/AI-Madpakken.
+Then ground in the project available in this environment and follow the authorized work
+order below.
+```
+
+A starter that also carries a doctrine summary does not replace the governing documents. Where
+it disagrees with them, report that as a discrepancy.
 
 ## Canonical distribution
-
-Both consumers **resolve and read** the package. Layer 1 grounds once at the start of every
-conversation (`Human_Sandwich_Layer1_Context.md` §4). An uploaded, pasted or local copy is a
-transport of foundation content, not proof of currentness: it stands in for the canonical
-foundation only where it is established to match the resolved revision, and is otherwise never
-represented as current. Downstream, where project grounding or an invoked doctrine requires a
-governing document, DID resolves the current Keeper-maintained distribution once per session
-and reads the applicable document directly, rather than working from a summary, a handoff
-paraphrase, or an older project-local copy. The resolved revision is the conversation's or
-session's foundation snapshot, re-checked only when the human asks
-(`Human_Sandwich_Layer1_Context.md` §39).
 
 The appointed canonical distribution is:
 
@@ -48,18 +73,192 @@ using this package never requires access to it. The maintainer is a maintenance 
 package itself. It is neither the creator attribution nor the HUMAN authority role in any
 project that uses the package.
 
-This file remains the owner of package composition and reading order. There is no separate
-manifest.
+This file remains the owner of package composition, role routing, reading order and foundation
+binding. There is no separate manifest.
+
+## Foundation binding
+
+Which Madpakken revision governs an execution context is decided by three different mechanisms.
+Keep them apart. None of them is a generic "re-ground".
+
+| | Mechanism | Question it answers | When |
+|---|---|---|---|
+| **A** | **Currentness discovery** | Which Madpakken revision governs this *fresh* execution context? | Once, at the start of a genuinely fresh Layer 1 conversation or DID session |
+| **B** | **Execution continuity** | Which immutable snapshot has this *already-running* context bound itself to? | For the whole life of that logical context |
+| **C** | **Context recovery** | How does the *same* logical execution recover its governing state after working-context loss or compaction? | Whenever load-bearing state may not have survived |
+
+> **Resolve mutable → bind immutable.** The canonical `main` is the discovery surface. The
+> resolved commit is the execution identity.
+
+### A. Currentness discovery — fresh contexts only
+
+At the start of a genuinely fresh Layer 1 conversation or DID session, before the first
+substantive answer or action:
+
+```text
+resolve the canonical distribution above, at its appointed branch
+→ record the resolved commit as this context's foundation snapshot
+→ read the distribution's root README, where present, then this file
+→ route by role (Start here) and follow the reading order from the role's context
+→ read every governing document at the recorded commit, not at the moving branch, wherever
+  the environment allows
+```
+
+Resolve with whatever the environment provides: a clone, a fetch, or the host's repository view
+or API. Where the documents can be read but the commit cannot, say so and record the snapshot as
+unestablished. Do not invent a revision.
+
+### B. Execution continuity — a running context keeps its snapshot
+
+The snapshot governs that logical context for its whole life:
+
+- **Layer 1:** one conversation, one snapshot, however long-lived the conversation is.
+- **DID:** one session, one snapshot, across all related tasks in that session. A new task or
+  work order inside the same logical session does not start a new foundation epoch.
+- **Delegated work:** a sub-agent, challenger or other child that DID starts within its own
+  authority belongs to the parent's execution, and binds to the parent's snapshot. Pass it the
+  repository and commit explicitly; the child does not rediscover currentness.
+
+Do not refresh the foundation because time has passed, the context has grown, a new task has
+begun, or another Madpakken method has become relevant. There is no refresh cadence: no daily,
+weekly, per-N-messages or per-N-tokens rule. No sufficient basis for one was found.
+
+> **Invoking a method means reading its governing document at the bound snapshot.** "Use
+> Critical Mass" means locating the Critical Mass owner in the snapshot and reading it there. It
+> does not mean fetching `main` again.
+
+A context moves to a newer foundation only through an explicit **foundation transition**,
+authorised by the human: resolve again, record the new commit, re-read what changed, and say so.
+A transition is a deliberate update, not a silent background refresh. Where a re-resolution the
+human asked for cannot be completed, the existing snapshot remains the working foundation,
+reported as not re-established current.
+
+Different contexts may legitimately hold different snapshots. A fresh DID may bind a newer
+revision than the Layer 1 that wrote its work order. That is ordinary. Where the work order
+relied on something the newer foundation changed, report the difference.
+
+### C. Context recovery — compaction is not a fresh start
+
+Compaction, summarisation, truncation, or any other loss of working context inside the same
+logical Layer 1 conversation or DID session is **context recovery**, not a fresh bootstrap. It
+never triggers currentness discovery by itself. The mechanism matters, not the vendor command
+that caused it.
+
+Load-bearing governing state includes, where applicable:
+
+- the role held;
+- the foundation repository identity;
+- the foundation commit bound for this context;
+- the active authority or work-order boundary, including what is withheld;
+- protected and custody-sensitive state;
+- the governing documents and methods currently applied;
+- the project or repository identity needed to continue safely.
+
+After context loss:
+
+1. **Where the harness mechanically guarantees** that this state survived verbatim, for example
+   because the same role instructions, the recorded commit and the active work order are all
+   still present unchanged, continue. No ceremonial reload is needed.
+2. **Where only a lossy summary survived, or survival is uncertain,** recover the uncertain
+   state from durable authoritative sources at the **same** commit. Re-read the needed governing
+   documents at that commit, re-read the work order or authorization from where it durably
+   lives, and re-inspect live project state. A summary can help recover authority. It is not
+   itself durable authority. DID applies this to work orders in `Human_Sandwich_DID_Context.md`
+   §11.
+3. **Do not resolve `main` because compaction happened.** A newer `main` is not the foundation of
+   a continuing context.
+
+Critical governing state belongs in durable state outside working memory. A conversation
+summary must not be its only owner. Record the bound commit where it can be recovered: the work
+record, or a session notes file or task log outside working memory. Only write it into project
+state where the project already has a convention for it.
+
+### Two clocks
+
+Foundation state and live project state change at different rates, and they are refreshed by
+different operations:
+
+```text
+foundation   resolved once per fresh context → bound → changed only by explicit transition
+project      re-inspected as often as the work needs: branch, HEAD, working tree, files,
+             tests, generated artifacts, deployment or publishing state, execution evidence
+```
+
+Re-grounding in project state is ordinary and frequent. It never implies refreshing the
+foundation.
+
+### Transport, identity and failing closed
+
+An uploaded, pasted, attached or local copy of this package is a transport or cache of
+foundation content, not proof of currentness. It stands in for the foundation only where its
+content is established to match the resolved commit. Where no commit can be resolved, it may be
+used under the identity that can actually be established, but it is never represented as
+current canonical Madpakken. None of the following substitutes for reading the governing
+document at the bound snapshot: a filename, snippet, search result, summary, handoff paraphrase,
+remembered wording, earlier conversation, or project-local copy.
+
+Repository identity is the canonical identity. A checkout path is not. A local clone is
+canonical only where its remote establishes that it belongs to the appointed repository. Where a
+resolution order helps, use: an explicit operator-provided location first, then an existing
+clone whose canonical remote matches, then a clone or fetch of the canonical repository. Keep
+three facts apart, none of which implies the next: *the distribution's identity is known*, *the
+distribution is accessible*, *the current state is established*. Access and credentials belong
+to the executing environment. No credential belongs in this package, a project, a prompt or a
+work order.
+
+Fail closed, and report the discrepancy, where work invokes or materially depends on governing
+doctrine and one of these cannot be established:
+
+- `FOUNDATION_CURRENTNESS_UNESTABLISHED` — a fresh context cannot resolve the canonical current
+  commit.
+- `FOUNDATION_CONTINUITY_UNESTABLISHED` — a continuing or recovered context cannot establish
+  which commit it was bound to. Do **not** silently select the current `main` and present that as
+  continuity. Report it. Continuing on a newer foundation is a transition, and needs the human.
+
+A prompt that cites a version, path or rule the bound document does not contain is the same
+kind of discrepancy. Do not reconcile it by preference. Work that does not consequentially
+depend on a Madpakken method may continue from mechanically established project state where it
+is otherwise authorised. In that case, claim no foundation currentness, declare the unresolved
+state where relevant, and do not present an older copy as current. This proportionality
+concerns dependence on the foundation only. It never supplies missing authority.
+
+A project may carry a thin pointer to this distribution in a startup surface it already has.
+The pointer copies no doctrine, pins no revision as timeless currentness, and does not become
+foundation authority.
+
+### Maturity
+
+The separation of A, B and C, resolve-then-bind, compaction as recovery, the two clocks and
+explicit transitions are the approved architecture. They rest on a mechanism-first Critical Mass
+across configuration-management baselines, immutable software references, agent instruction
+discovery, durable execution and recovery, and structured handoff and state transfer.
+
+That research returned `LOCAL_EXPERIMENT_REQUIRED` on field behaviour. `EXPERIMENTAL` therefore
+applies to the implementation claims, which are not yet field-established: that thin starters
+alone reliably bootstrap each role, that recovery from lossy compaction preserves load-bearing
+state in practice, that sub-agents inherit the parent snapshot, and that access works in
+non-workstation environments. The pre-publication validation of these paths was a
+maintainer-run dry run with simulated compaction. It was not observed native field use.
 
 ## Reading order
 
-1. **`Human_Sandwich_Layer1_Context.md`** — general cold-start operating context.
-   How a fresh Layer 1 thread grounds the foundation and starts, new-project vs
-   existing-project onboarding, the existing-project reconstruction/context-pack protocol,
-   foundation bootstrap for a fresh downstream session, working preferences,
-   downstream prompt presentation, escalation and autonomy, custody habits, and how to read
-   downstream reports. This is general to any project using the Human Sandwich Model, not
-   specific to any one project. Read this first; it is the operating manual.
+1. **The operational context for your role.** Read it first and in full. It is that role's
+   operating manual, and it tells you which of items 2–8 to read and when.
+
+   1a. **`Human_Sandwich_Layer1_Context.md`** — Layer 1 / COULD. How a fresh Layer 1
+       conversation starts, new-project vs existing-project onboarding, the existing-project
+       reconstruction/context-pack protocol, working preferences, downstream prompt
+       presentation and the thin starter a fresh DID needs, escalation and autonomy, custody
+       habits, and how to read downstream reports.
+
+   1b. **`Human_Sandwich_DID_Context.md`** — Layer 2 / DID. How a fresh DID session binds the
+       foundation and grounds in the project, how it interprets a work order and its authority,
+       how it finds the governing methods in its bound snapshot, evidence and custody
+       expectations, protected state, stopping and failing closed, session continuation and
+       recovery after context loss, and what a report returns.
+
+   Both are general to any project using the Human Sandwich Model, not specific to any one
+   project. Neither restates the shared doctrine and methods below; each routes to them.
 
 2. **`The_Human_Sandwich_Model.md`** — authority doctrine.
    The `COULD → SHOULD → DID` model. Answers: *who gets to decide what becomes real?*
@@ -120,9 +319,14 @@ meaning.
 - **The doctrine and methodology documents (items 2–4) provide doctrine and reasoning, not
   volatile roadmap state.** They explain how authority, verification, and method discovery
   are meant to work. They do not tell you where the project currently stands.
-- **`Human_Sandwich_Layer1_Context.md` (item 1) provides stable, cross-project operating
-  practice**, not project state. It intentionally does not carry a downstream project's
-  current phase, branch/HEAD, subsystem status, or model-routing tables.
+- **The role contexts (items 1a, 1b) provide stable, cross-project operating practice**, not
+  project state. They intentionally carry no project's current phase, branch/HEAD, subsystem
+  status, or model-routing tables. Neither is authority over meaning, scope or acceptance —
+  HUMAN SHOULD remains authority — and a work order does not become authoritative by quoting
+  either one.
+- **This file's "Foundation binding" section owns how every role discovers, binds, continues
+  on and recovers its foundation snapshot.** The role contexts apply it to their role and do
+  not restate it.
 - **`Nuke_Testing_Experimental_v0.1.md` (item 5) is a supplied experimental assurance
   method, not authority.** It gives a technique for adversarially challenging whether
   confidence in a result is justified; it does not decide meaning, cannot invent missing
@@ -152,8 +356,11 @@ meaning.
 ## Maintaining this package
 
 Update `Human_Sandwich_Layer1_Context.md` only when a stable, cross-project Layer 1 working
-rule changes — see its own "Update policy" section. Do not add project-specific or volatile
-project content to it.
+rule changes, and `Human_Sandwich_DID_Context.md` only when a stable, cross-project DID working
+rule changes — see each file's own "Update policy" section. Do not add project-specific or
+volatile project content to either. A rule that both roles need belongs in its shared owner —
+this file for foundation binding, the doctrine or method documents for everything else — not
+in two role contexts.
 
 The doctrine documents (`The_Human_Sandwich_Model.md`, `The_Sandwich_Alignment_Skewer.md`)
 and `Critical_Mass_v0.1.md` are published/accepted methodology held in governed custody. Do
@@ -168,9 +375,10 @@ exactly one active canonical representation is left behind. Do not leave paralle
 representations of the same publication side by side, and do not accumulate versioned
 duplicates such as `..._v4`, `Critical_Mass_v0.2.md`, or `...(4)`.
 
-`Human_Sandwich_Layer1_Context.md` itself uses a stable canonical filename without a version
-suffix, so future revisions replace it in place rather than forcing every project or reference
-to change filenames. The file's own internal `Version:` metadata tracks its revision.
+`Human_Sandwich_Layer1_Context.md` and `Human_Sandwich_DID_Context.md` use stable canonical
+filenames without a version suffix, so future revisions replace them in place rather than
+forcing every project or reference to change filenames. Each file's own internal `Version:`
+metadata tracks its revision.
 
 `Model_Routing_and_Effort_Policy.md` follows the same convention: a stable canonical filename
 without a version suffix, internal `Version:`/`Status:` metadata, and no current model names,

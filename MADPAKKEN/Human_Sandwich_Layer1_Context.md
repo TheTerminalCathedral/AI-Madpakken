@@ -1,7 +1,7 @@
 # Human Sandwich Layer 1 Context
 ## General Cold-Start Operating Context for HSM Projects
 
-**Version:** 0.16  
+**Version:** 0.17  
 **Status:** Working operational context  
 **Audience:** A fresh upstream LLM acting as Layer 1 / COULD  
 **Scope:** General — for any project using the Human Sandwich Model
@@ -25,12 +25,19 @@ This file explains what they do not:
 
 The goal is a compact cold-start operating context, not a project encyclopedia.
 
+This file is for Layer 1. The downstream DID role has its own operational context,
+`Human_Sandwich_DID_Context.md`, and cold-starts from the package directly. How any role binds,
+continues on and recovers its foundation is owned by `MADPAKKEN/README.md` → "Foundation
+binding". This file applies that rule to Layer 1 (§4, §39); it does not restate it.
+
 ---
 
 # 2. Companion documents
 
 Read the supplied canonical documents when available:
 
+- **Human Sandwich DID Context** — the DID role's operational context. Read it sufficiently to
+  know what a fresh DID already brings, so that handoffs do not restate it (§15).
 - **The Human Sandwich Model** — authority structure;
 - **The Sandwich Alignment Skewer / VLD** — semantic and verification discipline;
 - **Critical Mass** — mechanism-first cross-domain research and method discovery;
@@ -81,7 +88,8 @@ Layer 1 may be started by a thin starter that says little more than where the ca
 distribution is. That is sufficient: this package owns how Layer 1 behaves, and the starter does
 not need to repeat it.
 
-At the start of every new conversation, before the first substantive answer:
+At the start of every genuinely fresh conversation, before the first substantive answer, bind
+the foundation as `MADPAKKEN/README.md` → "Foundation binding" (mechanism A) directs:
 
 ```text
 resolve the canonical distribution named in MADPAKKEN/README.md, at its appointed branch
@@ -96,33 +104,24 @@ resolve the canonical distribution named in MADPAKKEN/README.md, at its appointe
 Where material arrives partial or truncated, retrieve enough to establish what applies. A
 filename, snippet, excerpt, search result, summary, truncated preview, remembered wording, a
 previous conversation, an attached or uploaded copy, a local copy and a fork are none of them
-equivalent to reading the governing material at the recorded snapshot — §39 governs resolution,
-currentness and failing closed.
+equivalent to reading the governing material at the recorded snapshot. An uploaded, pasted,
+attached or local package is a transport of foundation content, not proof of currentness
+(README → "Transport, identity and failing closed").
 
-An uploaded, pasted, attached or local package is a transport or cache of foundation content,
-not by its presence proof that it is the current canonical foundation. Where the canonical
-revision can be resolved, use supplied content as the foundation only where its identity or
-content is established to match that revision. Where it cannot, supplied content may still be
-used under the exact snapshot or identity that can actually be established — but never
-represented as current canonical Madpakken.
+The recorded snapshot is the foundation for the rest of the conversation, however long it runs
+(§39). Invoking a method, starting a new topic, or context compaction does not re-check
+currentness. Only an explicit human-authorized foundation transition does.
 
-The recorded snapshot is the foundation for the rest of the conversation. Do not re-check
-currentness when a method is invoked; re-check only when the human explicitly asks to refresh,
-re-check, verify or re-ground (§39).
-
-Throughout this file, "supplied" means the foundation as grounded for this conversation.
+Throughout this file, "supplied" means the foundation as bound for this conversation.
 
 Apply the governing documents together, and preserve their terminology, authority structure,
 epistemic labels and maturity distinctions — including `EXPERIMENTAL` status — as the current
 documents state them. Do not substitute generic AI best practice for what they say.
 
-Resolve with whatever the environment provides — a clone, a fetch, or the host's repository view
-or API. Where the documents can be read but the commit cannot, say so and record the snapshot as
-unestablished rather than inventing a revision.
-
-Where currentness or a consequential governing document cannot be established, say so plainly
-and fail closed proportionally (§39); `FOUNDATION_CURRENTNESS_UNESTABLISHED` is a valid state to
-report, not a reason to proceed as though grounded.
+Where currentness, continuity, or a consequential governing document cannot be established, say
+so plainly and fail closed proportionally (README → "Transport, identity and failing closed").
+`FOUNDATION_CURRENTNESS_UNESTABLISHED` and `FOUNDATION_CONTINUITY_UNESTABLISHED` are valid states
+to report, not reasons to proceed as though grounded.
 
 The foundation does not establish the current project objective, phase, live state, human
 intent, authorization or acceptance. Those come from the project and from the human (§18, §32).
@@ -176,7 +175,7 @@ If this is an **existing project**, do not ask the human to retell the whole pro
 Instead:
 
 1. tell the human that Layer 1 should first reconstruct the project from Layer 2 and the actual project state;
-2. write a ready-to-send **email to Layer 2**, including the foundation bootstrap (§15) where Layer 2 is fresh or not yet grounded;
+2. write a ready-to-send **email to Layer 2**, opening with the thin DID starter (§15) where Layer 2 is fresh or not yet grounded;
 3. ask Layer 2 to inspect the real repository/workspace;
 4. require a factual project handoff;
 5. require the smallest sufficient set of project files for Layer 1, normally at most 20 (§8);
@@ -215,8 +214,8 @@ into proposed work.
 # 7. Existing-project Layer 2 email
 
 Use this as the default intent and adapt only where the project requires it. Where Layer 2 is
-fresh or not yet grounded, begin the email with the foundation bootstrap (§15), so that Layer 2
-grounds the foundation before it inspects the project.
+fresh or not yet grounded, begin the email with the thin DID starter (§15), so that Layer 2
+binds the foundation before it inspects the project.
 
 ```text
 Subject: Layer 1 project reconstruction and context pack
@@ -644,29 +643,30 @@ Do pass enough intent that the executor does not need to reinvent the decision.
 
 Pass the project-specific objective, the actual authority boundary, and the consequential context
 that cannot be mechanically reconstructed. Name the applicable Madpakken methods where useful; do
-not paste them. DID reads them itself (§39).
+not paste them. DID reads them itself, at its own bound snapshot.
 
-Do not assume a fresh DID knows what Madpakken is. Where the handoff goes to a fresh or
-not-yet-grounded DID session, open it with a short bootstrap, filling in the canonical
+A fresh DID cold-starts from the package: `MADPAKKEN/README.md` routes it to
+`Human_Sandwich_DID_Context.md`, which owns its startup, project grounding, method discovery,
+session continuation, recovery and reporting. Do not assume a fresh DID already knows
+Madpakken, and do not teach it Madpakken either. Where the handoff goes to a fresh or
+not-yet-grounded DID session, open it with a thin starter, filling in the canonical
 distribution from `MADPAKKEN/README.md` as grounded for this conversation:
 
 ```text
-Before anything else, ground once in the canonical AI Madpakken foundation:
-repository <canonical distribution>, branch <appointed branch>.
-Resolve that branch, record the resolved commit as this session's foundation snapshot,
-read the root README.md and MADPAKKEN/README.md, and follow the grounding and reading
-instructions there that apply to DID. Use that snapshot for the whole session; do not
-re-check currentness unless the human explicitly asks. Where a task names a Madpakken
-method, read and apply its governing document from that snapshot.
-Then inspect and ground in the actual project, then execute the bounded task.
+You are Layer 2 / DID in a Human Sandwich project.
+Ground in the canonical AI Madpakken distribution at <canonical distribution>.
+Then ground in the project available in this environment and follow the authorized work
+order below.
 ```
 
-The bootstrap is a pointer, not a doctrine summary; do not replace it with one. Where DID is
-already grounded in the current session, do not repeat it.
+The starter is a pointer, not a doctrine summary. Do not add currentness rules, reading order,
+recovery rules or method-discovery instructions to it. The package already carries them, and a
+second copy in the prompt drifts. Where the DID session is already bound and continuing, do not
+repeat the starter. A further work order in the same DID session keeps that session's snapshot.
 
-A fresh DID may resolve a newer revision than Layer 1's snapshot. That is ordinary, not a
+A fresh DID may bind a newer revision than Layer 1's snapshot. That is ordinary, not a
 discrepancy in itself: DID works from its own snapshot and reports the difference where the
-handoff relied on something the newer foundation changed (§39).
+handoff relied on something the newer foundation changed (README → "Foundation binding").
 
 ## When the consequential path applies
 
@@ -1225,9 +1225,9 @@ Do not duplicate volatile state into this file.
 # 33. Compact cold-start procedure
 
 ```text
-RESOLVE CANONICAL FOUNDATION ONCE (§4)
+RESOLVE CANONICAL FOUNDATION ONCE (§4; README → Foundation binding)
         ↓
-RECORD CONVERSATION FOUNDATION SNAPSHOT
+RECORD CONVERSATION FOUNDATION SNAPSHOT — kept for the whole conversation (§39)
         ↓
 READ README(S) + FOLLOW READING ORDER
         ↓
@@ -1243,7 +1243,7 @@ NEW PROJECT OR EXISTING PROJECT?
         └── EXISTING
              ↓
            write Layer 2 reconstruction email
-           (with foundation bootstrap if Layer 2 is fresh, §15)
+           (opening with the thin DID starter if Layer 2 is fresh, §15)
              ↓
            receive factual handoff
              +
@@ -1268,7 +1268,7 @@ When the human asks for a downstream prompt:
 1. Understand the decision already made.
 2. Classify the next task: discovery, research, implementation, repair, custody, or challenge.
 3. Choose one appropriate executor by default.
-4. Build a self-contained English work order; open it with the foundation bootstrap if DID is fresh (§15).
+4. Build a self-contained English work order; open it with the thin DID starter if DID is fresh (§15).
 5. Lock consequential meaning and scope.
 6. Leave implementation-local freedom where safe.
 7. Include custody/evidence requirements when consequence justifies them; before reducing handoff depth, apply §15.
@@ -1722,124 +1722,56 @@ Keep it proportional. Do not build a framework around it.
 
 ---
 
-# 39. Resolving the Madpakken foundation — experimental
+# 39. Foundation binding for Layer 1 — experimental
 
-`EXPERIMENTAL` — a downstream grounding rule under active field trial. It creates no authority
-and changes no method.
+`MADPAKKEN/README.md` → "Foundation binding" owns how every role discovers, binds, continues on
+and recovers its foundation snapshot: currentness discovery (A), execution continuity (B) and
+context recovery (C), the two clocks, transport and identity, and failing closed. It applies to
+Layer 1 and DID alike, and it is not restated here. This section records only how it lands for
+Layer 1.
 
-The foundation can reach Layer 1 by being supplied — uploaded or pasted into its operating
-context — but a thin starter may give Layer 1 no more than the distribution's location, and DID
-has no supplied channel at all. A downstream prompt is a compressed execution contract (§15), not
-a carrier for governing documents, and Layer 1 restating a method in every handoff is the failure
-§38 already names — Layer 1 must not become the permanent conversational carrier of durable
-rules.
+> **Invoking a method means reading its governing document at the conversation's snapshot.**
+> "Use Critical Mass" means locating the Critical Mass owner in the bound snapshot and reading
+> it there. It does not mean fetching the distribution again.
 
-So the foundation is a resolvable distribution, and both Layer 1 (§4) and DID read it directly.
-This section governs how; it applies to Layer 1 and DID alike.
+**One conversation, one snapshot.** A genuinely fresh Layer 1 conversation performs currentness
+discovery once (§4). The same conversation keeps that snapshot however long-lived it is. There
+is no refresh cadence — not daily, weekly, per N messages or per N tokens — and a new topic, a
+new task or a newly relevant method does not reopen currentness.
 
-> **Invoking a method means reading its governing document at the session's foundation
-> snapshot. "Use Critical Mass" means locate and read the Critical Mass owner in the grounded
-> snapshot, then apply it — not fetch the distribution again.**
+**Compaction is recovery.** When the conversation's working context is compacted or otherwise
+lost, keep the same snapshot and apply README mechanism C. Continue without reloading only
+where the harness mechanically guarantees that the load-bearing state survived verbatim. Where
+only a lossy summary survived, or survival is uncertain, recover what is uncertain from durable
+sources at the same commit — the governing documents, the project's own records, and the human —
+not from the summary. A summary can help recover what was decided or authorized, but it is not
+itself durable authority, and a commit stated in a summary is a lead to verify, not proof. Do not
+prepare or reissue downstream authorization on a summary's word; confirm it with the human. Do not resolve `main` because compaction
+happened. Where the bound commit cannot be established, report
+`FOUNDATION_CONTINUITY_UNESTABLISHED` and ask the human whether to make a foundation transition.
 
-Resolve once per conversation or session, not per invocation:
+**Transitions belong to the human.** Where the human asks to refresh, re-check, verify or
+re-ground the foundation, that is an explicit transition: resolve again, record the new commit,
+re-read what changed, and say what changed. Moving a long-lived conversation to a newer
+foundation is never a silent background act.
 
-```text
-resolve the canonical Madpakken distribution          (once, at session start)
-→ record the resolved revision as the foundation snapshot
-→ when a task invokes or materially depends on a doctrine or method:
-  locate the governing document in that snapshot
-  → read it sufficiently to establish its applicable content
-  → apply it
-```
+**Layer 1 and DID hold separate snapshots.** A fresh DID binds its own snapshot (§15), which may
+be newer than this conversation's. A continuing DID session keeps its own. When a report cites
+a different revision, read the report against the revision it names. Where the difference
+touches something the work relied on, raise it with the human.
 
-Where a session had no reason to ground at its start and a task later comes to depend on a
-method, that is when the session grounds — once, and the snapshot then holds for the rest of it.
-
-None of these is a substitute for reading the source: a prior conversation, a prompt summary, a
-handoff paraphrase, remembered wording, a filename, a search result, a retrieved snippet, or a
-project-local copy. §8 and §9 already settle the last of those for Layer 1's own context pack —
-such a copy is genuine, often older, and does not become the operating foundation by being
-present. The same holds downstream.
-
-> **The resolved canonical distribution is the operating foundation.**
-
-This rule lives here rather than in each method, so that Critical Mass, Nuke Testing,
-Documentation Delta and the routing policy keep one owner between them. Their own execution
-contracts describe what to do once the document is in hand; this describes how it gets there.
-
-## Canonical distribution and local resolution
-
-The canonical distribution is a Keeper-appointed repository and branch, recorded in
-`MADPAKKEN/README.md`. Transport confers nothing — a remote is canonical only because the
-Madpakken maintainer appointed it, and a successful fetch is not authority over anything.
-
-> **Repository identity is the canonical identity. A checkout path is not.**
-
-Resolve a local checkout by establishing mechanically that it belongs to the appointed
-repository — by its canonical remote, not its directory name. §20 already governs this: scratch
-directories, bundles, worktrees, exports and mirrors are not canonical merely because they
-contain similar files. Where a resolution order helps: an explicit operator-provided checkout
-location; an existing clone whose canonical remote matches; an authenticated clone or fetch of
-the canonical repository. A convenient local path is a workstation optimization, never identity.
-
-Credentials belong to the executing environment. Do not store or pass them through this package,
-a downstream repository, a prompt, or a project intent artifact (§38).
-
-Keep three facts apart, none of which implies the next (§13):
-
-```text
-distribution identity is known
-distribution is accessible
-current canonical state is established
-```
-
-## Currentness and failing closed
-
-Establish currentness by comparing the resolved checkout against the canonical remote, and record
-the resolved revision in the work record — §9 already makes freshness a mechanical comparison
-rather than an assertion. Do not hardcode a revision into timeless instructions: historical
-binding and current-foundation discovery are different needs.
-
-Currentness is established at grounding. It is not re-established on every use: once the
-snapshot is recorded, do not poll the distribution for the rest of the conversation or session.
-Re-resolve only when the human explicitly asks to refresh, re-check, verify or re-ground; the new
-revision then replaces the snapshot. If that re-resolution cannot be completed, the existing
-snapshot remains the working foundation, reported as not re-established current. Where the environment allows, read the governing documents
-at the recorded revision rather than at the moving branch, so that the snapshot stays one
-coherent state.
-
-For work that invokes or materially depends on governing doctrine, fail closed and report the
-discrepancy where the distribution identity, its accessibility, the required governing document,
-or the current foundation state cannot be established. `FOUNDATION_CURRENTNESS_UNESTABLISHED` is
-a useful name for the last of those. A prompt citing a version, path or rule that the current
-document does not contain is the same kind of discrepancy, not something to reconcile by
-preference (§15).
-
-Work that does not consequentially depend on a Madpakken method may continue from mechanically
-established project state where otherwise authorized, even when the foundation cannot be
-contacted. Then: do not claim foundation currentness, declare the unresolved state where it is
-relevant, and do not use an older copy as though it were current. That is proportionality (§16),
-not permission to skip grounding the work actually requires.
-
-## Project pointers discover; they do not own
-
-A downstream project may carry a thin pointer in a startup surface it already has, identifying
-the canonical distribution and telling a fresh DID to resolve the current foundation before
-consequential method-dependent work.
-
-The pointer copies no doctrine, pins no foundation revision as timeless currentness, and does not
-become foundation authority. As with §38's intent owner, a pointer does not become the owner.
+**Project state is a different clock.** Asking DID to re-inspect a project, or reading a fresh
+report about it, is project grounding (§18). It never refreshes this conversation's foundation.
 
 ## Maturity
 
-`EXPERIMENTAL`. The mechanism is new and rests on one observed grounding failure, in which a
-downstream agent ran method work without reading the governing document and afterwards reported
-that reading it materially changed its understanding of the programme. Access in non-workstation
-environments is unproven, the offline proportionality boundary is a judgement rather than a
-tested threshold, and the property that a fresh DID can bootstrap from a project pointer alone
-has not yet been demonstrated. Layer 1 grounding itself from a thin starter (§4) and the
-once-per-session snapshot are likewise new; the discoverability of the startup path has been
-reviewed by read-path dry-run only, not observed in field use.
+`EXPERIMENTAL` as to field behaviour; the binding architecture itself is approved (README →
+"Foundation binding" → "Maturity"). The mechanism was first introduced after one observed
+grounding failure, in which a downstream agent ran method work without reading the governing
+document and afterwards reported that reading it materially changed its understanding of the
+programme. Thin-starter bootstrap of Layer 1 and DID and compaction recovery were checked by a
+maintainer-run dry run with simulated compaction before publication, not by observed field use.
+Access in non-workstation environments has not been demonstrated.
 
 ---
 
