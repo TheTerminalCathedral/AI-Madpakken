@@ -313,7 +313,8 @@ maintainer-run dry run with simulated compaction. It was not observed native fie
 5. **`Nuke_Testing_Experimental_v0.1.md`** — experimental contract-driven adversarial
    assurance. Starts from governed meaning/claims and attacks implementation, verification,
    and assurance-model weaknesses to challenge whether confidence in a result is actually
-   justified. Proportional — not mandatory for every task, and not authority. Marked
+   justified. It applies to the authorized project's own implementation, models, evidence
+   and test estate. Proportional — not mandatory for every task, and not authority. Marked
    `EXPERIMENTAL`; see "Maintaining this package" below for what that status does and does
    not mean.
 

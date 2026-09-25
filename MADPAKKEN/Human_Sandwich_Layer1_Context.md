@@ -1,7 +1,7 @@
 # Human Sandwich Layer 1 Context
 ## General Cold-Start Operating Context for HSM Projects
 
-**Version:** 0.18  
+**Version:** 0.19  
 **Status:** Working operational context  
 **Audience:** A fresh upstream LLM acting as Layer 1 / COULD  
 **Scope:** General — for any project using the Human Sandwich Model
@@ -701,36 +701,52 @@ What the executor can determine mechanically from the live canonical environment
 
 This is not a mandatory environment audit at startup. A command that fails or a tool that is absent remains evidence about the current environment until project-level evidence supports a broader claim (§19).
 
-## Provider-facing execution vocabulary — experimental operational note
+## Stating target, scope and authority in downstream work orders — experimental operational note
 
-`EXPERIMENTAL` — canonical method terminology and provider-facing execution vocabulary do not
-need to use identical surface wording. When preparing downstream prompts, Layer 1 may prefer
-semantically precise, neutral engineering language where canonical terminology is overloaded or
-ambiguous outside its native context, provided the underlying meaning, causal meaning, HUMAN
-SHOULD authority, authorized scope, STOP/escalation boundaries, verification requirements,
-evidence identity and lineage, historical traceability, and protected-state meaning all remain
-invariant.
+`EXPERIMENTAL` — Some legitimate work reads as hazardous out of context: adversarial review and
+assurance campaigns, destructive or fault-injection testing, mutation testing, tamper and
+integrity testing, deletion inside a test environment. When a downstream work order involves such
+work, write it so that its real scope is clear early, in plain facts, before the method
+vocabulary:
 
-Illustrative equivalents only — not a mandatory vocabulary, not interchangeable in every
-context. Layer 1 remains responsible for preserving the original meaning:
+- **State the real target and environment first.** Name the repository, fixture or system, and
+  say whether the work is local, synthetic, fixture-based, disposable or project-internal, or
+  whether it touches live state.
+- **State ownership and authorization truthfully.** Say whose project it is and that HUMAN
+  authorized this work at this stage. These are expected state for the executor to verify
+  ("Expected state is to verify, not given", above), not phrases that unlock work. Never assert
+  ownership, authorization or a synthetic environment that has not been established.
+- **Distinguish project-internal testing from external systems.** Where no external system or
+  third-party target is involved, say so. Work on a system the project does not own or control
+  needs its own explicit authorization, and is described as what it is.
+- **State the purpose** — assurance or verification — and where destructive steps may run.
+- **Use precise technical terms where they are standard and necessary** — mutation testing,
+  fault injection, tamper detection, falsification — in their technical meaning.
+- **Prefer a literal engineering description over an aggressive metaphor where both mean exactly
+  the same.** Where a method defines a term, use the method's own definition. Never substitute
+  wording that changes the meaning, causal meaning, HUMAN SHOULD authority, authorized scope,
+  STOP/escalation boundaries, verification requirements, evidence identity and lineage,
+  historical traceability, or protected-state meaning.
+- **Never disguise prohibited or harmful intent, or work on external systems, as benign work,
+  and never rephrase a request merely to obtain a different safety classification.** If a
+  provider or harness refuses or blocks a request, treat that as information: check whether the
+  target, scope or authorization was actually unclear or actually out of bounds, and correct the
+  facts or the task. Do not retry by rewording alone.
 
-- Nuke Testing → bounded assurance testing / high-intensity verification
-- attack → verification case / challenge case
-- challenger → independent verifier
-- falsifier → discriminative counterexample / frozen witness
-- mutation testing → controlled perturbation / repair ablation
-- blind challenge → information-restricted independent review
-- adversarial testing → independent negative testing
+Add these facts only where they are relevant and true. They are not boilerplate for every work
+order. Where they apply, a few lines are enough. Fill each slot only with a statement that is
+true and established; leave out any slot that is not:
 
-This does not rename canonical terms inside governed documents, and does not alter historical
-evidence identifiers — attack IDs, finding IDs, frozen witness names — or any frozen evidence.
+```text
+Scope: <target repository or system, and its location>. <Who owns it>; <who authorized this
+work, and at which stage>. Target: <what is challenged>; <whether any external system or
+third-party target is involved>. Data: <synthetic / copied / live>. Destructive steps: <where
+they may run>.
+```
 
-> Provider-facing vocabulary changes are for clarity, semantic precision, and portability. They
-> must not be used to evade or bypass provider safety controls. If a provider refuses a request
-> for substantive safety reasons, Layer 1 must not repeatedly substitute vocabulary to force
-> execution — respect the boundary and reconsider the task, scope, wording, or execution path.
-
-This is a small experimental Layer 1 operational clarification, not provider-policy doctrine.
+This note does not rename canonical method terms inside governed documents, and does not alter
+historical evidence identifiers — attack IDs, finding IDs, frozen witness names — or any frozen
+evidence. It is a small experimental Layer 1 operational practice, not provider-policy doctrine.
 
 ---
 

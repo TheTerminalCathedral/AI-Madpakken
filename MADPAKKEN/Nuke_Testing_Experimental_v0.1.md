@@ -1,7 +1,7 @@
 # Nuke Testing — Contract-Driven Adversarial Assurance
 
-**Version:** 0.7  
-**Date:** 2026-09-22  
+**Version:** 0.8  
+**Date:** 2026-09-25  
 **Status:** EXPERIMENTAL — practice-derived working method; not an established named methodology  
 **Positioning:** Experimental method in the Human Sandwich / AI Madpakken family  
 **Primary audience:** Humans and LLMs working on consequential software, engineering, research, automation and AI-assisted systems  
@@ -12,6 +12,12 @@
 ## 1. Purpose
 
 **Nuke Testing** is an experimental assurance method for work that is too consequential to trust merely because ordinary implementation checks are green.
+
+**Scope.** Nuke Testing applies to the authorized project's own implementation, models, evidence
+and test estate, including the dependencies and tools as that estate uses them. Its attacks,
+mutants and injected faults are challenges to claims about that system, run under HUMAN
+authorization for the project. Acting against systems the project does not own or control is
+outside the method unless separately and explicitly authorized.
 
 Its purpose is not to maximize test count.
 
@@ -834,9 +840,10 @@ Do meaning-preserving transformations preserve the protected semantic projection
 
 Can legal individual operations compose into an illegal history?
 
-### 14.11 Exploit-chain attacks
+### 14.11 Forbidden-composition attacks
 
-Can individually permitted transitions combine into a forbidden semantic end state?
+Can individually permitted transitions combine into a forbidden semantic end state? (Called
+exploit-chain attacks before version 0.8.)
 
 ### 14.12 Failure / chaos attacks
 
@@ -1305,7 +1312,7 @@ A green test written only against repaired code is weaker evidence.
 Discriminative regression (above) shows that the repaired implementation passes where the
 superseded implementation failed. A repair ablation strengthens that causal claim further.
 
-> **Where practical, temporarily ablate or bypass only the claimed load-bearing repair
+> **Where practical, temporarily ablate or disable only the claimed load-bearing repair
 > mechanism. If the original defect returns and disappears again when that mechanism is
 > restored, this strengthens causal evidence that the repair mechanism produced the correction
 > rather than an incidental collateral change.**
@@ -1889,7 +1896,7 @@ Choose proportionally from:
 - independent oracles;
 - model/stateful tests;
 - history checking;
-- exploit chains;
+- forbidden-composition chains (§14.11);
 - fault injection;
 - semantic chaos;
 - persistence/tamper challenges;
@@ -1988,6 +1995,10 @@ contract. The body of this document owns the operational semantics. The compact 
 they may reduce attack breadth and depth proportionally, but they add no obligations and never
 bypass adjudication, stop states, authority gates, evidence requirements or the permanent rules
 (§43). Where a summary appears to differ, this contract and the body govern.
+
+Scope (§1): a campaign challenges the authorized project's own implementation, models, evidence
+and test estate. Acting against systems the project does not own or control is out of scope
+unless separately and explicitly authorized.
 
 When an LLM is instructed to run or prepare Nuke Testing, it should:
 
