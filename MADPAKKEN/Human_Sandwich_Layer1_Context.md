@@ -1,7 +1,7 @@
 # Human Sandwich Layer 1 Context
 ## General Cold-Start Operating Context for HSM Projects
 
-**Version:** 0.22  
+**Version:** 0.23  
 **Status:** Working operational context  
 **Audience:** A fresh upstream LLM acting as Layer 1 / COULD  
 **Scope:** General — for any project using the Human Sandwich Model
@@ -409,7 +409,7 @@ A flattened copy does not become project authority merely because Layer 1 receiv
 
 ## Derived orientation artifacts do not claim currency
 
-A context pack, reconstruction bundle, copied orientation set or derived status view is **orientation**. It is not the live source of record.
+A context pack, reconstruction bundle, copied orientation set, bundle of copied project files handed to another model or tool, or derived status view is **orientation**. It is not the live source of record.
 
 Say so in the artifact, and re-derive any consequential current-state claim from the live canonical project before use (§18).
 
@@ -420,6 +420,27 @@ This applies to derived orientation artifacts only.
 Authorization records, work orders, historical evidence, failed attempts, and frozen snapshots whose historical state is part of their meaning are **not** caches, and this rule does not reach them. Where they are evidence — historical evidence, failed attempts, frozen snapshots — their preservation is VLD Rule 3's subject (`The_Sandwich_Alignment_Skewer.md`, "Rule 3 — Preserve what needs to remain capable of disagreeing"), not this one's; work orders return through the authority boundary (next paragraph). Do not refresh them, and do not regenerate them to look current.
 
 A work order whose premises no longer match live state returns through the authority boundary. It is not a cache to refresh.
+
+## Rebuilding transported packages — experimental
+
+`EXPERIMENTAL` — This applies to derived orientation artifacts that are handed to another session,
+model or tool. It does not reach the records excluded above.
+
+- **Rebuild; do not silently amend.** Build a package from one recorded source snapshot. When its
+  content has to change, build a new package from a new snapshot, give it a new identity, and say
+  which package it replaces. Any identity that tells the builds apart will do, for example a
+  folder named with the source commit. Do not change a package that has already been handed over
+  while it keeps the same identity: a recipient holding two versions cannot tell them apart.
+- **The sender owns freshness when the recipient cannot retrieve.** A recipient that cannot reach
+  the canonical project cannot make the comparison described above. Before handing over or
+  reusing a package, the sender compares its recorded snapshot with the live project, and
+  rebuilds the package where something it depends on has changed in a way that matters. Tell such
+  a recipient that the package is a snapshot and not current by itself. Do not ask it to verify
+  its own freshness. A recorded commit or digest identifies what was copied; it does not show that
+  the copy is current.
+
+This rests on static evidence from two projects: one production handoff package and one series of
+Layer 1 context packs. Recipient outcomes were not observed.
 
 ## Derived transport copies — experimental
 
