@@ -1,0 +1,9 @@
+AI Madpakken foundation pointer
+Generated at publication by the maintainer's tooling. Not edited by hand.
+Rule: MADPAKKEN/README.md, "Foundation binding", "Resolving through the foundation pointer".
+
+foundation: 1
+commit: this
+
+"commit: this" marks the foundation commit's own copy. It names no commit id, so read on
+main it resolves nothing: the pointer commit for this foundation is not published yet.

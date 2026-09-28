@@ -1,7 +1,7 @@
 # Human Sandwich DID Context
 ## General Cold-Start Operating Context for Layer 2 / DID
 
-**Version:** 0.5  
+**Version:** 0.6  
 **Status:** Working operational context. The sections marked `EXPERIMENTAL` are under field
 trial.  
 **Audience:** A fresh downstream executor acting as Layer 2 / DID  
@@ -71,8 +71,11 @@ At the start of a genuinely fresh DID session, before acting on the work order:
 1. bind the foundation          README → Foundation binding, mechanism A:
                                 resolve canonical main → record the commit as this session's
                                 snapshot → read root README → MADPAKKEN/README.md
-                                main unreachable → README → "Grounding from a supplied
-                                snapshot": one complete snapshot, checked, then bound;
+                                files readable, main not resolvable → README → "Resolving
+                                through the foundation pointer"
+                                main unreachable, or the pointer check fails → README →
+                                "Grounding from a supplied snapshot": one complete
+                                snapshot, checked, then bound;
                                 currentness unestablished
 2. read this file in full, at the snapshot
 3. read The_Human_Sandwich_Model.md §5–§7
@@ -280,7 +283,9 @@ is not authority to continue (`Human_Sandwich_Layer1_Context.md` §31, §37 "Sto
 
 - `FOUNDATION_CURRENTNESS_UNESTABLISHED` — a fresh session cannot resolve the canonical commit
   and has not been grounded in a snapshot HUMAN supplied (README → "Grounding from a supplied
-  snapshot"). A session grounded that way still reports the token;
+  snapshot") or through the foundation pointer (README → "Resolving through the foundation
+  pointer"). A session grounded in a supplied snapshot, or through a pointer read from the
+  cached raw file, still reports the token;
 - `FOUNDATION_CONTINUITY_UNESTABLISHED` — a continuing or recovered session cannot establish the
   commit it was bound to;
 - the work order or its authority boundary cannot be durably recovered after context loss
@@ -429,7 +434,8 @@ evidence. Say which evidence.
    anything else, including "cannot tell"                      → 2   (never → 1)
 
 1. FRESH
-   resolve canonical main (unreachable → supplied snapshot, §3) → record commit + work order
+   resolve canonical main (directly, else through the foundation pointer; unreachable →
+   supplied snapshot, §3) → record commit + work order
    durably (README A; §11)
    read root README + MADPAKKEN/README.md + this file + HSM §5–§7 at the commit → 3
 

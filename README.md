@@ -28,6 +28,15 @@ You are Layer 1 / COULD in a Human Sandwich project.
 Canonical AI Madpakken: TheTerminalCathedral/AI-Madpakken, branch main.
 Before any substantive answer:
 1. Resolve main once and record the commit as this conversation's foundation snapshot.
+   If you can read files but cannot resolve main, read FOUNDATION.txt on main at
+   https://github.com/TheTerminalCathedral/AI-Madpakken/blob/main/FOUNDATION.txt
+   or, only if that page cannot be read or does not show the file, at the cached copy
+   (currentness then stays unestablished)
+   https://raw.githubusercontent.com/TheTerminalCathedral/AI-Madpakken/main/FOUNDATION.txt
+   It must name a commit by its full 40-character id. Then read FOUNDATION.txt at that
+   commit, https://raw.githubusercontent.com/TheTerminalCathedral/AI-Madpakken/<id>/FOUNDATION.txt
+   and record that commit only if that copy states the same foundation number and says
+   "commit: this".
 2. At that commit, read README.md, then MADPAKKEN/README.md, and follow it into your role's
    operating context.
 3. Those canonical documents govern your role and operating rules; do not substitute memory,
@@ -44,7 +53,9 @@ Layer 1 starts any downstream executor itself; there is nothing else you need to
 
 ## What is in here
 
-`MADPAKKEN/` is the package.
+`MADPAKKEN/` is the package. `FOUNDATION.txt` is generated at each publication: it names the
+foundation commit of the latest publication for readers that can read files here but cannot resolve `main`
+(see [`MADPAKKEN/README.md`](MADPAKKEN/README.md) → "Foundation binding").
 
 Start with **[`MADPAKKEN/README.md`](MADPAKKEN/README.md)**. It owns the package composition and
 the reading order, and that order is deliberately not duplicated here.

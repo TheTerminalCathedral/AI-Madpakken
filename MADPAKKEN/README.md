@@ -18,7 +18,8 @@ DID starter. Each starter names only the entry: the role, the canonical distribu
 first, and — for DID — the authority split between Madpakken and the work order, and where
 to return after context loss. This file and the role's operational
 context own everything else. Currentness rules, reading order, recovery rules, authority
-semantics and method discovery live here, not in the starter, and a starter that omits them does
+semantics and method discovery live here, not in the starter, except the foundation-pointer
+check for a context that cannot resolve `main` ("Starter rules"). A starter that omits them does
 not waive them.
 
 ## Start here
@@ -42,6 +43,15 @@ You are Layer 1 / COULD in a Human Sandwich project.
 Canonical AI Madpakken: TheTerminalCathedral/AI-Madpakken, branch main.
 Before any substantive answer:
 1. Resolve main once and record the commit as this conversation's foundation snapshot.
+   If you can read files but cannot resolve main, read FOUNDATION.txt on main at
+   https://github.com/TheTerminalCathedral/AI-Madpakken/blob/main/FOUNDATION.txt
+   or, only if that page cannot be read or does not show the file, at the cached copy
+   (currentness then stays unestablished)
+   https://raw.githubusercontent.com/TheTerminalCathedral/AI-Madpakken/main/FOUNDATION.txt
+   It must name a commit by its full 40-character id. Then read FOUNDATION.txt at that
+   commit, https://raw.githubusercontent.com/TheTerminalCathedral/AI-Madpakken/<id>/FOUNDATION.txt
+   and record that commit only if that copy states the same foundation number and says
+   "commit: this".
 2. At that commit, read README.md, then MADPAKKEN/README.md, and follow it into your role's
    operating context.
 3. Those canonical documents govern your role and operating rules; do not substitute memory,
@@ -67,9 +77,19 @@ Canonical AI Madpakken: TheTerminalCathedral/AI-Madpakken, branch main.
 Before changing project state: resolve main once, record the commit as this session's
 foundation snapshot, and at that commit read MADPAKKEN/README.md and
 MADPAKKEN/Human_Sandwich_DID_Context.md.
-If main cannot be resolved or read here, do not ask HUMAN for individual files. Ask for one
-complete snapshot, the repository's ZIP (GitHub: Code → Download ZIP), and bind to it only as
-its MADPAKKEN/README.md → "Foundation binding" directs. Never call it current main.
+If you can read files but cannot resolve main, read FOUNDATION.txt on main at
+https://github.com/TheTerminalCathedral/AI-Madpakken/blob/main/FOUNDATION.txt
+or, only if that page cannot be read or does not show the file, at the cached copy
+(currentness then stays unestablished)
+https://raw.githubusercontent.com/TheTerminalCathedral/AI-Madpakken/main/FOUNDATION.txt
+It must name a commit by its full 40-character id. Then read FOUNDATION.txt at that commit,
+https://raw.githubusercontent.com/TheTerminalCathedral/AI-Madpakken/<id>/FOUNDATION.txt
+and record that commit only if that copy states the same foundation number and says
+"commit: this".
+If main cannot be resolved either way, or cannot be read here, do not ask HUMAN for
+individual files. Ask for one complete snapshot, the repository's ZIP (GitHub: Code →
+Download ZIP), and bind to it only as its MADPAKKEN/README.md → "Foundation binding" directs.
+Never call it current main.
 Madpakken governs your role, operating rules, methods, recovery and authority semantics. The
 authorized work order below governs the concrete task and the authority granted for it, within
 those rules.
@@ -89,6 +109,10 @@ content, no project detail beyond what HUMAN or the work order adds. A starter t
 a doctrine summary does not replace the governing documents. Where a starter disagrees with them,
 report that as a discrepancy; the governing documents win. A thinner starter still binds the
 foundation as "Foundation binding" directs, but the official texts are the tested entry.
+
+Both starters carry the foundation-pointer check itself, because a context that cannot resolve
+`main` has no bound commit yet at which to read the rule. "Foundation binding" → "Resolving
+through the foundation pointer" owns it.
 
 ## Canonical distribution
 
@@ -114,7 +138,9 @@ package itself. It is neither the creator attribution nor the HUMAN authority ro
 project that uses the package.
 
 This file remains the owner of package composition, role routing, reading order and foundation
-binding. There is no separate manifest.
+binding. There is no separate manifest. The generated `FOUNDATION.txt` ("Resolving through the
+foundation pointer") names a commit for readers that cannot resolve `main`; its list of
+addresses decides nothing about composition.
 
 ## Foundation binding
 
@@ -145,8 +171,92 @@ resolve the canonical distribution above, at its appointed branch
 ```
 
 Resolve with whatever the environment provides: a clone, a fetch, or the host's repository view
-or API. Where the documents can be read but the commit cannot, say so and record the snapshot as
-unestablished. Do not invent a revision.
+or API. Where the documents can be read but the commit cannot, resolve through the foundation
+pointer (below). Where that fails as well, say so and record the snapshot as unestablished. Do
+not invent a revision, and do not treat documents read at the branch as bound to any commit.
+
+### Resolving through the foundation pointer
+
+`EXPERIMENTAL` — Some environments can read the distribution's files over plain HTTP but cannot
+map `main` to a commit: no clone, no git access, no host API, and the host's commit pages are
+refused. Files read at `main` bind nothing. They do not say which commit they came from, and two
+of them need not come from the same one. For such a context the distribution carries a
+generated **foundation pointer**, `FOUNDATION.txt`, at its root.
+
+Every publication to the distribution is two commits, pushed together as one update of `main`:
+
+1. the **foundation commit**, which carries the change. Its `FOUNDATION.txt` states the next
+   foundation number and `commit: this`;
+2. the **pointer commit**, which changes only `FOUNDATION.txt`: the same number, `commit:` with
+   the foundation commit's full id, and the address of every file at that commit.
+
+A commit cannot contain its own id, so the pointer names its parent. Apart from
+`FOUNDATION.txt`, the two commits and `main` hold the same content, so either commit is the same
+foundation. The maintainer's tooling generates both commits and checks this after every
+publication; nobody edits the file by hand. The foundation is still simply the current `main`.
+The pointer adds no release concept and no second meaning of "current". The foundation number
+is only a consistency check between the two copies of the file. It is not a version, and the
+commit, not the number, identifies the foundation. A context that resolved `main` directly, or
+holds a supplied snapshot, binds that commit as usual, whichever of the two it is.
+`FOUNDATION.txt` is not a derived or transport marking.
+
+Where `main` cannot be resolved directly but files can be read:
+
+```text
+1. read FOUNDATION.txt on main, once — from the host's file page
+     https://github.com/TheTerminalCathedral/AI-Madpakken/blob/main/FOUNDATION.txt
+   and only if that page cannot be read or does not show the file, from the raw file
+     https://raw.githubusercontent.com/TheTerminalCathedral/AI-Madpakken/main/FOUNDATION.txt
+   → it must state  foundation: <N>  and  commit: <X>, X exactly 40 lowercase hexadecimal
+     characters
+2. read FOUNDATION.txt at X
+     https://raw.githubusercontent.com/TheTerminalCathedral/AI-Madpakken/<X>/FOUNDATION.txt
+   → it must state the same  foundation: <N>  and  commit: this
+3. record X as this context's foundation snapshot, with how it was resolved
+4. read every governing document at X, never at main. MADPAKKEN/README.md at X decides what
+   governs; the pointer's list of addresses is a convenience, and only addresses containing X
+   exactly may be used
+```
+
+Bind nothing, and fail closed as a context that cannot resolve
+(`FOUNDATION_CURRENTNESS_UNESTABLISHED`), where: the pointer on `main` cannot be read at all; the
+copy read on `main` or the copy at X is malformed; the copy on `main` says `commit: this`,
+because a publication is incomplete; X is not exactly 40 lowercase hexadecimal characters; X
+cannot be read; the numbers differ; or the copy at X does not say `commit: this`. A file page
+that was read but fails a check is not a reason to try the raw file. Do not fall back to
+documents read at `main`, to a shortened id, or to an id from memory, an earlier conversation, a
+summary or the file's history. Continue with "Grounding from a supplied snapshot".
+
+**What it establishes.**
+
+- **Immutable binding.** Everything governing is read at X, which cannot change.
+- **Canonical origin.** It rests on the pointer read from the canonical `main`. A commit id that
+  merely opens at the canonical address proves nothing: the host also serves commits there that
+  exist only in forks.
+- **Currentness, from the file page.** The host served its file page uncached when this was
+  investigated (2026-09-28), as its current view of `main`. A pointer read there establishes
+  currentness as direct resolution does. Report: `foundation snapshot <X>, resolved through the
+  foundation pointer (foundation <N>), read from the host's file page`.
+- **No currentness, from the raw file.** The raw file is a cached copy. It can lag a publication
+  by the host's cache time: minutes normally, and hours during host incidents that have been
+  reported. Nothing on the reading side detects that. A context that had to read the pointer
+  there is grounded, because X is canonical and immutable, but has not established currentness.
+  Report: `foundation snapshot <X>, resolved through the foundation pointer (foundation <N>), read
+  from the cached raw file; currentness unestablished (FOUNDATION_CURRENTNESS_UNESTABLISHED)`.
+- **Residual.** A change pushed to `main` outside the publication rule would leave the pointer
+  naming an older foundation while every check above passes. The maintainer's checks catch that;
+  the reading side cannot. Nor can the reading side detect a reading tool that serves the page
+  from its own cache, index or preview. A pointer seen in a search result, snippet or preview is
+  not a file-page read.
+
+**Other commit ids.** Where `main` can also be resolved directly, direct resolution governs. It
+agrees with the pointer where the resolved commit is X, or its `FOUNDATION.txt` names X; report
+any other difference as a discrepancy. An id stated by HUMAN, a work order or a summary does not
+replace steps 1–2. A difference between a fresh context's commit and one a work order cites is
+handled as mechanism B directs. Delegated children and supplied snapshots are unchanged.
+
+Mechanisms B and C apply unchanged: recovery re-reads at the same X and does not read the pointer
+again. Only a human-authorized foundation transition reruns steps 1–4.
 
 ### B. Execution continuity — a running context keeps its snapshot
 
@@ -256,10 +366,11 @@ doctrine and one of these cannot be established:
   continuity. Report it. Continuing on a newer foundation is a transition, and needs the human.
 
 A context grounded in a snapshot that HUMAN supplied ("Grounding from a supplied snapshot",
-below) still reports `FOUNDATION_CURRENTNESS_UNESTABLISHED`, but it is grounded. It does not fail
-closed on currentness for work that depends on doctrine at that snapshot. It still fails closed
-where the work needs currentness itself, such as a claim that the snapshot is current canonical
-Madpakken.
+below), or through a foundation pointer read from the cached raw file ("Resolving through the
+foundation pointer", above), still reports `FOUNDATION_CURRENTNESS_UNESTABLISHED`, but it is
+grounded. It does not fail closed on currentness for work that depends on doctrine at that
+snapshot. It still fails closed where the work needs currentness itself, such as a claim that the
+snapshot is current canonical Madpakken.
 
 A prompt that cites a version, path or rule the bound document does not contain is the same
 kind of discrepancy. Do not reconcile it by preference. Work that does not consequentially
@@ -311,6 +422,7 @@ every check the environment allows, and report each result:
 - **Unmarked.** Search every file, not only the ones you read, for a marking as a derived or
   transport copy. One marked file disqualifies the whole snapshot. This catches only a copy
   that declares itself, which is one reason content integrity is not established offline.
+  `FOUNDATION.txt` is not such a marking; bind the snapshot's own commit.
 
 A snapshot that fails a check does not qualify. Say which check failed, and ask for a fresh
 snapshot, not for the missing file.
@@ -353,6 +465,13 @@ state in practice, that sub-agents inherit the parent snapshot, and that access 
 non-workstation environments, and that grounding from a supplied snapshot works where access is
 restricted. The pre-publication validation of these paths was a
 maintainer-run dry run with simulated compaction. It was not observed native field use.
+
+Resolving through the foundation pointer rests on a separate Information Buffet investigation
+(2026-09-28) across update frameworks, package repositories, content-addressed systems, OS
+channels and the host's own behaviour. Reading everything at one immutable id is inherited
+practice. Taking currentness only from the host's uncached file page is local synthesis. That
+restricted web tools open the file page and the listed commit addresses was checked against a
+simulated restricted client, not in native field use.
 
 ## Reading order
 
