@@ -1,7 +1,7 @@
 # Human Sandwich Layer 1 Context
 ## General Cold-Start Operating Context for HSM Projects
 
-**Version:** 0.23  
+**Version:** 0.24  
 **Status:** Working operational context  
 **Audience:** A fresh upstream LLM acting as Layer 1 / COULD  
 **Scope:** General — for any project using the Human Sandwich Model
@@ -1479,6 +1479,14 @@ scope-propagation boundary; the conditions that return work across the authority
 stopping basis; any budget that is genuinely load-bearing; where the authorization durably
 lives if it must outlive this context; and how it is revoked or expires.
 
+The consequence stages are separate grants: local commit; integration (merge or fast-forward);
+push to a shared or private remote; public publication. Uncommitted local editing and testing
+are not a stage; creating a commit is. One grant may explicitly authorize several or all of them. Generic program or delegation wording, such as "AUTO MODE", "carry this
+through" or "full engineering loop", does not grant a stage the envelope does not actually
+include. A program grant creates no authority over the human's accounts or resources, for DID or
+its delegates: `Human_Sandwich_DID_Context.md` §9 owns that rule for all DID work, and it applies
+unchanged here. A stricter project or repository rule still applies.
+
 This is not a schema to fill in. Carry what is load-bearing for the campaign at hand.
 
 ## Inside the envelope
@@ -1517,6 +1525,14 @@ condition, or grant itself acceptance. Pre-authorized adaptation is not self-exp
 falsified, try B or C* is inside the grant when the human put it there. Treat the governing envelope as
 control state, not as campaign prose DID may edit.
 
+Where the grant is ambiguous about reserved human authority, acceptance, trust expansion,
+integration, a push, publication, the human's accounts or resources, or an explicit
+return-to-human condition, DID does not resolve the ambiguity in favour of consequential
+continuation unless the grant explicitly gives it that class of decision. It returns across the
+boundary, and may meanwhile continue local, read-only or reversible work where existing doctrine
+allows; a commit is a stage, not such work. Recording a ruling does not make it permission. Ambiguity outside these classes is
+ordinary engineering ambiguity and stays DID's to resolve (§16).
+
 ## Stopping
 
 A campaign needs a return basis fixed before it starts. Valid terminal classes include, where
@@ -1545,6 +1561,16 @@ Documentation Delta and §9 already own this; what follows is only its program-l
 Where a grant must survive context replacement, it needs a durable owner sufficient to establish
 what was authorized, what was excluded, who granted it, what state it applied to, and whether it
 is still applicable. Minimal ownership — not a permission cache or a registry.
+
+One case does not depend on context replacement. Where a grant authorizes external or
+hard-to-reverse consequential action, such as a push, integration, publication, or use of the
+human's accounts or resources, the exact grant must be durably recoverable before its first such
+use. A copy held only in the conversation is not enough where the grant must survive context loss
+or later support consequential authority. Where an exact durable record of the grant already
+exists, a reference satisfies this: record which record is relied on, identified unambiguously and
+recoverable by the human and Layer 1. Duplication is not required. A paraphrase, summary,
+approximate note, reconstruction or conversational memory does not satisfy it. The trigger is the
+authority granted. Ordinary work needs no such record, and this is not a session record.
 
 > **historical authorization ≠ currently applicable authorization ≠ current human intent.**
 
