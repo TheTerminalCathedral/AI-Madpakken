@@ -3,7 +3,28 @@ Generated at publication by the maintainer's tooling. Not edited by hand.
 Rule: MADPAKKEN/README.md, "Foundation binding", "Resolving through the foundation pointer".
 
 foundation: 2
-commit: this
+commit: f990a39b9987c77d1d0bed8cbd3410224d6c3b4d
 
-"commit: this" marks the foundation commit's own copy. It names no commit id, so read on
-main it resolves nothing: the pointer commit for this foundation is not published yet.
+This commit carries only this pointer. Apart from this file its content is identical to
+the commit named above. A reader that cannot resolve main binds the commit named above;
+a reader that resolved main directly, or holds a supplied snapshot, binds the commit it has.
+Read on the host's file page (https://github.com/TheTerminalCathedral/AI-Madpakken/blob/main/FOUNDATION.txt), this pointer establishes currentness.
+Read from any other copy, including raw.githubusercontent.com, it does not.
+
+Check at that commit:
+https://raw.githubusercontent.com/TheTerminalCathedral/AI-Madpakken/f990a39b9987c77d1d0bed8cbd3410224d6c3b4d/FOUNDATION.txt
+
+Files at that commit:
+https://raw.githubusercontent.com/TheTerminalCathedral/AI-Madpakken/f990a39b9987c77d1d0bed8cbd3410224d6c3b4d/README.md
+https://raw.githubusercontent.com/TheTerminalCathedral/AI-Madpakken/f990a39b9987c77d1d0bed8cbd3410224d6c3b4d/MADPAKKEN/README.md
+https://raw.githubusercontent.com/TheTerminalCathedral/AI-Madpakken/f990a39b9987c77d1d0bed8cbd3410224d6c3b4d/LICENSE
+https://raw.githubusercontent.com/TheTerminalCathedral/AI-Madpakken/f990a39b9987c77d1d0bed8cbd3410224d6c3b4d/MADPAKKEN/Critical_Mass_v0.1.md
+https://raw.githubusercontent.com/TheTerminalCathedral/AI-Madpakken/f990a39b9987c77d1d0bed8cbd3410224d6c3b4d/MADPAKKEN/Documentation_Delta_Experimental_Layer1_Rule_v0.1.md
+https://raw.githubusercontent.com/TheTerminalCathedral/AI-Madpakken/f990a39b9987c77d1d0bed8cbd3410224d6c3b4d/MADPAKKEN/Human_Sandwich_DID_Context.md
+https://raw.githubusercontent.com/TheTerminalCathedral/AI-Madpakken/f990a39b9987c77d1d0bed8cbd3410224d6c3b4d/MADPAKKEN/Human_Sandwich_Layer1_Context.md
+https://raw.githubusercontent.com/TheTerminalCathedral/AI-Madpakken/f990a39b9987c77d1d0bed8cbd3410224d6c3b4d/MADPAKKEN/Model_Routing_Current_Mappings.md
+https://raw.githubusercontent.com/TheTerminalCathedral/AI-Madpakken/f990a39b9987c77d1d0bed8cbd3410224d6c3b4d/MADPAKKEN/Model_Routing_and_Effort_Policy.md
+https://raw.githubusercontent.com/TheTerminalCathedral/AI-Madpakken/f990a39b9987c77d1d0bed8cbd3410224d6c3b4d/MADPAKKEN/Nuke_Testing_Experimental_v0.1.md
+https://raw.githubusercontent.com/TheTerminalCathedral/AI-Madpakken/f990a39b9987c77d1d0bed8cbd3410224d6c3b4d/MADPAKKEN/The_Human_Sandwich_Model.md
+https://raw.githubusercontent.com/TheTerminalCathedral/AI-Madpakken/f990a39b9987c77d1d0bed8cbd3410224d6c3b4d/MADPAKKEN/The_Sandwich_Alignment_Skewer.md
+https://raw.githubusercontent.com/TheTerminalCathedral/AI-Madpakken/f990a39b9987c77d1d0bed8cbd3410224d6c3b4d/MADPAKKEN/VLD_Capability_Substitution_Experimental_v0.1.md
