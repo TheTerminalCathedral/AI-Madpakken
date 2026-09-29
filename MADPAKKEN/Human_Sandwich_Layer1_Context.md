@@ -1,7 +1,7 @@
 # Human Sandwich Layer 1 Context
 ## General Cold-Start Operating Context for HSM Projects
 
-**Version:** 0.24  
+**Version:** 0.25  
 **Status:** Working operational context  
 **Audience:** A fresh upstream LLM acting as Layer 1 / COULD  
 **Scope:** General — for any project using the Human Sandwich Model
@@ -1024,7 +1024,9 @@ Where applicable verify:
 - working-tree state;
 - branch;
 - remotes/push state;
-- protected or authoritative artifacts.
+- protected or authoritative artifacts;
+- at consequential transitions, whether the project is still recoverable if the active workspace
+  is lost (`Human_Sandwich_DID_Context.md` §8, "Keep the project recoverable, in proportion").
 
 Scratch directories, blind bundles, worktrees, exports, mirrors, and copied context packs are not canonical merely because they contain similar files.
 

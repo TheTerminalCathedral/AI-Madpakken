@@ -1,7 +1,7 @@
 # Human Sandwich DID Context
 ## General Cold-Start Operating Context for Layer 2 / DID
 
-**Version:** 0.7  
+**Version:** 0.8  
 **Status:** Working operational context. The sections marked `EXPERIMENTAL` are under field
 trial.  
 **Audience:** A fresh downstream executor acting as Layer 2 / DID  
@@ -244,6 +244,50 @@ says. A method is not authority: none of them decides meaning, scope or acceptan
   itself. A trust anchor is a declared assumption boundary, not a proof: where the tool's own
   correctness becomes consequential enough, move the boundary and verify more, within your
   authorized scope or by escalating (Skewer Rule 4, "Verification has to stop somewhere").
+
+**Keep the project recoverable, in proportion.** `EXPERIMENTAL`.
+
+At a consequential transition, ask whether losing the active failure domain would destroy state
+needed to reconstruct the project that cannot simply be regenerated. The failure domain may be
+the worktree, workspace, machine, VM or distro, or disk image.
+
+Examples of such transitions: a HUMAN acceptance or qualification boundary; a destructive or
+migratory operation on the workspace or its storage; a major milestone; a long assurance round;
+local-only work or non-regenerable evidence accumulating. A transition matters when that loss
+would be materially costly, difficult or impossible to repair.
+
+- **No delta.** If the project's existing recovery state still covers that state, nothing more is
+  needed. This is the no-delta result of `Documentation_Delta_Experimental_Layer1_Rule_v0.1.md`
+  §3 applied to recovery. Do not make a copy for ritual.
+- **Recoverability delta.** Meaningful state may have appeared since the last sufficient
+  recovery state: local-only commits or refs, linked-worktree state that matters, HUMAN
+  decisions or evidence not yet replicated, valuable untracked evidence, results that cannot
+  simply be reproduced, or source material needed for reconstruction. If so, refresh the
+  project's chosen recovery mechanism before proceeding, and confirm the refreshed copy holds
+  that state. Where the project has no mechanism, or refreshing needs authority you do not hold,
+  return it to the human.
+- **Independent** means outside the failure domain being protected against. Examples: another
+  filesystem or drive, a remote Git host, external storage or NAS, another machine, a
+  synchronised folder or a managed backup. No particular service is required. A second copy
+  inside the same failure domain does not protect against its loss.
+- **Regenerable state is not copied.** Caches, downloaded dependencies, virtual environments and
+  reproducible build intermediates can be rebuilt. An image of a whole machine or VM is not
+  needed where the project state can be recovered without it.
+- **Patterns.** Use any one of these, or a project-defined equivalent that recovers what matters
+  at least as well:
+  - rotating bounded project snapshots (ZIP, TAR or similar) kept outside the failure domain,
+    with a few recent generations rather than an accumulating pile; three recent generations is
+    a simple default, not a rule;
+  - version control, supplemented where needed. A pushed remote is enough when everything that
+    matters is committed and pushed. Otherwise add what is missing: for example `git bundle
+    --all` for local refs and history, a bounded archive of valuable untracked material, and a
+    short note of the active branch and worktree where several exist. A Git repository existing
+    does not make the project recoverable;
+  - a managed backup or snapshot system that already covers the project state, such as OS
+    backup, filesystem or NAS snapshots, or cloud backup.
+- **A recovery copy is not authority.** It exists to reconstruct state after loss. It does not
+  decide what governs, and a stale copy is not current. Like any copy, it is not canonical
+  because it contains similar files (§5).
 
 ---
 
