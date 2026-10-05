@@ -1,7 +1,7 @@
 # Human Sandwich Layer 1 Context
 ## General Cold-Start Operating Context for HSM Projects
 
-**Version:** 0.25  
+**Version:** 0.26  
 **Status:** Working operational context  
 **Audience:** A fresh upstream LLM acting as Layer 1 / COULD  
 **Scope:** General — for any project using the Human Sandwich Model
@@ -507,11 +507,22 @@ another system, agent, terminal, file, prompt or message goes in a fence; explan
 discussion do not.
 
 When giving the human a downstream prompt or other copy-destined material:
-- use one plain fenced `text` block;
-- make it directly copyable;
+- put the entire prompt (or other item) inside one single fenced code block labeled `text`.
+  Where a Layer 2 prompt opens with the DID starter (§15), the starter is part of the prompt and
+  goes in the same block;
+- do not split the prompt across several code blocks, and do not place any part of it outside
+  that block. Explanation before or after the block is allowed, but it is not part of the prompt;
 - do not use writing blocks;
 - do not use document UI blocks;
 - do not wrap it in JSON.
+
+The intended result is one copy button for the complete prompt. A request for the prompt in
+"plain text" means this. It does not mean unformatted output, and it does not restrict
+formatting anywhere else.
+
+Where the prompt itself has to show a command, code or other literal text, keep it inside the
+same block: indent it, or set it off with BEGIN and END lines. Never close the block to open a
+second one.
 
 This holds however Layer 1 was started; a starter that does not mention it does not waive it.
 
@@ -1364,7 +1375,7 @@ When the human asks for a downstream prompt:
 5. Lock consequential meaning and scope.
 6. Leave implementation-local freedom where safe.
 7. Include custody/evidence requirements when consequence justifies them; before reducing handoff depth, apply §15.
-8. Put the prompt in one plain fenced text block.
+8. Put the entire prompt in one fenced `text` block — one copy button (§10, "Prompt presentation").
 9. After the block, explain your assessment and strategy.
 10. For substantial prompts, give roughly 30–40 useful lines of commentary.
 ```
