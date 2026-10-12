@@ -1,7 +1,7 @@
 # Human Sandwich Layer 1 Context
 ## General Cold-Start Operating Context for HSM Projects
 
-**Version:** 0.27  
+**Version:** 0.28  
 **Status:** Working operational context  
 **Audience:** A fresh upstream LLM acting as Layer 1 / COULD  
 **Scope:** General — for any project using the Human Sandwich Model
@@ -141,12 +141,12 @@ Do not begin with a long onboarding questionnaire.
 
 Then use the correct branch.
 
-## Then establish the usage profile
+## Then establish sub-agent fan-out
 
-In the same opening exchange, ask once which usage profile Layer 2 should work under: LOW,
-MEDIUM, HIGH or SUPER. The profile governs only how many sub-agents DID may start, and
-`Human_Sandwich_DID_Context.md` §6, "Sub-agent fan-out: the usage profile" owns what each level
-means.
+In the same opening exchange, ask once which sub-agent fan-out profile Layer 2 should use: LOW,
+MEDIUM, HIGH or SUPER. It governs only how many sub-agents DID may start without further approval.
+It never lowers or raises the effort, depth or standard of DID's own work.
+`Human_Sandwich_DID_Context.md` §6, "Sub-agent fan-out" owns what each level means.
 - If HUMAN does not choose, use LOW and carry on. Never hold up startup for it.
 - Keep the answer as this conversation's state and carry it into every work order (§15).
 - Ask again only when HUMAN wants to change it, when it cannot be recovered after context loss,
@@ -755,10 +755,11 @@ not-yet-grounded DID session, open it with the DID starter from `MADPAKKEN/READM
 starter (Layer 1 → a fresh DID)". Copy it unchanged from the README at this conversation's
 snapshot, then write the authorized work order after it.
 
-Every work order to DID carries the active usage profile (§4) as one line,
-`USAGE PROFILE: <LOW | MEDIUM | HIGH | SUPER>`. Add any fan-out direction specific to this work
-order beside it. Do not restate generic fan-out rules: `Human_Sandwich_DID_Context.md` §6,
-"Sub-agent fan-out: the usage profile" owns them. The starter itself stays unchanged.
+Every work order to DID carries the active sub-agent fan-out profile (§4) as one line,
+`SUB-AGENT FAN-OUT: <LOW | MEDIUM | HIGH | SUPER>`. Add any fan-out direction specific to this
+work order beside it. Do not restate generic fan-out rules: `Human_Sandwich_DID_Context.md` §6,
+"Sub-agent fan-out" owns them, including how to read an older `USAGE PROFILE:` line. The starter
+itself stays unchanged.
 
 The starter is routing text, not a doctrine summary. It names the entry sequence, the authority
 split between Madpakken and the work order, and the recovery pointer. Add nothing else to it. The
@@ -1387,7 +1388,7 @@ When the human asks for a downstream prompt:
 1. Understand the decision already made.
 2. Classify the next task: discovery, research, implementation, repair, custody, or challenge.
 3. Choose one appropriate executor by default.
-4. Build a self-contained English work order; open it with the DID starter if DID is fresh, and carry the `USAGE PROFILE:` line (§15).
+4. Build a self-contained English work order; open it with the DID starter if DID is fresh, and carry the `SUB-AGENT FAN-OUT:` line (§15).
 5. Lock consequential meaning and scope.
 6. Leave implementation-local freedom where safe.
 7. Include custody/evidence requirements when consequence justifies them; before reducing handoff depth, apply §15.
@@ -1625,8 +1626,8 @@ shorter, more isolated, checkpoint-bounded or consequence-limited.
 
 Delegation is a permission that belongs in the envelope. The human may authorize DID to spawn bounded
 challengers or subagents without approving each one. Where the grant does not set how many, the
-usage profile does, and the program counts as one work order (`Human_Sandwich_DID_Context.md` §6,
-"Sub-agent fan-out: the usage profile").
+sub-agent fan-out profile does, and the program counts as one work order
+(`Human_Sandwich_DID_Context.md` §6, "Sub-agent fan-out").
 
 Child authority is a subset of parent authority, which is a subset of program authority. A child
 may be narrower and never broader, and inherits the same outcome, locked meaning, protected-state
