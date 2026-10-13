@@ -1,7 +1,7 @@
 # Human Sandwich Layer 1 Context
 ## General Cold-Start Operating Context for HSM Projects
 
-**Version:** 0.28  
+**Version:** 0.29  
 **Status:** Working operational context  
 **Audience:** A fresh upstream LLM acting as Layer 1 / COULD  
 **Scope:** General — for any project using the Human Sandwich Model
@@ -193,9 +193,11 @@ Instead:
 2. write a ready-to-send **email to Layer 2**, opening with the DID starter (§15) where Layer 2 is fresh or not yet grounded;
 3. ask Layer 2 to inspect the real repository/workspace;
 4. require a factual project handoff;
-5. require the smallest sufficient set of project files for Layer 1, normally at most 20 (§8);
-6. require those files to be copied/exported into one flat folder;
-7. preserve original-path provenance for every selected file;
+5. require the project files Layer 1 reasonably needs to ground, selected by relevance, with no
+   fixed file count (§8);
+6. require them to be delivered as one ZIP archive with a compact manifest, so the human hands
+   over one artifact (§7);
+7. preserve original-path provenance for every selected file (§9);
 8. review the handoff and context pack before resuming ordinary work.
 
 Do not substitute old memory for current project grounding, and do not make the human the carrier of
@@ -275,53 +277,52 @@ Please produce:
      artifacts appear to claim that role, report the ambiguity; do not choose or create one.
 
 5. LAYER 1 CONTEXT PACK
-   Select the smallest set of existing project files — normally no more than 20 — that is
-   sufficient for a fresh Layer 1 for:
+   Select the existing project files a fresh Layer 1 reasonably needs — as many as that takes,
+   and no more — for:
    - understanding the project;
    - reasoning about next steps;
    - preserving decisions and architecture;
    - preparing safe downstream handoffs;
    - interpreting future execution reports.
 
-   Do not select files merely because they are large or implementation-critical.
-   Select the files that preserve the most useful project intelligence for Layer 1.
-   Fewer than 20 is fine; 20 is a ceiling, not a quota. If more are genuinely required,
-   say why before exceeding it.
+   There is no file-count limit, and no number to fill. Select by relevance: include a file
+   because it materially helps Layer 1 ground, never merely because it exists, is large or is
+   implementation-critical. Prefer the files that preserve the most useful project
+   intelligence. Leave out caches, dependencies, build outputs, virtual environments,
+   regenerable scratch, unrelated large data, duplicate exports, stale material with no
+   grounding value, and credentials or other sensitive material the task does not need.
 
    Always include the project's authoritative owner of durable human intent
    (HUMAN_INTENT.md or the project's equivalent), where one exists. Copy the file itself,
-   unaltered, never a summary, paraphrase, excerpt or derived copy. It does not count against
-   the 20. If no owner exists, say so in 00_PROJECT_HANDOFF.md. If several artifacts claim the
-   role, report that under 4, do not choose one, and copy none of them as the owner.
+   unaltered, never a summary, paraphrase, excerpt or derived copy. If no owner exists, say so
+   in 00_PROJECT_HANDOFF.md. If several artifacts claim the role, report that under 4, do not
+   choose one, and copy none of them as the owner.
 
-   Do not spend slots on project-local copies of the Madpakken or other foundation
-   documents — Layer 1 grounds in the canonical foundation separately. Include one only if
-   its historical use in this project is itself relevant, and say so.
+   Do not include project-local copies of the Madpakken or other foundation documents —
+   Layer 1 grounds in the canonical foundation separately. Include one only if its historical
+   use in this project is itself relevant, and say so.
 
-   Copy/export them into one flat folder:
+   Deliver the pack as one ZIP archive, so the human hands Layer 1 one artifact:
 
-   LAYER1_CONTEXT_PACK/
+   LAYER1_CONTEXT_PACK.zip, holding a top-level LAYER1_CONTEXT_PACK/ folder
 
-   Preserve provenance for every file.
+   Keep each selected file at its original relative path inside that folder; the path is its
+   provenance. Every path stays inside the folder: no absolute paths, no "..", no links. Do not
+   rename or alter originals.
 
-   If filenames collide, rename only the copied/exported versions safely, for example:
-
-   01_project_root__README.md
-   02_docs_architecture__README.md
-   03_analysis_current__DECISIONS.md
-
-   Do not rename or alter originals.
-
-   Also create:
+   Put the manifest at the folder's top level:
 
    00_PROJECT_HANDOFF.md
 
-   For every selected file record:
-   - copied filename;
-   - original project path;
+   Open it with one line saying the pack is a snapshot for orientation, not project authority
+   and not current by itself, with the project revision it was built from. Keep it compact.
+   For every selected file, or tightly related file group, record:
+   - its path in the archive;
+   - original project path, where different;
    - source revision/commit for that path, where mechanically available;
    - why it was selected;
-   - whether it is authoritative, historical, derived, experimental, or informational.
+   - whether it is authoritative, historical, derived, experimental, or informational;
+   - any currentness caveat that matters, such as a file that changes often.
 
    The revision is provenance for later mechanical comparison, not proof that the copy is
    current. Where no revision is mechanically available, say so rather than inventing one.
@@ -335,18 +336,18 @@ Please produce:
    - an important project decision appears unresolved.
 
 7. OUTPUT LOCATION
-   Report the exact path to LAYER1_CONTEXT_PACK/ and its contents.
+   Report the exact path to LAYER1_CONTEXT_PACK.zip, its sha256, and its contents.
 
-Normal maximum selected project files: 20 — a ceiling, not a quota.
-The handoff/manifest file and the human-intent owner do not count against the 20-file artifact
-limit.
+The context pack is selected by relevance, with no file-count limit, and delivered as one ZIP
+archive. It is a transported copy for orientation, not project authority or proof of
+currentness.
 
 Return facts, not a polished narrative that hides disagreement.
 ```
 
 ---
 
-# 8. Why the context pack is capped at 20 files
+# 8. What belongs in the context pack
 
 The Layer 1 context pack is a compression boundary.
 
@@ -354,11 +355,18 @@ It is not a repository mirror.
 
 The selection criterion is:
 
-> **Which maximum 20 artifacts preserve the most useful project intelligence for Layer 1?**
+> **Which artifacts does a fresh Layer 1 reasonably need to ground in this project?**
 
-The cap is a ceiling, not a quota. The goal is the smallest sufficient grounding set; a pack
-filled to 20 is not thereby complete, and a pack of 8 that grounds the project is better than 20
-that pad it.
+There is no file-count limit. A fixed count was an arbitrary proxy: it forced out files a
+complex project genuinely needed, and invited padding in a simple one. Relevance decides. Every
+file must earn its place, and a pack that grounds the project in 8 files is better than one that
+pads it to 40. Removing the count does not remove proportion: do not package the whole
+repository by default, and keep the pack a size Layer 1 can actually read and use.
+
+The pack travels as one ZIP archive with its manifest (§7), so the human hands over one artifact
+rather than many separate uploads. Where Layer 1's environment cannot open an archive, the human
+may give it every file extracted from that archive, the manifest included. That is the same pack
+in another form. A partial selection of it is not.
 
 Useful examples may include:
 
@@ -375,7 +383,7 @@ Useful examples may include:
 
 Project-local copies of the Layer 1 foundation are duplicates, not project intelligence.
 
-A project may carry its own copy of the Human Sandwich, VLD or other foundation material. Those copies are genuine project artifacts with real provenance, and they are often older than the foundation Layer 1 grounded in (§4). They should not normally consume slots, and they do not displace what Layer 1 already has: the grounded canonical foundation remains the operating foundation.
+A project may carry its own copy of the Human Sandwich, VLD or other foundation material. Those copies are genuine project artifacts with real provenance, and they are often older than the foundation Layer 1 grounded in (§4). They should not normally be included, and they do not displace what Layer 1 already has: the grounded canonical foundation remains the operating foundation.
 
 Include one only where its historical use in the project is itself decision-relevant — a past decision taken under an older version, for example. Mark it as historical project evidence when you do. It does not become current Layer 1 operating authority by arriving in the pack.
 
@@ -385,23 +393,26 @@ Large implementation files may be less useful to Layer 1 than a short authoritat
 
 Layer 1 may request more files later.
 
-The cap applies only to cold-start grounding.
+This selection rule applies only to cold-start grounding.
 
 ---
 
 # 9. Flatness must preserve provenance
 
-The flat folder exists for easy upload.
+A transport package exists to be easy to hand over: for the context pack, one ZIP archive (§7).
 
-Flatness must not erase source identity.
+Packaging must not erase source identity. Neither may flattening or renaming, wherever they are
+used.
 
-Every copied file must remain traceable to its original path.
+Every copied file must remain traceable to its original path. Inside the context pack, keeping
+each file at its original relative path does this by itself. A file that has to be renamed or
+moved still records its original path in the manifest.
 
-Example:
+Example manifest entry:
 
 ```text
-Copied filename:
-02_docs_architecture__README.md
+Path in archive:
+LAYER1_CONTEXT_PACK/docs/architecture/README.md
 
 Original path:
 docs/architecture/README.md
@@ -416,7 +427,10 @@ Status:
 authoritative
 ```
 
-A flattened copy does not become project authority merely because Layer 1 received it.
+A copied file, flattened, archived or otherwise, does not become project authority merely
+because Layer 1 received it. The context pack archive is a derived orientation artifact: the
+rules below on currency, freshness and rebuilding apply to it in full. Its manifest records
+where things came from; it does not establish that they are current.
 
 ## Derived orientation artifacts do not claim currency
 
@@ -1367,7 +1381,7 @@ NEW PROJECT OR EXISTING PROJECT?
              ↓
            receive factual handoff
              +
-           flat context pack, smallest sufficient, normally ≤ 20
+           context pack: one ZIP + manifest, selected by relevance
              ↓
            review contradictions + custody
              ↓
